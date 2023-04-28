@@ -1,0 +1,20 @@
+query BlogPost($locale: [Locales] = en, $url:String){
+  LocationItemPage(locale: $locale, where:{
+    RelativePath: { eq: $url}
+  })
+  {
+    items{
+      Name,
+      Url,
+      StartPublish
+      MainIntro,
+      MainBody,
+      Image {
+        Url
+      },
+      PageImage {
+        Url
+      }
+    }
+  }
+}

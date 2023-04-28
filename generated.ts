@@ -67932,6 +67932,21 @@ export type YouTubeBlockWhereInput = {
 
 export type LandingPageFragment = { __typename?: 'LandingPage', Name?: string | null };
 
+export type BlogListQueryVariables = Exact<{
+  locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
+}>;
+
+
+export type BlogListQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, RelativePath?: string | null, StartPublish?: any | null, MainIntro?: string | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
+
+export type BlogPostQueryVariables = Exact<{
+  locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
+  url?: InputMaybe<Scalars['String']>;
+}>;
+
+
+export type BlogPostQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, Url?: string | null, StartPublish?: any | null, MainIntro?: string | null, MainBody?: string | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
+
 export type GetContentQueryVariables = Exact<{
   url?: InputMaybe<Scalars['String']>;
 }>;
@@ -67939,48 +67954,19 @@ export type GetContentQueryVariables = Exact<{
 
 export type GetContentQuery = { __typename?: 'Query', Content?: { __typename?: 'ContentOutput', items?: Array<{ __typename?: 'AdaptiveHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressBookPage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressesElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AssetsDownloadLinksBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Associations', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogCommentBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BookmarksPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BootstrapCardBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BreadcrumbBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BudgetingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BundleContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarEventPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CallToActionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselControls', _fulltext?: Array<string | null> | null } | { __typename?: 'CartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CatalogContent', _fulltext?: Array<string | null> | null } | { __typename?: 'Categories', _fulltext?: Array<string | null> | null } | { __typename?: 'CategoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CheckoutPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CodingFile', _fulltext?: Array<string | null> | null } | { __typename?: 'CollectionPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CommentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CommunityPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Content', _fulltext?: Array<string | null> | null } | { __typename?: 'CouponData', _fulltext?: Array<string | null> | null } | { __typename?: 'CreditCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CustomViewConfigurationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMImageAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMVideoAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeRangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DiscountItems', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'ElevatedRoleBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ExistsFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FacebookBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FeedBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FileUploadElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterActivitiesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterContinentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterDistancesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterTemperaturesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FixedPricePurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'FolderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'FormContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FormStepBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FoundationPdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericBundle', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericNode', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericPackage', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'GiftCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'GoogleMapsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupAdmissionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupCreationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HealthChatbotBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'HomePage', _fulltext?: Array<string | null> | null } | { __typename?: 'HtmlBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'IframeBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'JourneyContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LikeButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipAffiliationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipDisplayBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MenuItemBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ModalBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MonetaryReward', _fulltext?: Array<string | null> | null } | { __typename?: 'NavigationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NewProductsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'NodeContent', _fulltext?: Array<string | null> | null } | { __typename?: 'NumberElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NumericFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEmailEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEventTrackingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListConsentFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPSearchEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPUpdateProfileBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderDetailsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderPadsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrdersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PackageContent', _fulltext?: Array<string | null> | null } | { __typename?: 'PageListBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ParagraphTextElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'PdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonList', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PredefinedHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockImage', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProfilePage', _fulltext?: Array<string | null> | null } | { __typename?: 'PromotionSchedule', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseAmount', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RatingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RecaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RedemptionLimitsData', _fulltext?: Array<string | null> | null } | { __typename?: 'Relations', _fulltext?: Array<string | null> | null } | { __typename?: 'ReportingMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RssReaderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SalesPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SearchResultPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SelectionElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SeoInformation', _fulltext?: Array<string | null> | null } | { __typename?: 'SharedCartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ShippingDimensions', _fulltext?: Array<string | null> | null } | { __typename?: 'SingleImage', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardFile', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'StorePage', _fulltext?: Array<string | null> | null } | { __typename?: 'StringFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubOrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubmitButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionDetailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TagPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TeaserBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextareaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextboxElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ThreeColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TinyMceAdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'TwitterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TwoColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'UrlElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'UsersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'VariationContent', _fulltext?: Array<string | null> | null } | { __typename?: 'VectorImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoFile', _fulltext?: Array<string | null> | null } | { __typename?: 'VimeoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VisitorDataHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WebImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'WidgetBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WishListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'YouTubeBlock', _fulltext?: Array<string | null> | null } | null> | null } | null };
 
-export type BlogListQueryVariables = Exact<{
-  locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
-}>;
-
-
-export type BlogListQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, Url?: string | null, StartPublish?: any | null, MainIntro?: string | null, MainBody?: string | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
-
 export const LandingPageFragmentDoc = `
     fragment LandingPage on LandingPage {
   Name
 }
     `;
-export const GetContentDocument = `
-    query GetContent($url: String) {
-  Content(locale: en, where: {RelativePath: {eq: $url}}) {
-    items {
-      _fulltext
-    }
-  }
-}
-    `;
-export const useGetContentQuery = <
-      TData = GetContentQuery,
-      TError = unknown
-    >(
-      variables?: GetContentQueryVariables,
-      options?: UseQueryOptions<GetContentQuery, TError, TData>
-    ) =>
-    useQuery<GetContentQuery, TError, TData>(
-      variables === undefined ? ['GetContent'] : ['GetContent', variables],
-      fetcher<GetContentQuery, GetContentQueryVariables>(GetContentDocument, variables),
-      options
-    );
 export const BlogListDocument = `
     query BlogList($locale: [Locales] = en) {
   LocationItemPage(locale: $locale, orderBy: {Name: ASC}) {
     items {
       Name
-      Url
+      RelativePath
       StartPublish
       MainIntro
-      MainBody
       Image {
         Url
       }
@@ -68001,5 +67987,57 @@ export const useBlogListQuery = <
     useQuery<BlogListQuery, TError, TData>(
       variables === undefined ? ['BlogList'] : ['BlogList', variables],
       fetcher<BlogListQuery, BlogListQueryVariables>(BlogListDocument, variables),
+      options
+    );
+export const BlogPostDocument = `
+    query BlogPost($locale: [Locales] = en, $url: String) {
+  LocationItemPage(locale: $locale, where: {RelativePath: {eq: $url}}) {
+    items {
+      Name
+      Url
+      StartPublish
+      MainIntro
+      MainBody
+      Image {
+        Url
+      }
+      PageImage {
+        Url
+      }
+    }
+  }
+}
+    `;
+export const useBlogPostQuery = <
+      TData = BlogPostQuery,
+      TError = unknown
+    >(
+      variables?: BlogPostQueryVariables,
+      options?: UseQueryOptions<BlogPostQuery, TError, TData>
+    ) =>
+    useQuery<BlogPostQuery, TError, TData>(
+      variables === undefined ? ['BlogPost'] : ['BlogPost', variables],
+      fetcher<BlogPostQuery, BlogPostQueryVariables>(BlogPostDocument, variables),
+      options
+    );
+export const GetContentDocument = `
+    query GetContent($url: String) {
+  Content(locale: en, where: {RelativePath: {eq: $url}}) {
+    items {
+      _fulltext
+    }
+  }
+}
+    `;
+export const useGetContentQuery = <
+      TData = GetContentQuery,
+      TError = unknown
+    >(
+      variables?: GetContentQueryVariables,
+      options?: UseQueryOptions<GetContentQuery, TError, TData>
+    ) =>
+    useQuery<GetContentQuery, TError, TData>(
+      variables === undefined ? ['GetContent'] : ['GetContent', variables],
+      fetcher<GetContentQuery, GetContentQueryVariables>(GetContentDocument, variables),
       options
     );

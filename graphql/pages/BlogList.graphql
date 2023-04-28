@@ -5,10 +5,9 @@ query BlogList($locale: [Locales] = en){
   {
     items{
       Name,
-      Url,
+      RelativePath,
       StartPublish
       MainIntro,
-      MainBody,
       Image {
         Url
       },

@@ -18,7 +18,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Header/>
+            <Header height={60}/>
             <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
                 <div className="mx-0 sm:mx-6">
                     <Nav/>
@@ -27,7 +27,7 @@ export default function Home() {
                             .filter((item,index) => index == 0)
                             .map((content) => {
                         return (
-                            <BlogPostSummaryLead key={content?.Url} blogItem={content} />
+                            <BlogPostSummaryLead key={content?.RelativePath} blogItem={content} />
                         );
                     })}
                     <div className="flex flex-wrap justify-between pt-12 -mx-6">
@@ -37,13 +37,11 @@ export default function Home() {
                                 .map((content) => {
                             // @ts-ignore
                                     return (
-                                <BlogPostSummary key={content?.Url} blogItem={content} />
+                                <BlogPostSummary key={content?.RelativePath} blogItem={content} />
                             );
                         })}
                     </div>
-
                 </div>
-
             </div>
         </>
     );
