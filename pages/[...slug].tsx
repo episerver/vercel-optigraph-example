@@ -1,8 +1,7 @@
-import Header from "@/components/Header";
+import Header from "@/components/react/Header";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from 'next/router';
-import {useQuery, gql} from "@apollo/client";
 import {useGetContentQuery} from "@/generated";
 
 const inter = Inter({ subsets: ["latin"] });

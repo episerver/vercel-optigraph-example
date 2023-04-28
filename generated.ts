@@ -67944,7 +67944,7 @@ export type BlogListQueryVariables = Exact<{
 }>;
 
 
-export type BlogListQuery = { __typename?: 'Query', BlogItemPage?: { __typename?: 'BlogItemPageOutput', items?: Array<{ __typename?: 'BlogItemPage', Name?: string | null, TeaserText?: string | null, MainBody?: string | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
+export type BlogListQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, Url?: string | null, StartPublish?: any | null, MainIntro?: string | null, MainBody?: string | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
 
 export const LandingPageFragmentDoc = `
     fragment LandingPage on LandingPage {
@@ -67974,11 +67974,16 @@ export const useGetContentQuery = <
     );
 export const BlogListDocument = `
     query BlogList($locale: [Locales] = en) {
-  BlogItemPage(locale: $locale) {
+  LocationItemPage(locale: $locale) {
     items {
       Name
-      TeaserText
+      Url
+      StartPublish
+      MainIntro
       MainBody
+      Image {
+        Url
+      }
       PageImage {
         Url
       }
