@@ -1,0 +1,26 @@
+query SearchBlogs($locale: [Locales] = en, $query:String){
+  LocationItemPage(
+    locale: $locale,
+    orderBy:{
+      Name : ASC
+    },
+    where:{
+      _fulltext : {
+        contains : $query
+      }
+    })
+  {
+    items{
+      RelativePath,
+      Name,
+      MainIntro,
+      StartPublish,
+      Image {
+        Url
+      },
+      PageImage {
+        Url
+      }
+    }
+  }
+}
