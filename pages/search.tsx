@@ -7,8 +7,8 @@ import BlogPostSummary from "@/components/cms/blocks/BlogPostSummary";
 
 export default function Search(){
     const router = useRouter();
-    const query = router.query.query !== undefined ? router.query.query : '';
-    console.log(query);
+    let query = router.query.query !== undefined ? router.query.query : '';
+    // @ts-ignore
     const data = useSearchBlogsQuery({query: query}).data;
     return (
         <>
