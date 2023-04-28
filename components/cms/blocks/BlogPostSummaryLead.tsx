@@ -19,8 +19,7 @@ export default function BlogPostSummaryLead({blogItem} : Content){
                             <div className="w-full font-bold text-xl text-gray-900 px-6">{blogItem.Name}
                             </div>
                             <p className="text-gray-800 font-serif text-base px-6 mb-5">
-                                This starter template is an attempt to replicate the default Ghost theme "Casper" using
-                                Tailwind CSS and vanilla Javascript.
+                                {blogItem.MainIntro}
                             </p>
                         </div>
 

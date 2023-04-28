@@ -67974,7 +67974,7 @@ export const useGetContentQuery = <
     );
 export const BlogListDocument = `
     query BlogList($locale: [Locales] = en) {
-  LocationItemPage(locale: $locale) {
+  LocationItemPage(locale: $locale, orderBy: {Name: ASC}) {
     items {
       Name
       Url
