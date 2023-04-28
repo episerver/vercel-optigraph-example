@@ -10,7 +10,6 @@ export default function Home() {
   const router = useRouter();
   const slug = (router.query.slug as string[]) || [];
   const url = "/" + slug.join('/');
-  const data = useGetContentQuery({ url: url}).data;
   return (
     <>
       <Head>
@@ -22,8 +21,7 @@ export default function Home() {
       <Header />
       <div className="flex flex-col justify-center">
         <div>
-          <p className="text-2xl">Slug Page: {slug.join('/')}</p>
-            <p>{data?.Content?.items[0]?._fulltext}</p>
+          <p className="text-2xl">Post Detail: {slug.join('/')}</p>
         </div>
       </div>
     </>

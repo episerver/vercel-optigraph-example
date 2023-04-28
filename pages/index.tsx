@@ -22,14 +22,21 @@ export default function Home() {
             <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
                 <div className="mx-0 sm:mx-6">
                     <Nav/>
-                    {data?.LocationItemPage?.items && data.LocationItemPage?.items.filter((item,index) => index == 0).map((content) => {
+                    {data?.LocationItemPage?.items &&
+                        data.LocationItemPage?.items
+                            .filter((item,index) => index == 0)
+                            .map((content) => {
                         return (
                             <BlogPostSummaryLead key={content?.Url} blogItem={content} />
                         );
                     })}
                     <div className="flex flex-wrap justify-between pt-12 -mx-6">
-                        {data?.LocationItemPage?.items && data.LocationItemPage?.items.filter((item,index) => index != 0).map((content) => {
-                            return (
+                        {data?.LocationItemPage?.items &&
+                            data.LocationItemPage?.items
+                                .filter((item,index) => index != 0)
+                                .map((content) => {
+                            // @ts-ignore
+                                    return (
                                 <BlogPostSummary key={content?.Url} blogItem={content} />
                             );
                         })}
