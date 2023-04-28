@@ -1,0 +1,13 @@
+query BlogList($locale: [Locales] = en){
+  BlogItemPage(locale: $locale)
+  {
+    items{
+      Name,
+      TeaserText,
+      MainBody,
+      PageImage {
+        Url
+      }
+    }
+  }
+}

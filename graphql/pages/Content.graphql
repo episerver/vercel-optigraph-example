@@ -1,0 +1,12 @@
+query GetContent($url: String) {
+  Content(locale: en,
+    where: {
+      RelativePath: {
+        eq: $url
+      }})
+  {
+    items{
+      _fulltext
+    }
+  }
+}

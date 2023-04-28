@@ -1,0 +1,12 @@
+schema: https://cg.optimizely.com/content/v2?auth=***REMOVED***
+documents: './graphql/**/*.graphql'
+generates:
+  ./generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+    config:
+      withHooks: true
+      fetcher:
+        endpoint: 'https://cg.optimizely.com/content/v2?auth=***REMOVED***'
