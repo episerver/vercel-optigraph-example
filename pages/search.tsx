@@ -14,7 +14,7 @@ export default function Search(){
         <>
             <Header height={60} />
             <div className="flex flex-col w-full items-center">
-                <div className="text-4xl">Searching for <span className="text-2xl">{query}</span></div>
+                <div className="text-4xl">Searching for <span className="text-2xl text-red-400">{query}</span></div>
             </div>
 
             <div className="flex">
