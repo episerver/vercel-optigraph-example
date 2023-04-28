@@ -2,14 +2,14 @@ import Header from "@/components/react/Header";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from 'next/router';
-import {useGetContentQuery} from "@/generated";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Post({url}) {
   const router = useRouter();
   const slug = (router.query.slug as string[]) || [];
   const url = "/" + slug.join('/');
+  const data = useBlogPo({ url: url}).data;
   return (
     <>
       <Head>
@@ -21,7 +21,8 @@ export default function Home() {
       <Header />
       <div className="flex flex-col justify-center">
         <div>
-          <p className="text-2xl">Post Detail: {slug.join('/')}</p>
+          <p className="text-2xl">Slug Page: {slug.join('/')}</p>
+            <p>{data?.Content?.items[0]?._fulltext}</p>
         </div>
       </div>
     </>
