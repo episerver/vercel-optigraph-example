@@ -1,5 +1,5 @@
 query BlogList($locale: [Locales] = en){
-  LocationItemPage(locale: $locale, orderBy:{
+  LocationItemPage(locale: $locale, limit: 50, orderBy:{
     Name : ASC
   })
   {
