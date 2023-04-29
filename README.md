@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Deployment Variables
+When deploying to Vercel add the environment variable *NEXT_PUBLIC_CG_SINGLE_KEY* to the project with a valid content graph Single Key
+When testing the application locally ensure that you update .env file with a valide Single Key from Content Graph
+
 ## Getting Started
 
 First, run the development server:
