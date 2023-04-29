@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 When deploying to Vercel add the environment variable *NEXT_PUBLIC_CG_SINGLE_KEY* to the project with a valid content graph Single Key
 When testing the application locally ensure that you update .env file with a valide Single Key from Content Graph
 
+[![name](public/vercel.gif)](public/vercel.gif)
+
+
 ## Getting Started
 
 First, run the development server:
