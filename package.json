@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "generate": "graphql-codegen",
+    "generate": "graphql-codegen -r dotenv/config",
     "dev": "next dev",
-    "prebuild": "graphql-codegen",
+    "prebuild": "graphql-codegen -r dotenv/config",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

@@ -1,4 +1,4 @@
-schema: https://cg.optimizely.com/content/v2?auth=***REMOVED***
+schema: https://cg.optimizely.com/content/v2?auth=${NEXT_PUBLIC_CG_SINGLE_KEY}
 documents: './graphql/**/*.graphql'
 generates:
   ./generated.ts:
@@ -9,4 +9,4 @@ generates:
     config:
       withHooks: true
       fetcher:
-        endpoint: 'https://cg.optimizely.com/content/v2?auth=***REMOVED***'
+        endpoint: 'https://cg.optimizely.com/content/v2?auth=${NEXT_PUBLIC_CG_SINGLE_KEY}'

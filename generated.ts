@@ -67969,7 +67969,7 @@ export const LandingPageFragmentDoc = `
     `;
 export const BlogListDocument = `
     query BlogList($locale: [Locales] = en) {
-  LocationItemPage(locale: $locale, orderBy: {Name: ASC}) {
+  LocationItemPage(locale: $locale, limit: 50, orderBy: {Name: ASC}) {
     items {
       Name
       RelativePath
