@@ -1,3 +1,0 @@
-fragment LandingPage on LandingPage {
-    Name
-}
