@@ -2,13 +2,14 @@ import {LocationItemPage} from "@/generated";
 import Link from "next/link";
 interface Content {
     blogItem: LocationItemPage
+    width?: String
 }
-export default function BlogPostSummary({blogItem} : Content){
+export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
     let image  = blogItem.PageImage == undefined ? blogItem.Image?.Url : blogItem.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${blogItem.Name}` : image;
     return(
         <>
-            <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div className={`w-full md:w-${width} p-6 flex flex-col flex-grow flex-shrink`}>
                 <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                     <Link href={blogItem.RelativePath} className="flex flex-wrap no-underline hover:no-underline">
                         <img src={image}

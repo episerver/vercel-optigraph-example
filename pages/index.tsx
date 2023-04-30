@@ -1,15 +1,17 @@
 import Header from "@/components/react/Header";
 import {Inter} from "next/font/google";
 import Head from "next/head";
-import {LocationItemPage, useBlogListQuery} from "@/generated";
+import {useBlogListQuery} from "@/generated";
 import Nav from "@/components/react/Nav";
 import BlogPostSummary from "@/components/cms/blocks/BlogPostSummary";
 import BlogPostSummaryLead from "@/components/cms/blocks/BlogPostSummaryLead";
+import chance from 'chance';
 
 const inter = Inter({subsets: ["latin"]});
-
 export default function Home() {
     const data = useBlogListQuery().data;
+    const items = data?.LocationItemPage?.items;
+    let firstItem = items == null ? null : items[0];
     return (
         <>
             <Head>
@@ -37,7 +39,7 @@ export default function Home() {
                                 .map((content) => {
                             // @ts-ignore
                                     return (
-                                <BlogPostSummary key={content?.RelativePath} blogItem={content} />
+                                <BlogPostSummary key={content?.RelativePath} blogItem={content} width={`${chance().pickone(['1/3','2/3','2/3','1/3'])}`} />
                             );
                         })}
                     </div>
