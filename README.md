@@ -1,10 +1,24 @@
+## Deploy with Vercel
+Click the deploy button below to directly deploy this repository with Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkunalshetye%2Fcg-blog&env=NEXT_PUBLIC_CG_SINGLE_KEY,NEXT_PUBLIC_CG_APP_KEY,NEXT_PUBLIC_CG_SECRET,NEXT_PUBLIC_CG_PREVIEW_MODE)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Deployment Variables
+## Deployment Variables
 When deploying to Vercel add the environment variable *NEXT_PUBLIC_CG_SINGLE_KEY* to the project with a valid content graph Single Key
 When testing the application locally ensure that you update .env file with a valide Single Key from Content Graph
 
 [![name](public/vercel.gif)](public/vercel.gif)
+
+
+## Setting Up Preview for Content Graph
+| Variable                    | Description                    | Value                         |
+|-----------------------------|--------------------------------|-------------------------------|
+| NEXT_PUBLIC_CG_SINGLE_KEY   | Single Key from Content Graph  |                               |
+| NEXT_PUBLIC_CG_APP_KEY      | App Key from ContentGraph      |                               |
+| NEXT_PUBLIC_CG_SECRET       | App Secret from ContentGraph   |                               |
+| NEXT_PUBLIC_CG_PREVIEW_MODE | Toggles fetching Draft Content | true/false , default is false |
 
 
 ## Getting Started
