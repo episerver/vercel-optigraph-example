@@ -4,7 +4,7 @@ interface Content {
     blogItem: LocationItemPage,
 }
 export default function BlogPostSummaryLead({blogItem} : Content){
-    let image  = blogItem.PageImage == null ? blogItem.Image?.Url : blogItem.PageImage.Url;
+    let image  = blogItem.PageImage.Url == null ? blogItem.Image?.Url : blogItem.PageImage.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${blogItem.Name.replace(' ','')}` : image;
     return(
             <div className="flex h-full bg-white rounded overflow-hidden shadow-lg">
