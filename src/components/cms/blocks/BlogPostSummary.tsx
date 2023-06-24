@@ -17,6 +17,7 @@ export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
                             className="h-64 w-full rounded-t pb-6"
                             width={336}
                             height={256}
+                            loading={"lazy"}
                             alt={blogItem?.Name || "city"}
                         />
                             {/*<p className="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>*/}
