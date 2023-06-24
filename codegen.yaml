@@ -1,12 +1,21 @@
-schema: https://cg.optimizely.com/content/v2?auth=${NEXT_PUBLIC_CG_SINGLE_KEY}
-documents: './graphql/**/*.graphql'
+schema: https://cg.optimizely.com/content/v2?auth=${CG_SINGLE_KEY}
+documents: './src/graphql/**/*.graphql'
 generates:
-  ./generated.ts:
+  ./src/generated/graphql.schema.json:
+    plugins:
+      - introspection
+  ./src/generated/graphql.schema.graphql:
+    plugins:
+      - schema-ast
+  ./src/generated/sdk.ts:
     plugins:
       - typescript
       - typescript-operations
-      - typescript-react-query
+      - typescript-graphql-request
     config:
-      withHooks: true
-      fetcher:
-        endpoint: 'https://cg.optimizely.com/content/v2?auth=${NEXT_PUBLIC_CG_SINGLE_KEY}'
+      rawRequest: false
+      inlineFragmentTypes: 'combine'
+      skipTypename: false
+      exportFragmentSpreadSubTypes: true
+      dedupeFragments: true
+      preResolveTypes: true
