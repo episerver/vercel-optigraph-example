@@ -3,15 +3,11 @@ import Header from "@/src/components/react/Header";
 import {Inter} from "next/font/google";
 import Head from "next/head";
 import {client} from "@/src/client";
+import {getData} from "@/src/app/page";
 
 const inter = Inter({subsets: ["latin"]});
 
-type Params = {
-    params: {
-        slug: string
-    }
-}
-export default async function Post({params: { slug } } : Params) {
+export default async function Post({params: { slug } }) {
     const id = parseInt(slug[0] || "0");
     const workId = parseInt(slug[1] || "0");
     const data = await client.BlogPost({id: id, workId: workId});
@@ -29,33 +25,20 @@ export default async function Post({params: { slug } } : Params) {
                         <link rel="icon" href="/favicon.ico"/>
                     </Head>
                     <Header height={15}/>
-                    {/*<div className="flex flex-col justify-center">*/}
-                    {/*  <div>*/}
-                    {/*    <p className="text-2xl">Slug Page: {slug.join('/')}</p>*/}
-                    {/*      <p>{data?.LocationItemPage?.items[0]?.Name}</p>*/}
-                    {/*      <div dangerouslySetInnerHTML={{ __html: data?.LocationItemPage?.items[0]?.MainBody}} />*/}
-                    {/*  </div>*/}
-                    {/*</div>*/}
                     <div className="text-center pt-16 md:pt-32">
                         <h1 className="font-bold break-normal text-3xl md:text-5xl">{item.Name}</h1>
                     </div>
                     <div className="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
                          style={{backgroundImage: `url(${image})`, height: '30vh'}}></div>
                     <div className="container max-w-5xl mx-auto -mt-32">
-
                         <div className="mx-0 sm:mx-6">
-
                             <div
                                 className="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
                                 style={{fontFamily: 'Georgia,serif'}}>
-
                                 <p className="text-2xl md:text-3xl mb-5">
                                     {item.MainIntro}
                                 </p>
-
                                 <div className="py-6" dangerouslySetInnerHTML={{__html: item.MainBody}}></div>
-
-
                             </div>
 
                             <div className="flex w-full items-center font-sans p-8 md:p-24">
@@ -79,12 +62,19 @@ export default async function Post({params: { slug } } : Params) {
                             </div>
                         </div>
                     </div>
-                    )
+            )
                 </>
             }</>
     );
 }
 
-async function getData(){
-
+export async function generateStaticParams(){
+    const posts = await getData();
+    let paths = [];
+    posts.LocationItemPage?.items?.map(post => (
+        paths.push({
+            slug: [post?.ContentLink?.Id?.toString() || "0", post?.ContentLink?.WorkId?.toString() || "0"]
+        })
+    ));
+    return paths;
 }

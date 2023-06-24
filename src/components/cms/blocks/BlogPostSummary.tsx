@@ -15,8 +15,8 @@ export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
                     <Link href={`/posts/${blogItem?.ContentLink?.Id}/${blogItem?.ContentLink?.WorkId}`} className="flex flex-wrap no-underline hover:no-underline">
                         <Image src={image}
                             className="h-64 w-full rounded-t pb-6"
-                            width={640}
-                            height={480}
+                            width={336}
+                            height={256}
                             alt={blogItem?.Name || "city"}
                         />
                             {/*<p className="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>*/}

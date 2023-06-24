@@ -6,11 +6,13 @@ const endpoint = `https://cg.optimizely.com/content/v2?auth=${process.env.NEXT_P
 const graphQlClient = new GraphQLClient(endpoint, {
     headers: {
     },
+    next: {revalidate: 3600}
 });
 
 const previewGraphQlClient = new GraphQLClient(endpoint, {
     headers: {
     },
+    next: {revalidate: 60}
 });
 
 export const client = getSdk(graphQlClient);
