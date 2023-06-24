@@ -6,7 +6,7 @@ interface Config {
 }
 
 export default function Header({height}: Config) {
-    const coverImage = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80";
+    const coverImage = "/city-guide.avif";
 
     return (
         <div className="w-full m-0 p-0 bg-cover bg-bottom"

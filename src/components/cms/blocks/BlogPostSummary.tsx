@@ -1,5 +1,6 @@
 import {LocationItemPage} from "@/generated";
 import Link from "next/link";
+import Image from "next/image";
 interface Content {
     blogItem: LocationItemPage
     width?: String
@@ -12,8 +13,12 @@ export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
             <div className={`w-full md:w-${width} p-6 flex flex-col flex-grow flex-shrink`}>
                 <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                     <Link href={`/posts/${blogItem?.ContentLink?.Id}/${blogItem?.ContentLink?.WorkId}`} className="flex flex-wrap no-underline hover:no-underline">
-                        <img src={image}
-                             className="h-64 w-full rounded-t pb-6" alt={"image"} />
+                        <Image src={image}
+                            className="h-64 w-full rounded-t pb-6"
+                            width={640}
+                            height={480}
+                            alt={blogItem?.Name || "city"}
+                        />
                             {/*<p className="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>*/}
                             <div className="w-full font-bold text-xl text-gray-900 px-6">{blogItem?.Name}
                             </div>

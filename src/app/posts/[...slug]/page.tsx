@@ -18,7 +18,6 @@ export default async function Post({params: { slug } } : Params) {
     const item = data?.LocationItemPage?.items[0];
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
-    console.log(image);
     return (
         <>
             {item &&
@@ -38,7 +37,6 @@ export default async function Post({params: { slug } } : Params) {
                     {/*  </div>*/}
                     {/*</div>*/}
                     <div className="text-center pt-16 md:pt-32">
-                        <p className="text-sm md:text-base text-green-500 font-bold">{item.StartPublish}</p>
                         <h1 className="font-bold break-normal text-3xl md:text-5xl">{item.Name}</h1>
                     </div>
                     <div className="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
