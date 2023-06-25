@@ -5,7 +5,6 @@
   "scripts": {
     "generate": "graphql-codegen -r dotenv/config",
     "dev": "next dev",
-    "prebuild": "graphql-codegen -r dotenv/config",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
