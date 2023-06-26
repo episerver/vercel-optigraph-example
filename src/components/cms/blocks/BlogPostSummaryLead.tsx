@@ -17,9 +17,9 @@ export default function BlogPostSummaryLead({blogItem} : Content){
 
                     <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <div className="w-full font-bold text-xl text-gray-900 px-6 pt-8">{blogItem?.Name}
+                            <div className="w-full font-bold text-3xl text-gray-900 px-6 pt-8">{blogItem?.Name}
                             </div>
-                            <p className="text-gray-800 font-serif text-base px-6 mb-5">
+                            <p className="text-gray-700 font-serif text-lg px-6 mb-5">
                                 {blogItem?.MainIntro}
                             </p>
                         </div>
