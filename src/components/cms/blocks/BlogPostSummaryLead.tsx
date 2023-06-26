@@ -1,6 +1,6 @@
-import {LocationItemPage} from "@/generated";
 import Link from "next/link";
 import Image from "next/image";
+import {LocationItemPage} from "@/src/generated/sdk";
 interface Content {
     blogItem: LocationItemPage,
 }
