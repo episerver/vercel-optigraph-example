@@ -12,8 +12,6 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<ResponseData>
 ) {
-    console.log(req.headers);
-    console.log(webhookUrl);
     const endTime = DateTime.utc().set({seconds: 0, milliSeconds: 0});
     const startTime = endTime.minus({minute: 1});
     let callingWebhook = false;
@@ -25,7 +23,6 @@ export default async function handler(
             });
     if (response?.Content?.total || -1 > 0) {
         callingWebhook = true;
-        console.log("calling webhook");
         if(webhookUrl !== ''){
             await fetch(webhookUrl);
         }
