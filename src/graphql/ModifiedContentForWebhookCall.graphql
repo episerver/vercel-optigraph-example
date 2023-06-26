@@ -1,0 +1,8 @@
+query ModifiedContentForWebhookCall($startTime: Date, $endTime: Date) {
+    Content(
+        limit: 1
+        where: { _modified: { gte: $startTime, lte: $endTime }, Status: { eq: "Published" } }
+    ) {
+        total
+    }
+}

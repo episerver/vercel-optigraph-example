@@ -81403,6 +81403,14 @@ export type YouTubeBlockWhereInput = {
   _or?: InputMaybe<Array<InputMaybe<YouTubeBlockWhereInput>>>;
 };
 
+export type ModifiedContentForWebhookCallQueryVariables = Exact<{
+  startTime?: InputMaybe<Scalars['Date']>;
+  endTime?: InputMaybe<Scalars['Date']>;
+}>;
+
+
+export type ModifiedContentForWebhookCallQuery = { __typename?: 'Query', Content?: { __typename?: 'ContentOutput', total?: number | null } | null };
+
 export type BlogListQueryVariables = Exact<{
   locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
 }>;
@@ -81435,6 +81443,16 @@ export type SearchBlogsQueryVariables = Exact<{
 export type SearchBlogsQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', RelativePath?: string | null, Name?: string | null, MainIntro?: string | null, StartPublish?: any | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
 
 
+export const ModifiedContentForWebhookCallDocument = gql`
+    query ModifiedContentForWebhookCall($startTime: Date, $endTime: Date) {
+  Content(
+    limit: 1
+    where: {_modified: {gte: $startTime, lte: $endTime}, Status: {eq: "Published"}}
+  ) {
+    total
+  }
+}
+    `;
 export const BlogListDocument = gql`
     query BlogList($locale: [Locales] = en) {
   LocationItemPage(locale: $locale, limit: 50, orderBy: {Name: ASC}) {
@@ -81528,6 +81546,9 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
+    ModifiedContentForWebhookCall(variables?: ModifiedContentForWebhookCallQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<ModifiedContentForWebhookCallQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<ModifiedContentForWebhookCallQuery>(ModifiedContentForWebhookCallDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'ModifiedContentForWebhookCall', 'query');
+    },
     BlogList(variables?: BlogListQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<BlogListQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<BlogListQuery>(BlogListDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'BlogList', 'query');
     },
