@@ -17,7 +17,8 @@ export default async function Post({params: { slug } }) {
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
     const cmsUrl = process.env.CMS_URL || "";
     if(cmsUrl !== ""){
-        item.Name = encodeEditInfo(item?.Name || '',process.env.CMS_URL);
+        const finalUrl=  `${cmsUrl}/EPiServer/CMS/?language=en#context=epi.cms.contentdata:///${id}&viewsetting=viewlanguage:///en`
+        item.Name = encodeEditInfo(item?.Name || '', cmsUrl ,finalUrl);
     }
     return (
         <>
@@ -85,9 +86,9 @@ export async function generateStaticParams(){
 }
 
 
-function encodeEditInfo(text: string, href: string): string {
+function encodeEditInfo(text: string, orgin: string, href: string): string {
     return vercelStegaCombine(text, {
-        origin: 'Optimizely',
+        origin,
         href,
     });
 }
