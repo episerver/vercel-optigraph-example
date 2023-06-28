@@ -4,7 +4,7 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import {client} from "@/src/client";
 import {getData} from "@/src/app/page";
-import {vercelStegaCombine} from "@vercel/stega";
+import {encodeEditInfo} from "@/src/lib/visualEditing";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -83,12 +83,4 @@ export async function generateStaticParams(){
         })
     ));
     return paths;
-}
-
-
-function encodeEditInfo(text: string, origin: string, href: string): string {
-    return vercelStegaCombine(text, {
-        origin,
-        href,
-    });
 }

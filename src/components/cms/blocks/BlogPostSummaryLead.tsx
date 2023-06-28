@@ -1,12 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import {LocationItemPage} from "@/src/generated/sdk";
+import {encodeEditInfo} from "@/src/lib/visualEditing";
 interface Content {
     blogItem: LocationItemPage,
 }
 export default function BlogPostSummaryLead({blogItem} : Content){
     let image  = blogItem?.PageImage?.Url == null ? blogItem.Image?.Url : blogItem.PageImage.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${blogItem?.Name?.replace(' ','') || ""}` : image;
+    const cmsUrl = process.env.CMS_URL || "";
+    if(cmsUrl !== ""){
+        const finalUrl=  `${cmsUrl}/EPiServer/CMS/?language=en#context=epi.cms.contentdata:///${blogItem?.ContentLink?.Id}&viewsetting=viewlanguage:///en`
+        blogItem.Name = encodeEditInfo(blogItem?.Name || '', "optimizely.com" ,finalUrl);
+    }
     return(
             <div className="flex h-full bg-white rounded overflow-hidden shadow-lg">
                 <Link href={`/posts/${blogItem?.ContentLink?.Id}/${blogItem?.ContentLink?.WorkId}`} className="flex flex-wrap no-underline hover:no-underline">
