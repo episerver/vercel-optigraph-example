@@ -4,6 +4,7 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import {client} from "@/src/client";
 import {getData} from "@/src/app/page";
+import {vercelStegaCombine} from "@vercel/stega";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -14,6 +15,10 @@ export default async function Post({params: { slug } }) {
     const item = data?.LocationItemPage?.items[0];
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
+    const cmsUrl = process.env.CMS_URL || "";
+    if(cmsUrl !== ""){
+        item.Name = encodeEditInfo(item?.Name || '',process.env.CMS_URL);
+    }
     return (
         <>
             {item &&
@@ -77,4 +82,12 @@ export async function generateStaticParams(){
         })
     ));
     return paths;
+}
+
+
+function encodeEditInfo(text: string, href: string): string {
+    return vercelStegaCombine(text, {
+        origin: 'Optimizely',
+        href,
+    });
 }
