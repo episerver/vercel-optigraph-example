@@ -86,7 +86,7 @@ export async function generateStaticParams(){
 }
 
 
-function encodeEditInfo(text: string, orgin: string, href: string): string {
+function encodeEditInfo(text: string, origin: string, href: string): string {
     return vercelStegaCombine(text, {
         origin,
         href,
