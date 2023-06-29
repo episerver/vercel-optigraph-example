@@ -12,6 +12,10 @@ const nextConfig = {
         port: '',
         pathname: '/globalassets/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+      }
     ],
   },
 }

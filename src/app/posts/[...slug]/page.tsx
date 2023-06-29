@@ -2,16 +2,16 @@
 import Header from "@/src/components/react/Header";
 import {Inter} from "next/font/google";
 import Head from "next/head";
-import {client} from "@/src/client";
 import {getData} from "@/src/app/page";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
+import {getClient} from "@/src/client";
 
 const inter = Inter({subsets: ["latin"]});
 
 export default async function Post({params: { slug } }) {
     const id = parseInt(slug[0] || "0");
     const workId = parseInt(slug[1] || "0");
-    const data = await client.BlogPost({id: id, workId: workId});
+    const data = await getClient().BlogPost({id: id, workId: workId});
     const item = data?.LocationItemPage?.items[0];
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;

@@ -1,4 +1,4 @@
-import {client} from "@/src/client";
+import {getClient} from "@/src/client";
 import Head from "next/head";
 import Header from "@/src/components/react/Header";
 import BlogPostSummaryLead from "@/src/components/cms/blocks/BlogPostSummaryLead";
@@ -50,5 +50,5 @@ export default async function Page({ params }: any)  {
     );
 }
 export async function getData(){
-  return await client.BlogList();
+  return await getClient().BlogList();
 }
