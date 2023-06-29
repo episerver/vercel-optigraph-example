@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type {NextApiRequest, NextApiResponse} from 'next'
 import {DateTime} from 'luxon'
-import {client} from "@/src/client";
+import {getClient} from "@/src/client";
 
 type ResponseData = {
     status: string
@@ -16,7 +16,7 @@ export default async function handler(
     const startTime = endTime.minus({minute: 1});
     let callingWebhook = false;
     const response =
-        await client
+        await getClient()
             .ModifiedContentForWebhookCall({
                 startTime: startTime,
                 endTime: endTime
