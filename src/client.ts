@@ -7,7 +7,7 @@ import {getAuthenticationHeader} from "@/src/lib/contentgraph";
 
 
 const endpoint = `https://cg.optimizely.com/content/v2`
-const endpointWithSingleKey = `${endpoint}?auth=${process.env.NEXT_PUBLIC_CG_SINGLE_KEY}`
+const endpointWithSingleKey = `${endpoint}?auth=${process.env.CG_SINGLE_KEY}`
 
 // Standard Requests
 
