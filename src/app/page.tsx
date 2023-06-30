@@ -1,8 +1,8 @@
 import {getClient} from "@/src/client";
 import Head from "next/head";
-import Header from "@/src/components/react/Header";
-import BlogPostSummaryLead from "@/src/components/cms/blocks/BlogPostSummaryLead";
-import BlogPostSummary from "@/src/components/cms/blocks/BlogPostSummary";
+import Header from "@/src/components/Header";
+import BlogPostSummaryLead from "@/src/components/BlogPostSummaryLead";
+import BlogPostSummary from "@/src/components/BlogPostSummary";
 import {Suspense} from "react";
 
 export default async function Page({ params }: any)  {

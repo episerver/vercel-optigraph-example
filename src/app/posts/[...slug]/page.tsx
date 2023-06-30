@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Header from "@/src/components/react/Header";
+import Header from "@/src/components/Header";
 import {Inter} from "next/font/google";
 import Head from "next/head";
 import {getData} from "@/src/app/page";
