@@ -1,7 +1,7 @@
 query BlogList($locale: [Locales] = en){
-  LocationItemPage(locale: $locale, limit: 50, orderBy:{
-    Name : ASC
-  })
+  LocationItemPage(locale: $locale, limit: 100, orderBy:{
+    Name : ASC, Saved: DESC
+  }, where: { IsCommonDraft: {eq: true}})
   {
     items{
       Name,
@@ -14,6 +14,7 @@ query BlogList($locale: [Locales] = en){
       PageImage {
         Url
       },
+      Saved,
       ContentLink {
         Id
         WorkId

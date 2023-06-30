@@ -38,6 +38,8 @@ type AdaptiveHeroBlock implements IContent {
 
   """"""
   HeroImage: AdaptiveHeroBlockSingleImage
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -367,6 +369,8 @@ type AdaptiveImage implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -649,6 +653,8 @@ type AddressBookPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -967,6 +973,8 @@ type AddressesElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -1206,6 +1214,8 @@ type AssetsDownloadLinksBlock implements IContent {
 
   """"""
   GroupName: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -1398,6 +1408,8 @@ type Associations implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -1584,6 +1596,8 @@ type BlogCommentBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -1810,6 +1824,8 @@ type BlogItemPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -2165,6 +2181,8 @@ type BlogListPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -2557,6 +2575,8 @@ type BookmarksPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -2928,6 +2948,8 @@ type BootstrapCardBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -3165,6 +3187,8 @@ type BreadcrumbBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -3394,6 +3418,8 @@ type BudgetingPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -3709,6 +3735,8 @@ type BundleContent implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -4061,6 +4089,8 @@ type ButtonBlock implements IContent {
 
   """"""
   FontSize: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -4335,6 +4365,8 @@ type CalendarBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -4580,6 +4612,8 @@ type CalendarEventPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -4911,6 +4945,8 @@ type CallToActionBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -5259,6 +5295,8 @@ type CaptchaElementBlock implements IContent {
 
   """"""
   ImageWidth: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -5461,6 +5499,8 @@ type CarouselBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -5698,6 +5738,8 @@ type CarouselControls implements IContent {
   The amount of time in milliseconds before automatically advancing to the next slide. Defaults to 5 seconds
   """
   Interval: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -5926,6 +5968,8 @@ type CartPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -6241,6 +6285,8 @@ type CatalogContent implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -6432,6 +6478,8 @@ type Categories implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -6605,6 +6653,8 @@ type CategoryBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -6857,6 +6907,8 @@ type CheckoutPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -7169,6 +7221,8 @@ type ChoiceElementBlock implements IContent {
 
   """"""
   Feed: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -7363,6 +7417,8 @@ type CodingFile implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -7586,6 +7642,8 @@ type CollectionPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -7937,6 +7995,8 @@ type CommentsBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -8187,6 +8247,8 @@ type CommunityPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -8785,6 +8847,8 @@ type ContainerBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -8970,6 +9034,8 @@ type Content implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -9014,54 +9080,63 @@ type Content implements IContent {
 type ContentAreaItemModel {
   ContentLink: ContentModelReference
   DisplayOption: String
+  InlineBlock: InlineBlockPropertyModel
   Tag: String
 }
 
 type ContentAreaItemModelAutocomplete {
   ContentLink: ContentModelReferenceAutocomplete
   DisplayOption(limit: Int! = 10, value: String!): [String]
+  InlineBlock: InlineBlockPropertyModelAutocomplete
   Tag(limit: Int! = 10, value: String!): [String]
 }
 
 type ContentAreaItemModelFacet {
   ContentLink: ContentModelReferenceFacet
   DisplayOption(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  InlineBlock: InlineBlockPropertyModelFacet
   Tag(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
 }
 
 input ContentAreaItemModelOrderByInput {
   ContentLink: ContentModelReferenceOrderByInput
   DisplayOption: OrderBy
+  InlineBlock: InlineBlockPropertyModelOrderByInput
   Tag: OrderBy
 }
 
 type ContentAreaItemModelSearch {
   ContentLink: ContentModelReferenceSearch
   DisplayOption: String
+  InlineBlock: InlineBlockPropertyModelSearch
   Tag: String
 }
 
 type ContentAreaItemModelSearchFacet {
   ContentLink: ContentModelReferenceSearchFacet
   DisplayOption(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  InlineBlock: InlineBlockPropertyModelSearchFacet
   Tag(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
 }
 
 input ContentAreaItemModelSearchOrderByInput {
   ContentLink: ContentModelReferenceSearchOrderByInput
   DisplayOption: OrderBy
+  InlineBlock: InlineBlockPropertyModelSearchOrderByInput
   Tag: OrderBy
 }
 
 input ContentAreaItemModelSearchWhereInput {
   ContentLink: ContentModelReferenceSearchWhereInput
   DisplayOption: SearchableStringFilterInput
+  InlineBlock: InlineBlockPropertyModelSearchWhereInput
   Tag: SearchableStringFilterInput
 }
 
 input ContentAreaItemModelWhereInput {
   ContentLink: ContentModelReferenceWhereInput
   DisplayOption: StringFilterInput
+  InlineBlock: InlineBlockPropertyModelWhereInput
   Tag: StringFilterInput
 }
 
@@ -9360,6 +9435,8 @@ type CouponData implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -9560,6 +9637,8 @@ type CreditCardPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -9870,6 +9949,8 @@ type CustomViewConfigurationBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -10059,6 +10140,8 @@ type DAMAsset implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -10237,6 +10320,8 @@ type DAMImageAsset implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -10415,6 +10500,8 @@ type DAMVideoAsset implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -10652,6 +10739,8 @@ type DateTimeElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -10857,6 +10946,8 @@ type DateTimeRangeElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -11056,6 +11147,8 @@ type DiscountItems implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -11278,6 +11371,8 @@ type DynamicProduct implements IContent {
 
   """"""
   HideSiteHeader: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -11755,6 +11850,8 @@ type DynamicVariant implements IContent {
 
   """"""
   InventoryReference: ContentModelReference
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -12224,6 +12321,8 @@ type ElevatedRoleBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -12416,6 +12515,8 @@ type ExistsFilterBlock implements IContent {
 
   """Name of field in index"""
   FieldName: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -12592,6 +12693,8 @@ type FacebookBlock implements IContent {
 
   """"""
   Height: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -12802,6 +12905,8 @@ type FeedBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -13011,6 +13116,8 @@ type FileUploadElementBlock implements IContent {
 
   """"""
   FileTypes: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -13217,6 +13324,8 @@ type FilterActivitiesBlock implements IContent {
 
   """"""
   FilterTitle: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -13418,6 +13527,8 @@ type FilterContinentsBlock implements IContent {
 
   """"""
   FilterTitle: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -13619,6 +13730,8 @@ type FilterDistancesBlock implements IContent {
 
   """"""
   FilterTitle: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -13820,6 +13933,8 @@ type FilterTemperaturesBlock implements IContent {
 
   """"""
   FilterTitle: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -14005,6 +14120,8 @@ type FixedPricePurchaseQuantity implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -14230,6 +14347,8 @@ type FolderPage implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -14411,6 +14530,8 @@ type FormContainerBlock implements IContent {
 
   """"""
   FinalizedSubmissionRetentionPeriod: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -14656,6 +14777,8 @@ type FormStepBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -14843,6 +14966,8 @@ type FoundationPdfFile implements IContent {
 
   """The height of PDF preview embed (px)"""
   Height: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -15057,6 +15182,8 @@ type GenericBundle implements IContent {
 
   """"""
   HideSiteHeader: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -15437,6 +15564,8 @@ type GenericNode implements IContent {
 
   """"""
   HideSiteHeader: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -15774,6 +15903,8 @@ type GenericPackage implements IContent {
 
   """"""
   InventoryReference: ContentModelReference
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -16238,6 +16369,8 @@ type GenericProduct implements IContent {
 
   """"""
   HideSiteHeader: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -16715,6 +16848,8 @@ type GenericVariant implements IContent {
 
   """"""
   InventoryReference: ContentModelReference
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -17208,6 +17343,8 @@ type GiftCardPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -17524,6 +17661,8 @@ type GoogleMapsBlock implements IContent {
 
   """"""
   Height: Float
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -17722,6 +17861,8 @@ type GroupAdmissionBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -17895,6 +18036,8 @@ type GroupCreationBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -18040,6 +18183,189 @@ input GroupCreationBlockWhereInput {
   _or: [GroupCreationBlockWhereInput]
 }
 
+type HcaptchaElementBlock implements IContent {
+  """"""
+  Ancestors: [String]
+
+  """"""
+  Category: [CategoryModel]
+
+  """"""
+  Changed: Date
+
+  """"""
+  ContentLink: ContentModelReference
+
+  """"""
+  ContentType: [String]
+
+  """"""
+  Created: Date
+
+  """"""
+  ExistingLanguages: [ContentLanguageModel]
+
+  """"""
+  IsCommonDraft: Bool
+
+  """"""
+  Language: ContentLanguageModel
+
+  """"""
+  MasterLanguage: ContentLanguageModel
+
+  """"""
+  Name: String
+
+  """"""
+  ParentLink: ContentModelReference
+
+  """"""
+  RelativePath: String
+
+  """"""
+  RouteSegment: String
+
+  """"""
+  Saved: Date
+
+  """"""
+  ScoreThreshold: Float
+
+  """"""
+  SecretKey: String
+
+  """"""
+  SiteKey: String
+
+  """"""
+  StartPublish: Date
+
+  """"""
+  Status: String
+
+  """"""
+  StopPublish: Date
+
+  """"""
+  Url: String
+
+  """"""
+  Validators: String
+  _children: QueryRef
+  _deleted: Bool
+  _fulltext: [String]
+  _modified: Date
+  _score: Float
+}
+
+type HcaptchaElementBlockAutocomplete {
+  Ancestors(limit: Int! = 10, value: String!): [String]
+  Category: CategoryModelAutocomplete
+  ContentLink: ContentModelReferenceAutocomplete
+  ContentType(limit: Int! = 10, value: String!): [String]
+  ExistingLanguages: ContentLanguageModelAutocomplete
+  Language: ContentLanguageModelAutocomplete
+  MasterLanguage: ContentLanguageModelAutocomplete
+  ParentLink: ContentModelReferenceAutocomplete
+  RelativePath(limit: Int! = 10, value: String!): [String]
+  RouteSegment(limit: Int! = 10, value: String!): [String]
+  Status(limit: Int! = 10, value: String!): [String]
+  Url(limit: Int! = 10, value: String!): [String]
+}
+
+type HcaptchaElementBlockFacet {
+  Ancestors(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Category: CategoryModelFacet
+  Changed(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ContentLink: ContentModelReferenceFacet
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Created(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ExistingLanguages: ContentLanguageModelFacet
+  IsCommonDraft(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Language: ContentLanguageModelFacet
+  MasterLanguage: ContentLanguageModelFacet
+  Name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ParentLink: ContentModelReferenceFacet
+  RelativePath(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ScoreThreshold(ranges: [RangeFacetsInput]): [NumberFacet]
+  SecretKey(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SiteKey(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StopPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Validators(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+}
+
+input HcaptchaElementBlockOrderByInput {
+  Ancestors: OrderBy
+  Category: CategoryModelOrderByInput
+  Changed: OrderBy
+  ContentLink: ContentModelReferenceOrderByInput
+  ContentType: OrderBy
+  Created: OrderBy
+  ExistingLanguages: ContentLanguageModelOrderByInput
+  IsCommonDraft: OrderBy
+  Language: ContentLanguageModelOrderByInput
+  MasterLanguage: ContentLanguageModelOrderByInput
+  Name: OrderBy
+  ParentLink: ContentModelReferenceOrderByInput
+  RelativePath: OrderBy
+  RouteSegment: OrderBy
+  Saved: OrderBy
+  ScoreThreshold: OrderBy
+  SecretKey: OrderBy
+  SiteKey: OrderBy
+  StartPublish: OrderBy
+  Status: OrderBy
+  StopPublish: OrderBy
+  Url: OrderBy
+  Validators: OrderBy
+  _ranking: Ranking
+}
+
+type HcaptchaElementBlockOutput {
+  autocomplete: HcaptchaElementBlockAutocomplete
+  cursor: String
+  facets: HcaptchaElementBlockFacet
+  items: [HcaptchaElementBlock]
+  total(all: Boolean): Int
+}
+
+input HcaptchaElementBlockWhereInput {
+  Ancestors: StringFilterInput
+  Category: CategoryModelWhereInput
+  Changed: DateFilterInput
+  ContentLink: ContentModelReferenceWhereInput
+  ContentType: StringFilterInput
+  Created: DateFilterInput
+  ExistingLanguages: ContentLanguageModelWhereInput
+  IsCommonDraft: BoolFilterInput
+  Language: ContentLanguageModelWhereInput
+  MasterLanguage: ContentLanguageModelWhereInput
+  Name: SearchableStringFilterInput
+  ParentLink: ContentModelReferenceWhereInput
+  RelativePath: StringFilterInput
+  RouteSegment: StringFilterInput
+  Saved: DateFilterInput
+  ScoreThreshold: FloatFilterInput
+  SecretKey: SearchableStringFilterInput
+  SiteKey: SearchableStringFilterInput
+  StartPublish: DateFilterInput
+  Status: StringFilterInput
+  StopPublish: DateFilterInput
+  Url: StringFilterInput
+  Validators: SearchableStringFilterInput
+  _and: [HcaptchaElementBlockWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _modified: DateFilterInput
+  _not: [HcaptchaElementBlockWhereInput]
+  _or: [HcaptchaElementBlockWhereInput]
+}
+
 """Used to insert a health chat bot"""
 type HealthChatbotBlock implements IContent {
   """"""
@@ -18082,6 +18408,8 @@ type HealthChatbotBlock implements IContent {
 
   """The height of the bot in pixels as shown on screen"""
   HeightInPixels: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -18289,6 +18617,8 @@ type HeroBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -18404,6 +18734,8 @@ type HeroBlockCallout implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -18802,6 +19134,8 @@ type HomePage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -19142,6 +19476,8 @@ type HtmlBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -19302,6 +19638,8 @@ interface IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -19376,6 +19714,8 @@ type IframeBlock implements IContent {
 
   """"""
   IframeRatio: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -19567,6 +19907,8 @@ type ImageChoiceElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -19816,6 +20158,8 @@ type ImageMediaData implements IContent {
 
   """"""
   IsBwImg: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -20083,6 +20427,42 @@ input ImageMediaDataWhereInput {
   _or: [ImageMediaDataWhereInput]
 }
 
+type InlineBlockPropertyModel {
+  ContentType: [String]
+}
+
+type InlineBlockPropertyModelAutocomplete {
+  ContentType(limit: Int! = 10, value: String!): [String]
+}
+
+type InlineBlockPropertyModelFacet {
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+}
+
+input InlineBlockPropertyModelOrderByInput {
+  ContentType: OrderBy
+}
+
+type InlineBlockPropertyModelSearch {
+  ContentType: [String]
+}
+
+type InlineBlockPropertyModelSearchFacet {
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+}
+
+input InlineBlockPropertyModelSearchOrderByInput {
+  ContentType: OrderBy
+}
+
+input InlineBlockPropertyModelSearchWhereInput {
+  ContentType: SearchableStringFilterInput
+}
+
+input InlineBlockPropertyModelWhereInput {
+  ContentType: StringFilterInput
+}
+
 input IntFilterInput {
   """
   `boost` influences the weight of a field by boosting a match with a number (default: 1) — counts more towards the eventual relevance score which can be projected with `_score` — at query time. Note that `boost` cannot be a negative number.
@@ -20164,6 +20544,8 @@ type JourneyContainerBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """Start for Journey. All ODP blocks will be offset by 2 minutes each."""
@@ -20397,6 +20779,8 @@ type LandingPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -20715,6 +21099,8 @@ type LikeButtonBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -20992,6 +21378,8 @@ type LocationItemPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -21392,6 +21780,8 @@ type LocationListPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -21708,6 +22098,8 @@ type MembershipAffiliationBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -21918,6 +22310,8 @@ type MembershipDisplayBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -22122,6 +22516,8 @@ type MenuItemBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -22316,6 +22712,8 @@ type ModalBlock implements IContent {
 
   """Check this box to hide the title section on modal"""
   HideModalTitle: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -22577,6 +22975,8 @@ type MonetaryReward implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -22753,6 +23153,8 @@ type NavigationBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -22982,6 +23384,8 @@ type NewProductsPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -23326,6 +23730,8 @@ type NodeContent implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -23571,6 +23977,8 @@ type NumberElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -23776,6 +24184,8 @@ type NumericFilterBlock implements IContent {
 
   """The value to filter search results on"""
   FieldValue: Float
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -23954,6 +24364,8 @@ type ODPEmailEventBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -24150,6 +24562,8 @@ type ODPEventTrackingBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -24349,6 +24763,8 @@ type ODPListConsentFormBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -24545,6 +24961,8 @@ type ODPListFormBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -24720,6 +25138,8 @@ type ODPSearchEventBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -24907,6 +25327,8 @@ type ODPUpdateProfileBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -25135,6 +25557,8 @@ type OrderConfirmationMailPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -25481,6 +25905,8 @@ type OrderConfirmationPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -25833,6 +26259,8 @@ type OrderDetailsPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -26142,6 +26570,8 @@ type OrderHistoryBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -26364,6 +26794,8 @@ type OrderHistoryPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -26701,6 +27133,8 @@ type OrderPadsPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -27011,6 +27445,8 @@ type OrderSearchBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -27227,6 +27663,8 @@ type OrdersPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -27564,6 +28002,8 @@ type OrganizationPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -27879,6 +28319,8 @@ type PackageContent implements IContent {
 
   """"""
   InventoryReference: ContentModelReference
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -28266,6 +28708,8 @@ type PageListBlock implements IContent {
 
   """"""
   IncludeTeaserText: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -28522,6 +28966,8 @@ type ParagraphTextElementBlock implements IContent {
 
   """"""
   FormSubmissionId: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -28704,6 +29150,8 @@ type PdfFile implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -28915,6 +29363,8 @@ type PersonList implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -29261,6 +29711,8 @@ type PersonPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -29595,6 +30047,8 @@ type PredefinedHiddenElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -29770,6 +30224,8 @@ type ProductContent implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -30080,6 +30536,8 @@ type ProductHeroBlock implements IContent {
 
   """"""
   Image: ProductHeroBlockProductHeroBlockImage
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -30172,6 +30630,8 @@ type ProductHeroBlockCallout implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -30391,6 +30851,8 @@ type ProductHeroBlockImage implements IContent {
 
   """"""
   ImageWidth: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -30767,6 +31229,8 @@ type ProductSearchBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """The number of products to show in a row, default is 3"""
@@ -31043,6 +31507,8 @@ type ProfilePage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -31346,6 +31812,8 @@ type PromotionSchedule implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -31525,6 +31993,8 @@ type PurchaseAmount implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -31682,6 +32152,8 @@ type PurchaseQuantity implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -31905,6 +32377,7 @@ type Query {
   GoogleMapsBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GoogleMapsBlockOrderByInput, skip: Int = 0, where: GoogleMapsBlockWhereInput): GoogleMapsBlockOutput
   GroupAdmissionBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GroupAdmissionBlockOrderByInput, skip: Int = 0, where: GroupAdmissionBlockWhereInput): GroupAdmissionBlockOutput
   GroupCreationBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GroupCreationBlockOrderByInput, skip: Int = 0, where: GroupCreationBlockWhereInput): GroupCreationBlockOutput
+  HcaptchaElementBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HcaptchaElementBlockOrderByInput, skip: Int = 0, where: HcaptchaElementBlockWhereInput): HcaptchaElementBlockOutput
   HealthChatbotBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HealthChatbotBlockOrderByInput, skip: Int = 0, where: HealthChatbotBlockWhereInput): HealthChatbotBlockOutput
   HeroBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HeroBlockOrderByInput, skip: Int = 0, where: HeroBlockWhereInput): HeroBlockOutput
   HeroBlockCallout(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HeroBlockCalloutOrderByInput, skip: Int = 0, where: HeroBlockCalloutWhereInput): HeroBlockCalloutOutput
@@ -32080,6 +32553,7 @@ type QueryRef {
   GoogleMapsBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GoogleMapsBlockOrderByInput, skip: Int = 0, where: GoogleMapsBlockWhereInput): GoogleMapsBlockOutput
   GroupAdmissionBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GroupAdmissionBlockOrderByInput, skip: Int = 0, where: GroupAdmissionBlockWhereInput): GroupAdmissionBlockOutput
   GroupCreationBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: GroupCreationBlockOrderByInput, skip: Int = 0, where: GroupCreationBlockWhereInput): GroupCreationBlockOutput
+  HcaptchaElementBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HcaptchaElementBlockOrderByInput, skip: Int = 0, where: HcaptchaElementBlockWhereInput): HcaptchaElementBlockOutput
   HealthChatbotBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HealthChatbotBlockOrderByInput, skip: Int = 0, where: HealthChatbotBlockWhereInput): HealthChatbotBlockOutput
   HeroBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HeroBlockOrderByInput, skip: Int = 0, where: HeroBlockWhereInput): HeroBlockOutput
   HeroBlockCallout(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: HeroBlockCalloutOrderByInput, skip: Int = 0, where: HeroBlockCalloutWhereInput): HeroBlockCalloutOutput
@@ -32217,6 +32691,8 @@ type QuickOrderBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -32444,6 +32920,8 @@ type QuickOrderPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -32756,6 +33234,8 @@ type RangeElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -32979,6 +33459,8 @@ type RatingBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -33173,6 +33655,8 @@ type RecaptchaElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -33354,6 +33838,8 @@ type RedemptionLimitsData implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -33529,6 +34015,8 @@ type Relations implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -33689,6 +34177,8 @@ type ReportingMediaData implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -33866,6 +34356,8 @@ type ResetButtonElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -34069,6 +34561,8 @@ type ResetPasswordMailPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -34414,6 +34908,8 @@ type ResetPasswordPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -34730,6 +35226,8 @@ type RssReaderBlock implements IContent {
 
   """Include publish date for each item in list"""
   IncludePublishDate: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -34974,6 +35472,8 @@ type SalesPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -35346,6 +35846,8 @@ type SearchResultPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -35719,6 +36221,8 @@ type SelectionElementBlock implements IContent {
 
   """"""
   Feed: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -35918,6 +36422,8 @@ type SeoInformation implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -36127,6 +36633,8 @@ type SharedCartPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -36430,6 +36938,8 @@ type ShippingDimensions implements IContent {
 
   """"""
   Height: Float
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -36623,6 +37133,8 @@ type SingleImage implements IContent {
 
   """"""
   Id: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -36813,8 +37325,6 @@ input SingleImageWhereInput {
 type SiteDefinition {
   """"""
   ContentLink: ContentModelReference
-
-  """"""
   ContentRoots: ContentRootsModel
 
   """"""
@@ -36974,6 +37484,8 @@ type StandardFile implements IContent {
 
   """"""
   FileSize: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -37200,6 +37712,8 @@ type StandardPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -37566,6 +38080,8 @@ type StorePage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -37878,6 +38394,8 @@ type StringFilterBlock implements IContent {
 
   """The value to filter search results on"""
   FieldValue: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -38124,6 +38642,8 @@ type SubOrganizationPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -38436,6 +38956,8 @@ type SubmitButtonElementBlock implements IContent {
 
   """"""
   Image: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -38638,6 +39160,8 @@ type SubscriptionBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -38863,6 +39387,8 @@ type SubscriptionDetailPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -39200,6 +39726,8 @@ type SubscriptionHistoryPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -39551,6 +40079,8 @@ type TagPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -39909,6 +40439,8 @@ type TeaserBlock implements IContent {
 
   """"""
   ImageSize: Int
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -40186,6 +40718,8 @@ type TextBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -40380,6 +40914,8 @@ type TextareaElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -40579,6 +41115,8 @@ type TextboxElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -40815,6 +41353,8 @@ type ThreeColumnLandingPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -41151,6 +41691,8 @@ type TinyMceAdaptiveImage implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -41422,6 +41964,8 @@ type TwitterBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -41647,6 +42191,8 @@ type TwoColumnLandingPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -41977,6 +42523,8 @@ type UrlElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -42207,6 +42755,8 @@ type UsersPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -42522,6 +43072,8 @@ type VariationContent implements IContent {
 
   """"""
   InventoryReference: ContentModelReference
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -42926,6 +43478,8 @@ type VectorImageMediaData implements IContent {
 
   """"""
   IsBwImg: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -43224,6 +43778,8 @@ type VideoBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -43423,6 +43979,8 @@ type VideoFile implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -43629,6 +44187,8 @@ type VimeoBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -43828,6 +44388,8 @@ type VisitorDataHiddenElementBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -44043,6 +44605,8 @@ type WebImageMediaData implements IContent {
 
   """"""
   IsBwImg: Bool
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -44332,6 +44896,8 @@ type WidgetBlock implements IContent {
 
   """"""
   ExistingLanguages: [ContentLanguageModel]
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -44544,6 +45110,8 @@ type WishListPage implements IContent {
 
   """"""
   Industry: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""
@@ -44857,6 +45425,8 @@ type YouTubeBlock implements IContent {
 
   """"""
   Heading: String
+
+  """"""
   IsCommonDraft: Bool
 
   """"""

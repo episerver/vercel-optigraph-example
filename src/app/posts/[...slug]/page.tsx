@@ -5,6 +5,7 @@ import Head from "next/head";
 import {getData} from "@/src/app/page";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
 import {getClient} from "@/src/client";
+import {LocationItemPage} from "@/src/generated/sdk";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -75,9 +76,24 @@ export default async function Post({params: { slug } }) {
 }
 
 export async function generateStaticParams(){
-    const posts = await getData();
+    let items = await getData();
+    if(process.env.VERCEL_ENV === "preview"){
+        let filteredItems: LocationItemPage[] = [];
+        if(items != null){
+            items.map((content) => {
+                if(content == null) return;
+                let existingItem = filteredItems
+                    .filter((item, index) => item?.ContentLink?.Id == content?.ContentLink?.Id);
+                if (existingItem.length == 0)
+                    filteredItems.push(content);
+                else if (existingItem[0].Saved < content.Saved)
+                    existingItem[0] = content;
+            });
+        }
+        items = filteredItems;
+    }
     let paths = [];
-    posts.LocationItemPage?.items?.map(post => (
+    items.map(post => (
         paths.push({
             slug: [post?.ContentLink?.Id?.toString() || "0", post?.ContentLink?.WorkId?.toString() || "0"]
         })

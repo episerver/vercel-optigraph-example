@@ -4,10 +4,10 @@ import Header from "@/src/components/Header";
 import BlogPostSummaryLead from "@/src/components/BlogPostSummaryLead";
 import BlogPostSummary from "@/src/components/BlogPostSummary";
 import {Suspense} from "react";
+import {LocationItemPage} from "@/src/generated/sdk";
 
 export default async function Page({ params }: any)  {
-    const data = await getData();
-    const items = data?.LocationItemPage?.items || [];
+    const items = await getData();
     let firstItem = items == null ? null : items[0];
     return (
         <>
@@ -21,8 +21,8 @@ export default async function Page({ params }: any)  {
             <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
                 <div className="mx-0 sm:mx-6">
                     <Suspense fallback={<p>Loading...</p>}>
-                        {data?.LocationItemPage?.items &&
-                            data.LocationItemPage?.items
+                        {items &&
+                            items
                                 .filter((item,index) => index == 0)
                                 .map((content) => {
                                     return (
@@ -32,8 +32,8 @@ export default async function Page({ params }: any)  {
                     </Suspense>
                     <Suspense fallback={<p>Loading...</p>}>
                         <div className="flex flex-wrap justify-between pt-12 -mx-6">
-                            {data?.LocationItemPage?.items &&
-                                data.LocationItemPage?.items
+                            {items &&
+                                items
                                     .filter((item,index) => index != 0)
                                     .map((content) => {
                                         // @ts-ignore
@@ -50,5 +50,19 @@ export default async function Page({ params }: any)  {
     );
 }
 export async function getData(){
-  return await getClient().BlogList();
+    const data = await getClient().BlogList();
+    if(process.env.VERCEL_ENV !== "preview") return data.LocationItemPage?.items;
+    let filteredItems: LocationItemPage[] = [];
+    if(data?.LocationItemPage?.items != null){
+        data.LocationItemPage.items.map((content) => {
+            if(content == null) return;
+            let existingItem = filteredItems
+                .filter((item, index) => item?.ContentLink?.Id == content?.ContentLink?.Id);
+            if (existingItem.length == 0)
+                filteredItems.push(content);
+            else if (existingItem[0].Saved < content.Saved)
+                existingItem[0] = content;
+        });
+    }
+  return filteredItems;
 }
