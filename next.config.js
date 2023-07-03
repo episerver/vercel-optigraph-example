@@ -6,16 +6,19 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'bank.opti-demo.xyz',
-        port: '',
-        pathname: '/globalassets/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-      }
+        {
+          protocol: 'https',
+          hostname: 'bank.opti-demo.xyz',
+          pathname: '/globalassets/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'images2.welcomesoftware.com',
+        },
+        {
+            protocol: 'https',
+            hostname: 'source.unsplash.com',
+        }
     ],
   },
 }
