@@ -1,7 +1,7 @@
 ## Deploy with Vercel
 Click the deploy button below to directly deploy this repository with Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkunalshetye%2Fcg-blog&env=NEXT_PUBLIC_CG_SINGLE_KEY,NEXT_PUBLIC_CG_APP_KEY,NEXT_PUBLIC_CG_SECRET,NEXT_PUBLIC_CG_PREVIEW_MODE)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fepiserver%2Fvercel-contentgraph-template&env=CG_SINGLE_KEY,CG_APP_KEY,CG_SECRET,REDEPLOY_HOOK,CMS_URL)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

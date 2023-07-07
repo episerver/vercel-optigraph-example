@@ -1,19 +1,26 @@
 // @ts-nocheck
-import Header from "@/src/components/react/Header";
+import Header from "@/src/components/Header";
 import {Inter} from "next/font/google";
 import Head from "next/head";
-import {client} from "@/src/client";
 import {getData} from "@/src/app/page";
+import {encodeEditInfo} from "@/src/lib/visualEditing";
+import {getClient, isPreviewBranch} from "@/src/client";
+import {LocationItemPage} from "@/src/generated/sdk";
 
 const inter = Inter({subsets: ["latin"]});
 
 export default async function Post({params: { slug } }) {
     const id = parseInt(slug[0] || "0");
     const workId = parseInt(slug[1] || "0");
-    const data = await client.BlogPost({id: id, workId: workId});
+    const data = await getClient(["cities"]).BlogPost({id: id, workId: workId});
     const item = data?.LocationItemPage?.items[0];
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
+    const cmsUrl = process.env.CMS_URL || "";
+    if(cmsUrl !== ""){
+        const finalUrl=  `${cmsUrl}/EPiServer/CMS/?language=en#context=epi.cms.contentdata:///${id}&viewsetting=viewlanguage:///en`
+        item.Name = encodeEditInfo(item?.Name || '', cmsUrl ,finalUrl);
+    }
     return (
         <>
             {item &&
@@ -69,9 +76,24 @@ export default async function Post({params: { slug } }) {
 }
 
 export async function generateStaticParams(){
-    const posts = await getData();
+    let items = await getData();
+    if(isPreviewBranch()){
+        let filteredItems: LocationItemPage[] = [];
+        if(items != null){
+            items.map((content) => {
+                if(content == null) return;
+                let existingItem = filteredItems
+                    .filter((item, index) => item?.ContentLink?.Id == content?.ContentLink?.Id);
+                if (existingItem.length == 0)
+                    filteredItems.push(content);
+                else if (existingItem[0].Saved < content.Saved)
+                    existingItem[0] = content;
+            });
+        }
+        items = filteredItems;
+    }
     let paths = [];
-    posts.LocationItemPage?.items?.map(post => (
+    items.map(post => (
         paths.push({
             slug: [post?.ContentLink?.Id?.toString() || "0", post?.ContentLink?.WorkId?.toString() || "0"]
         })
