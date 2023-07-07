@@ -4,7 +4,7 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import {getData} from "@/src/app/page";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
-import {getClient} from "@/src/client";
+import {getClient, isPreviewBranch} from "@/src/client";
 import {LocationItemPage} from "@/src/generated/sdk";
 
 const inter = Inter({subsets: ["latin"]});
@@ -77,7 +77,7 @@ export default async function Post({params: { slug } }) {
 
 export async function generateStaticParams(){
     let items = await getData();
-    if(process.env.VERCEL_ENV === "preview"){
+    if(isPreviewBranch()){
         let filteredItems: LocationItemPage[] = [];
         if(items != null){
             items.map((content) => {

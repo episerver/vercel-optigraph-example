@@ -38,7 +38,11 @@ const client = getSdk(graphQlClient);
 const previewClient = getSdk(previewGraphQlClient);
 
 export function getClient(){
-    return process.env.VERCEL_ENV !== 'preview' ? client : previewClient;
+    return !isPreviewBranch() ? client : previewClient;
     //return previewClient;
     //return client;
+}
+
+export function isPreviewBranch(){
+    return process.env.VERCEL_ENV === 'preview';
 }
