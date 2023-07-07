@@ -1,7 +1,7 @@
-query BlogPost($locale: [Locales] = en, $id:Int, $workId: Int){
+query BlogPost($locale: [Locales] = en, $guid: String){
   LocationItemPage(locale: $locale, where:{
     ContentLink: {
-      Id: {eq: $id}, WorkId:{ eq: $workId}
+      GuidValue: {eq: $guid}
     }
   })
   {

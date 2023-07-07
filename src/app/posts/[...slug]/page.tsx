@@ -10,10 +10,10 @@ import {LocationItemPage} from "@/src/generated/sdk";
 const inter = Inter({subsets: ["latin"]});
 
 export default async function Post({params: { slug } }) {
-    const id = parseInt(slug[0] || "0");
-    const workId = parseInt(slug[1] || "0");
-    const data = await getClient(["city"]).BlogPost({id: id, workId: workId});
+    const guid = slug[0] || "0";
+    const data = await getClient(["city"]).BlogPost({guid: guid});
     const item = data?.LocationItemPage?.items[0];
+    const id = item?.ContentLink?.Id || "0";
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
     const cmsUrl = process.env.CMS_URL || "";
@@ -83,7 +83,7 @@ export async function generateStaticParams(){
             items.map((content) => {
                 if(content == null) return;
                 let existingItem = filteredItems
-                    .filter((item, index) => item?.ContentLink?.Id == content?.ContentLink?.Id);
+                    .filter((item, index) => item?.ContentLink?.GuidValue == content?.ContentLink?.GuidValue);
                 if (existingItem.length == 0)
                     filteredItems.push(content);
                 else if (existingItem[0].Saved < content.Saved)
@@ -95,7 +95,7 @@ export async function generateStaticParams(){
     let paths = [];
     items.map(post => (
         paths.push({
-            slug: [post?.ContentLink?.Id?.toString() || "0", post?.ContentLink?.WorkId?.toString() || "0"]
+            slug: [post?.ContentLink?.GuidValue]
         })
     ));
     return paths;

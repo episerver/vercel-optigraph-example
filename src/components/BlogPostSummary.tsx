@@ -18,7 +18,7 @@ export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
         <>
             <div className={`w-full md:w-${width} p-6 flex flex-col flex-grow flex-shrink`}>
                 <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                    <Link href={`/posts/${blogItem?.ContentLink?.Id}/${blogItem?.ContentLink?.WorkId}`} className="flex flex-wrap no-underline hover:no-underline">
+                    <Link href={`/posts/${blogItem?.ContentLink?.GuidValue}`} className="flex flex-wrap no-underline hover:no-underline">
                         <Image src={image}
                             className="h-64 w-full rounded-t pb-6"
                             width={336}
