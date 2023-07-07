@@ -46,6 +46,7 @@ export type AdaptiveHeroBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -74,6 +75,7 @@ export type AdaptiveHeroBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -104,6 +106,12 @@ export type AdaptiveHeroBlockAutocompleteRelativePathArgs = {
 
 
 export type AdaptiveHeroBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AdaptiveHeroBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -147,6 +155,7 @@ export type AdaptiveHeroBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -262,6 +271,14 @@ export type AdaptiveHeroBlockFacetRouteSegmentArgs = {
 export type AdaptiveHeroBlockFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type AdaptiveHeroBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -490,6 +507,7 @@ export type AdaptiveHeroBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -703,6 +721,7 @@ export type AdaptiveHeroBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -733,6 +752,7 @@ export type AdaptiveImage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   Small?: Maybe<AdaptiveImageSingleImage>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -759,6 +779,7 @@ export type AdaptiveImageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Small?: Maybe<AdaptiveImageSingleImageAutocomplete>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -784,6 +805,12 @@ export type AdaptiveImageAutocompleteRelativePathArgs = {
 
 
 export type AdaptiveImageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AdaptiveImageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -819,6 +846,7 @@ export type AdaptiveImageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   Small?: Maybe<AdaptiveImageSingleImageFacet>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -893,6 +921,14 @@ export type AdaptiveImageFacetSavedArgs = {
 };
 
 
+export type AdaptiveImageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type AdaptiveImageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -938,6 +974,7 @@ export type AdaptiveImageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   Small?: InputMaybe<AdaptiveImageSingleImageOrderByInput>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -1144,6 +1181,7 @@ export type AdaptiveImageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   Small?: InputMaybe<AdaptiveImageSingleImageWhereInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -1197,6 +1235,7 @@ export type AddressBookPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -1233,6 +1272,7 @@ export type AddressBookPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -1280,6 +1320,12 @@ export type AddressBookPageAutocompleteRelativePathArgs = {
 
 
 export type AddressBookPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AddressBookPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -1358,6 +1404,7 @@ export type AddressBookPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -1574,6 +1621,14 @@ export type AddressBookPageFacetSavedArgs = {
 };
 
 
+export type AddressBookPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type AddressBookPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -1686,6 +1741,7 @@ export type AddressBookPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -1751,6 +1807,7 @@ export type AddressBookPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -1797,6 +1854,7 @@ export type AddressesElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   StateLabel?: Maybe<Scalars['String']>;
   Status?: Maybe<Scalars['String']>;
@@ -1823,6 +1881,7 @@ export type AddressesElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -1847,6 +1906,12 @@ export type AddressesElementBlockAutocompleteRelativePathArgs = {
 
 
 export type AddressesElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AddressesElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -1891,6 +1956,7 @@ export type AddressesElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   StateLabel?: Maybe<Array<Maybe<StringFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -2046,6 +2112,14 @@ export type AddressesElementBlockFacetSavedArgs = {
 };
 
 
+export type AddressesElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type AddressesElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -2124,6 +2198,7 @@ export type AddressesElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   StateLabel?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -2175,6 +2250,7 @@ export type AddressesElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   StateLabel?: InputMaybe<SearchableStringFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -2217,6 +2293,7 @@ export type AssetsDownloadLinksBlock = IContent & {
   RootContent?: Maybe<ContentModelReference>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -2242,6 +2319,7 @@ export type AssetsDownloadLinksBlockAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RootContent?: Maybe<ContentModelReferenceAutocomplete>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -2266,6 +2344,12 @@ export type AssetsDownloadLinksBlockAutocompleteRelativePathArgs = {
 
 
 export type AssetsDownloadLinksBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AssetsDownloadLinksBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -2307,6 +2391,7 @@ export type AssetsDownloadLinksBlockFacet = {
   RootContent?: Maybe<ContentModelReferenceFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -2422,6 +2507,14 @@ export type AssetsDownloadLinksBlockFacetSavedArgs = {
 };
 
 
+export type AssetsDownloadLinksBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type AssetsDownloadLinksBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -2473,6 +2566,7 @@ export type AssetsDownloadLinksBlockOrderByInput = {
   RootContent?: InputMaybe<ContentModelReferenceOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -2518,6 +2612,7 @@ export type AssetsDownloadLinksBlockWhereInput = {
   RootContent?: InputMaybe<ContentModelReferenceWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -2546,6 +2641,7 @@ export type Associations = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -2569,6 +2665,7 @@ export type AssociationsAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -2593,6 +2690,12 @@ export type AssociationsAutocompleteRelativePathArgs = {
 
 
 export type AssociationsAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type AssociationsAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -2626,6 +2729,7 @@ export type AssociationsFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -2699,6 +2803,14 @@ export type AssociationsFacetSavedArgs = {
 };
 
 
+export type AssociationsFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type AssociationsFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -2742,6 +2854,7 @@ export type AssociationsOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -2779,6 +2892,7 @@ export type AssociationsWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -2870,6 +2984,7 @@ export type BlogCommentBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -2893,6 +3008,7 @@ export type BlogCommentBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -2917,6 +3033,12 @@ export type BlogCommentBlockAutocompleteRelativePathArgs = {
 
 
 export type BlogCommentBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BlogCommentBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -2955,6 +3077,7 @@ export type BlogCommentBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -3053,6 +3176,14 @@ export type BlogCommentBlockFacetSavedArgs = {
 };
 
 
+export type BlogCommentBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BlogCommentBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -3101,6 +3232,7 @@ export type BlogCommentBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -3143,6 +3275,7 @@ export type BlogCommentBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -3196,6 +3329,7 @@ export type BlogItemPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -3232,6 +3366,7 @@ export type BlogItemPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -3279,6 +3414,12 @@ export type BlogItemPageAutocompleteRelativePathArgs = {
 
 
 export type BlogItemPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BlogItemPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -3358,6 +3499,7 @@ export type BlogItemPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -3582,6 +3724,14 @@ export type BlogItemPageFacetSavedArgs = {
 };
 
 
+export type BlogItemPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BlogItemPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -3695,6 +3845,7 @@ export type BlogItemPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -3761,6 +3912,7 @@ export type BlogItemPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -3832,6 +3984,7 @@ export type BlogListPage = IContent & {
   Root?: Maybe<ContentModelReference>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   SortOrder?: Maybe<Scalars['Int']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -3872,6 +4025,7 @@ export type BlogListPageAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   Root?: Maybe<ContentModelReferenceAutocomplete>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -3919,6 +4073,12 @@ export type BlogListPageAutocompleteRelativePathArgs = {
 
 
 export type BlogListPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BlogListPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -4006,6 +4166,7 @@ export type BlogListPageFacet = {
   Root?: Maybe<ContentModelReferenceFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SortOrder?: Maybe<Array<Maybe<NumberFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -4280,6 +4441,14 @@ export type BlogListPageFacetSavedArgs = {
 };
 
 
+export type BlogListPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BlogListPageFacetSortOrderArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
@@ -4414,6 +4583,7 @@ export type BlogListPageOrderByInput = {
   Root?: InputMaybe<ContentModelReferenceOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SortOrder?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -4490,6 +4660,7 @@ export type BlogListPageWhereInput = {
   Root?: InputMaybe<ContentModelReferenceWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SortOrder?: InputMaybe<IntFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -4551,6 +4722,7 @@ export type BookmarksPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -4587,6 +4759,7 @@ export type BookmarksPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -4634,6 +4807,12 @@ export type BookmarksPageAutocompleteRelativePathArgs = {
 
 
 export type BookmarksPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BookmarksPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -4712,6 +4891,7 @@ export type BookmarksPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -4928,6 +5108,14 @@ export type BookmarksPageFacetSavedArgs = {
 };
 
 
+export type BookmarksPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BookmarksPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -5040,6 +5228,7 @@ export type BookmarksPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -5105,6 +5294,7 @@ export type BookmarksPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -5176,6 +5366,7 @@ export type BootstrapCardBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -5203,6 +5394,7 @@ export type BootstrapCardBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -5233,6 +5425,12 @@ export type BootstrapCardBlockAutocompleteRelativePathArgs = {
 
 
 export type BootstrapCardBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BootstrapCardBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -5284,6 +5482,7 @@ export type BootstrapCardBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -5466,6 +5665,14 @@ export type BootstrapCardBlockFacetSavedArgs = {
 };
 
 
+export type BootstrapCardBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BootstrapCardBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -5527,6 +5734,7 @@ export type BootstrapCardBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -5582,6 +5790,7 @@ export type BootstrapCardBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -5620,6 +5829,7 @@ export type BreadcrumbBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   Separator?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -5645,6 +5855,7 @@ export type BreadcrumbBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -5669,6 +5880,12 @@ export type BreadcrumbBlockAutocompleteRelativePathArgs = {
 
 
 export type BreadcrumbBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BreadcrumbBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -5710,6 +5927,7 @@ export type BreadcrumbBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   Separator?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -5828,6 +6046,14 @@ export type BreadcrumbBlockFacetSeparatorArgs = {
 };
 
 
+export type BreadcrumbBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BreadcrumbBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -5879,6 +6105,7 @@ export type BreadcrumbBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   Separator?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -5924,6 +6151,7 @@ export type BreadcrumbBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   Separator?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -5976,6 +6204,7 @@ export type BudgetingPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -6012,6 +6241,7 @@ export type BudgetingPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -6059,6 +6289,12 @@ export type BudgetingPageAutocompleteRelativePathArgs = {
 
 
 export type BudgetingPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BudgetingPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -6137,6 +6373,7 @@ export type BudgetingPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -6353,6 +6590,14 @@ export type BudgetingPageFacetSavedArgs = {
 };
 
 
+export type BudgetingPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BudgetingPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -6465,6 +6710,7 @@ export type BudgetingPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -6530,6 +6776,7 @@ export type BudgetingPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -6551,6 +6798,7 @@ export type BudgetingPageWhereInput = {
 export type BundleContent = IContent & {
   __typename?: 'BundleContent';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<BundleContentAssociations>;
   BundleReference?: Maybe<ContentModelReference>;
   CatalogId?: Maybe<Scalars['Int']>;
@@ -6574,6 +6822,7 @@ export type BundleContent = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SeoInformation?: Maybe<BundleContentSeoInformation>;
   SeoUri?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -6611,6 +6860,7 @@ export type BundleContentAssociationsWhereInput = {
 export type BundleContentAutocomplete = {
   __typename?: 'BundleContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<BundleContentAssociationsAutocomplete>;
   BundleReference?: Maybe<ContentModelReferenceAutocomplete>;
   Categories?: Maybe<BundleContentCategoriesAutocomplete>;
@@ -6625,6 +6875,7 @@ export type BundleContentAutocomplete = {
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SeoInformation?: Maybe<BundleContentSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -6655,6 +6906,12 @@ export type BundleContentAutocompleteRouteSegmentArgs = {
 
 
 export type BundleContentAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type BundleContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -6697,6 +6954,7 @@ export type BundleContentCategoriesWhereInput = {
 export type BundleContentFacet = {
   __typename?: 'BundleContentFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<BundleContentAssociationsFacet>;
   BundleReference?: Maybe<ContentModelReferenceFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -6720,6 +6978,7 @@ export type BundleContentFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SeoInformation?: Maybe<BundleContentSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -6827,6 +7086,14 @@ export type BundleContentFacetSeoUriArgs = {
 };
 
 
+export type BundleContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type BundleContentFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -6856,6 +7123,7 @@ export type BundleContentFacetUrlArgs = {
 
 export type BundleContentOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<BundleContentAssociationsOrderByInput>;
   BundleReference?: InputMaybe<ContentModelReferenceOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
@@ -6879,6 +7147,7 @@ export type BundleContentOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SeoInformation?: InputMaybe<BundleContentSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -7000,6 +7269,7 @@ export type BundleContentSeoInformationWhereInput = {
 
 export type BundleContentWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<BundleContentAssociationsWhereInput>;
   BundleReference?: InputMaybe<ContentModelReferenceWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
@@ -7023,6 +7293,7 @@ export type BundleContentWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SeoInformation?: InputMaybe<BundleContentSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -7080,6 +7351,7 @@ export type ButtonBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   /** This will determine whether or not to use transparent background */
   ShowTransparentBackground?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -7114,6 +7386,7 @@ export type ButtonBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -7185,6 +7458,12 @@ export type ButtonBlockAutocompleteRouteSegmentArgs = {
 };
 
 
+export type ButtonBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type ButtonBlockAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -7236,6 +7515,7 @@ export type ButtonBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowTransparentBackground?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -7475,6 +7755,14 @@ export type ButtonBlockFacetShowTransparentBackgroundArgs = {
 };
 
 
+export type ButtonBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ButtonBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -7557,6 +7845,7 @@ export type ButtonBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowTransparentBackground?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -7619,6 +7908,7 @@ export type ButtonBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowTransparentBackground?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -7660,6 +7950,7 @@ export type CalendarBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -7687,6 +7978,7 @@ export type CalendarBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -7711,6 +8003,12 @@ export type CalendarBlockAutocompleteRelativePathArgs = {
 
 
 export type CalendarBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CalendarBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -7753,6 +8051,7 @@ export type CalendarBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -7869,6 +8168,14 @@ export type CalendarBlockFacetSavedArgs = {
 };
 
 
+export type CalendarBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CalendarBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -7929,6 +8236,7 @@ export type CalendarBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -7976,6 +8284,7 @@ export type CalendarBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -8032,6 +8341,7 @@ export type CalendarEventPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -8068,6 +8378,7 @@ export type CalendarEventPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -8115,6 +8426,12 @@ export type CalendarEventPageAutocompleteRelativePathArgs = {
 
 
 export type CalendarEventPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CalendarEventPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -8196,6 +8513,7 @@ export type CalendarEventPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -8432,6 +8750,14 @@ export type CalendarEventPageFacetSavedArgs = {
 };
 
 
+export type CalendarEventPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CalendarEventPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -8547,6 +8873,7 @@ export type CalendarEventPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -8615,6 +8942,7 @@ export type CalendarEventPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -8660,6 +8988,7 @@ export type CallToActionBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -8690,6 +9019,7 @@ export type CallToActionBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -8714,6 +9044,12 @@ export type CallToActionBlockAutocompleteRelativePathArgs = {
 
 
 export type CallToActionBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CallToActionBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -9159,6 +9495,7 @@ export type CallToActionBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -9272,6 +9609,14 @@ export type CallToActionBlockFacetSavedArgs = {
 };
 
 
+export type CallToActionBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CallToActionBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -9347,6 +9692,7 @@ export type CallToActionBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -9395,6 +9741,7 @@ export type CallToActionBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -9430,6 +9777,7 @@ export type CaptchaElementBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -9455,6 +9803,7 @@ export type CaptchaElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -9479,6 +9828,12 @@ export type CaptchaElementBlockAutocompleteRelativePathArgs = {
 
 
 export type CaptchaElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CaptchaElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -9516,6 +9871,7 @@ export type CaptchaElementBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -9617,6 +9973,14 @@ export type CaptchaElementBlockFacetSavedArgs = {
 };
 
 
+export type CaptchaElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CaptchaElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -9677,6 +10041,7 @@ export type CaptchaElementBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -9720,6 +10085,7 @@ export type CaptchaElementBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -9761,6 +10127,7 @@ export type CarouselBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -9786,6 +10153,7 @@ export type CarouselBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -9810,6 +10178,12 @@ export type CarouselBlockAutocompleteRelativePathArgs = {
 
 
 export type CarouselBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CarouselBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -9944,6 +10318,7 @@ export type CarouselBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -10046,6 +10421,14 @@ export type CarouselBlockFacetSavedArgs = {
 };
 
 
+export type CarouselBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CarouselBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -10096,6 +10479,7 @@ export type CarouselBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -10140,6 +10524,7 @@ export type CarouselBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -10178,6 +10563,7 @@ export type CarouselControls = IContent & {
   ShowControls?: Maybe<Scalars['Bool']>;
   /** Show carousel indicators, small bars below the carousel items to allow users to jump to any item in the carousel */
   ShowIndicators?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -10202,6 +10588,7 @@ export type CarouselControlsAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -10226,6 +10613,12 @@ export type CarouselControlsAutocompleteRelativePathArgs = {
 
 
 export type CarouselControlsAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CarouselControlsAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -10264,6 +10657,7 @@ export type CarouselControlsFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowControls?: Maybe<Array<Maybe<StringFacet>>>;
   ShowIndicators?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -10375,6 +10769,14 @@ export type CarouselControlsFacetShowIndicatorsArgs = {
 };
 
 
+export type CarouselControlsFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CarouselControlsFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -10431,6 +10833,7 @@ export type CarouselControlsOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ShowControls?: InputMaybe<OrderBy>;
   ShowIndicators?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -10474,6 +10877,7 @@ export type CarouselControlsWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ShowControls?: InputMaybe<BoolFilterInput>;
   ShowIndicators?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -10530,6 +10934,7 @@ export type CartPage = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   /** This will determine whether or not to show recommendations. */
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -10566,6 +10971,7 @@ export type CartPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -10613,6 +11019,12 @@ export type CartPageAutocompleteRelativePathArgs = {
 
 
 export type CartPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CartPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -10693,6 +11105,7 @@ export type CartPageFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -10917,6 +11330,14 @@ export type CartPageFacetShowRecommendationsArgs = {
 };
 
 
+export type CartPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CartPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -11031,6 +11452,7 @@ export type CartPageOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -11098,6 +11520,7 @@ export type CartPageWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -11138,6 +11561,7 @@ export type CatalogContent = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -11165,6 +11589,7 @@ export type CatalogContentAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   WeightBase?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -11219,6 +11644,12 @@ export type CatalogContentAutocompleteRouteSegmentArgs = {
 };
 
 
+export type CatalogContentAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type CatalogContentAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -11258,6 +11689,7 @@ export type CatalogContentFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -11377,6 +11809,14 @@ export type CatalogContentFacetSavedArgs = {
 };
 
 
+export type CatalogContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CatalogContentFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -11433,6 +11873,7 @@ export type CatalogContentOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -11476,6 +11917,7 @@ export type CatalogContentWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -11505,6 +11947,7 @@ export type Categories = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -11528,6 +11971,7 @@ export type CategoriesAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -11552,6 +11996,12 @@ export type CategoriesAutocompleteRelativePathArgs = {
 
 
 export type CategoriesAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CategoriesAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -11585,6 +12035,7 @@ export type CategoriesFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -11658,6 +12109,14 @@ export type CategoriesFacetSavedArgs = {
 };
 
 
+export type CategoriesFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CategoriesFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -11701,6 +12160,7 @@ export type CategoriesOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -11738,6 +12198,7 @@ export type CategoriesWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -11775,6 +12236,7 @@ export type CategoryBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -11800,6 +12262,7 @@ export type CategoryBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -11824,6 +12287,12 @@ export type CategoryBlockAutocompleteRelativePathArgs = {
 
 
 export type CategoryBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CategoryBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -11864,6 +12333,7 @@ export type CategoryBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -11974,6 +12444,14 @@ export type CategoryBlockFacetSavedArgs = {
 };
 
 
+export type CategoryBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CategoryBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -12024,6 +12502,7 @@ export type CategoryBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -12068,6 +12547,7 @@ export type CategoryBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -12185,6 +12665,7 @@ export type CheckoutPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -12221,6 +12702,7 @@ export type CheckoutPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -12268,6 +12750,12 @@ export type CheckoutPageAutocompleteRelativePathArgs = {
 
 
 export type CheckoutPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CheckoutPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -12346,6 +12834,7 @@ export type CheckoutPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -12562,6 +13051,14 @@ export type CheckoutPageFacetSavedArgs = {
 };
 
 
+export type CheckoutPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CheckoutPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -12674,6 +13171,7 @@ export type CheckoutPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -12739,6 +13237,7 @@ export type CheckoutPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -12780,6 +13279,7 @@ export type ChoiceElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -12804,6 +13304,7 @@ export type ChoiceElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -12828,6 +13329,12 @@ export type ChoiceElementBlockAutocompleteRelativePathArgs = {
 
 
 export type ChoiceElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ChoiceElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -12867,6 +13374,7 @@ export type ChoiceElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -12986,6 +13494,14 @@ export type ChoiceElementBlockFacetSavedArgs = {
 };
 
 
+export type ChoiceElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ChoiceElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -13043,6 +13559,7 @@ export type ChoiceElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -13087,6 +13604,7 @@ export type ChoiceElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -13120,6 +13638,7 @@ export type CodingFile = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -13145,6 +13664,7 @@ export type CodingFileAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -13181,6 +13701,12 @@ export type CodingFileAutocompleteRouteSegmentArgs = {
 };
 
 
+export type CodingFileAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type CodingFileAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -13212,6 +13738,7 @@ export type CodingFileFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -13310,6 +13837,14 @@ export type CodingFileFacetSavedArgs = {
 };
 
 
+export type CodingFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CodingFileFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -13356,6 +13891,7 @@ export type CodingFileOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -13397,6 +13933,7 @@ export type CodingFileWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -13455,6 +13992,7 @@ export type CollectionPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -13493,6 +14031,7 @@ export type CollectionPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -13541,6 +14080,12 @@ export type CollectionPageAutocompleteRelativePathArgs = {
 
 
 export type CollectionPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CollectionPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -13624,6 +14169,7 @@ export type CollectionPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -13857,6 +14403,14 @@ export type CollectionPageFacetSavedArgs = {
 };
 
 
+export type CollectionPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CollectionPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -13974,6 +14528,7 @@ export type CollectionPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -14045,6 +14600,7 @@ export type CollectionPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -14094,6 +14650,7 @@ export type CommentsBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SendActivity?: Maybe<Scalars['Bool']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -14118,6 +14675,7 @@ export type CommentsBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -14142,6 +14700,12 @@ export type CommentsBlockAutocompleteRelativePathArgs = {
 
 
 export type CommentsBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CommentsBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -14186,6 +14750,7 @@ export type CommentsBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SendActivity?: Maybe<Array<Maybe<StringFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -14327,6 +14892,14 @@ export type CommentsBlockFacetShowHeadingArgs = {
 };
 
 
+export type CommentsBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CommentsBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -14381,6 +14954,7 @@ export type CommentsBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SendActivity?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -14429,6 +15003,7 @@ export type CommentsBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SendActivity?: InputMaybe<BoolFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -14438,6 +15013,76 @@ export type CommentsBlockWhereInput = {
   _modified?: InputMaybe<DateFilterInput>;
   _not?: InputMaybe<Array<InputMaybe<CommentsBlockWhereInput>>>;
   _or?: InputMaybe<Array<InputMaybe<CommentsBlockWhereInput>>>;
+};
+
+export type CommerceMedia = {
+  __typename?: 'CommerceMedia';
+  AssetLink?: Maybe<ContentReference>;
+  AssetType?: Maybe<Scalars['String']>;
+  GroupName?: Maybe<Scalars['String']>;
+  SortOrder?: Maybe<Scalars['Int']>;
+};
+
+export type CommerceMediaAutocomplete = {
+  __typename?: 'CommerceMediaAutocomplete';
+  AssetLink?: Maybe<ContentReferenceAutocomplete>;
+  AssetType?: Maybe<Array<Maybe<Scalars['String']>>>;
+  GroupName?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+
+export type CommerceMediaAutocompleteAssetTypeArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CommerceMediaAutocompleteGroupNameArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+export type CommerceMediaFacet = {
+  __typename?: 'CommerceMediaFacet';
+  AssetLink?: Maybe<ContentReferenceFacet>;
+  AssetType?: Maybe<Array<Maybe<StringFacet>>>;
+  GroupName?: Maybe<Array<Maybe<StringFacet>>>;
+  SortOrder?: Maybe<Array<Maybe<NumberFacet>>>;
+};
+
+
+export type CommerceMediaFacetAssetTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CommerceMediaFacetGroupNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CommerceMediaFacetSortOrderArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+export type CommerceMediaOrderByInput = {
+  AssetLink?: InputMaybe<ContentReferenceOrderByInput>;
+  AssetType?: InputMaybe<OrderBy>;
+  GroupName?: InputMaybe<OrderBy>;
+  SortOrder?: InputMaybe<OrderBy>;
+};
+
+export type CommerceMediaWhereInput = {
+  AssetLink?: InputMaybe<ContentReferenceWhereInput>;
+  AssetType?: InputMaybe<StringFilterInput>;
+  GroupName?: InputMaybe<StringFilterInput>;
+  SortOrder?: InputMaybe<IntFilterInput>;
 };
 
 /** A reseller's community page using Episerver Social. */
@@ -14489,6 +15134,7 @@ export type CommunityPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -14531,6 +15177,7 @@ export type CommunityPageAutocomplete = {
   Ratings?: Maybe<CommunityPageRatingBlockAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Subscriptions?: Maybe<CommunityPageSubscriptionBlockAutocomplete>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -14579,6 +15226,12 @@ export type CommunityPageAutocompleteRelativePathArgs = {
 
 
 export type CommunityPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CommunityPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -14820,6 +15473,7 @@ export type CommunityPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -15034,6 +15688,14 @@ export type CommunityPageFacetRouteSegmentArgs = {
 export type CommunityPageFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CommunityPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -15369,6 +16031,7 @@ export type CommunityPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -15691,6 +16354,7 @@ export type CommunityPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -15736,6 +16400,7 @@ export type ContainerBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -15760,6 +16425,7 @@ export type ContainerBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -15784,6 +16450,12 @@ export type ContainerBlockAutocompleteRelativePathArgs = {
 
 
 export type ContainerBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ContainerBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -15824,6 +16496,7 @@ export type ContainerBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -15934,6 +16607,14 @@ export type ContainerBlockFacetSavedArgs = {
 };
 
 
+export type ContainerBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ContainerBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -15984,6 +16665,7 @@ export type ContainerBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -16028,6 +16710,7 @@ export type ContainerBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -16055,6 +16738,7 @@ export type Content = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -16189,6 +16873,7 @@ export type ContentAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -16213,6 +16898,12 @@ export type ContentAutocompleteRelativePathArgs = {
 
 
 export type ContentAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -16245,6 +16936,7 @@ export type ContentFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -16315,6 +17007,14 @@ export type ContentFacetRouteSegmentArgs = {
 export type ContentFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -16657,6 +17357,7 @@ export type ContentOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -16676,6 +17377,97 @@ export type ContentOutput = {
 
 export type ContentOutputTotalArgs = {
   all?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type ContentReference = {
+  __typename?: 'ContentReference';
+  GetPublishedOrLatest?: Maybe<Scalars['Bool']>;
+  ID?: Maybe<Scalars['Int']>;
+  IsExternalProvider?: Maybe<Scalars['Bool']>;
+  IsReadOnly?: Maybe<Scalars['Bool']>;
+  ProviderName?: Maybe<Scalars['String']>;
+  WorkID?: Maybe<Scalars['Int']>;
+};
+
+export type ContentReferenceAutocomplete = {
+  __typename?: 'ContentReferenceAutocomplete';
+  ProviderName?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+
+export type ContentReferenceAutocompleteProviderNameArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+export type ContentReferenceFacet = {
+  __typename?: 'ContentReferenceFacet';
+  GetPublishedOrLatest?: Maybe<Array<Maybe<StringFacet>>>;
+  ID?: Maybe<Array<Maybe<NumberFacet>>>;
+  IsExternalProvider?: Maybe<Array<Maybe<StringFacet>>>;
+  IsReadOnly?: Maybe<Array<Maybe<StringFacet>>>;
+  ProviderName?: Maybe<Array<Maybe<StringFacet>>>;
+  WorkID?: Maybe<Array<Maybe<NumberFacet>>>;
+};
+
+
+export type ContentReferenceFacetGetPublishedOrLatestArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentReferenceFacetIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type ContentReferenceFacetIsExternalProviderArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentReferenceFacetIsReadOnlyArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentReferenceFacetProviderNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type ContentReferenceFacetWorkIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+export type ContentReferenceOrderByInput = {
+  GetPublishedOrLatest?: InputMaybe<OrderBy>;
+  ID?: InputMaybe<OrderBy>;
+  IsExternalProvider?: InputMaybe<OrderBy>;
+  IsReadOnly?: InputMaybe<OrderBy>;
+  ProviderName?: InputMaybe<OrderBy>;
+  WorkID?: InputMaybe<OrderBy>;
+};
+
+export type ContentReferenceWhereInput = {
+  GetPublishedOrLatest?: InputMaybe<BoolFilterInput>;
+  ID?: InputMaybe<IntFilterInput>;
+  IsExternalProvider?: InputMaybe<BoolFilterInput>;
+  IsReadOnly?: InputMaybe<BoolFilterInput>;
+  ProviderName?: InputMaybe<StringFilterInput>;
+  WorkID?: InputMaybe<IntFilterInput>;
 };
 
 export type ContentRootsModel = {
@@ -16741,6 +17533,7 @@ export type ContentWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -16770,6 +17563,7 @@ export type CouponData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -16793,6 +17587,7 @@ export type CouponDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -16817,6 +17612,12 @@ export type CouponDataAutocompleteRelativePathArgs = {
 
 
 export type CouponDataAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CouponDataAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -16851,6 +17652,7 @@ export type CouponDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -16932,6 +17734,14 @@ export type CouponDataFacetSavedArgs = {
 };
 
 
+export type CouponDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CouponDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -16976,6 +17786,7 @@ export type CouponDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -17014,6 +17825,7 @@ export type CouponDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -17067,6 +17879,7 @@ export type CreditCardPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -17103,6 +17916,7 @@ export type CreditCardPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -17150,6 +17964,12 @@ export type CreditCardPageAutocompleteRelativePathArgs = {
 
 
 export type CreditCardPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CreditCardPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -17229,6 +18049,7 @@ export type CreditCardPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -17453,6 +18274,14 @@ export type CreditCardPageFacetSavedArgs = {
 };
 
 
+export type CreditCardPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CreditCardPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -17566,6 +18395,7 @@ export type CreditCardPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -17632,6 +18462,7 @@ export type CreditCardPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -17676,6 +18507,7 @@ export type CustomViewConfigurationBlock = IContent & {
   Root?: Maybe<ContentModelReference>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   /** Sort order in menu */
   SortOrder?: Maybe<Scalars['Int']>;
   StartPublish?: Maybe<Scalars['Date']>;
@@ -17703,6 +18535,7 @@ export type CustomViewConfigurationBlockAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   Root?: Maybe<ContentModelReferenceAutocomplete>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -17727,6 +18560,12 @@ export type CustomViewConfigurationBlockAutocompleteRelativePathArgs = {
 
 
 export type CustomViewConfigurationBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CustomViewConfigurationBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -17764,6 +18603,7 @@ export type CustomViewConfigurationBlockFacet = {
   Root?: Maybe<ContentModelReferenceFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SortOrder?: Maybe<Array<Maybe<NumberFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -17854,6 +18694,14 @@ export type CustomViewConfigurationBlockFacetSavedArgs = {
 };
 
 
+export type CustomViewConfigurationBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type CustomViewConfigurationBlockFacetSortOrderArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
@@ -17906,6 +18754,7 @@ export type CustomViewConfigurationBlockOrderByInput = {
   Root?: InputMaybe<ContentModelReferenceOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SortOrder?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -17948,6 +18797,7 @@ export type CustomViewConfigurationBlockWhereInput = {
   Root?: InputMaybe<ContentModelReferenceWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SortOrder?: InputMaybe<IntFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -17980,6 +18830,7 @@ export type DamAsset = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -18005,6 +18856,7 @@ export type DamAssetAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -18041,6 +18893,12 @@ export type DamAssetAutocompleteRouteSegmentArgs = {
 };
 
 
+export type DamAssetAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type DamAssetAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -18071,6 +18929,7 @@ export type DamAssetFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -18161,6 +19020,14 @@ export type DamAssetFacetSavedArgs = {
 };
 
 
+export type DamAssetFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DamAssetFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -18206,6 +19073,7 @@ export type DamAssetOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -18246,6 +19114,7 @@ export type DamAssetWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -18278,6 +19147,7 @@ export type DamImageAsset = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -18303,6 +19173,7 @@ export type DamImageAssetAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -18339,6 +19210,12 @@ export type DamImageAssetAutocompleteRouteSegmentArgs = {
 };
 
 
+export type DamImageAssetAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type DamImageAssetAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -18369,6 +19246,7 @@ export type DamImageAssetFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -18459,6 +19337,14 @@ export type DamImageAssetFacetSavedArgs = {
 };
 
 
+export type DamImageAssetFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DamImageAssetFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -18504,6 +19390,7 @@ export type DamImageAssetOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -18544,6 +19431,7 @@ export type DamImageAssetWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -18576,6 +19464,7 @@ export type DamVideoAsset = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -18601,6 +19490,7 @@ export type DamVideoAssetAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -18637,6 +19527,12 @@ export type DamVideoAssetAutocompleteRouteSegmentArgs = {
 };
 
 
+export type DamVideoAssetAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type DamVideoAssetAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -18667,6 +19563,7 @@ export type DamVideoAssetFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -18757,6 +19654,14 @@ export type DamVideoAssetFacetSavedArgs = {
 };
 
 
+export type DamVideoAssetFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DamVideoAssetFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -18802,6 +19707,7 @@ export type DamVideoAssetOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -18842,6 +19748,7 @@ export type DamVideoAssetWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -18910,6 +19817,7 @@ export type DateTimeElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -18934,6 +19842,7 @@ export type DateTimeElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -18958,6 +19867,12 @@ export type DateTimeElementBlockAutocompleteRelativePathArgs = {
 
 
 export type DateTimeElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type DateTimeElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -18998,6 +19913,7 @@ export type DateTimeElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -19122,6 +20038,14 @@ export type DateTimeElementBlockFacetSavedArgs = {
 };
 
 
+export type DateTimeElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DateTimeElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -19180,6 +20104,7 @@ export type DateTimeElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -19225,6 +20150,7 @@ export type DateTimeElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -19261,6 +20187,7 @@ export type DateTimeRangeElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -19285,6 +20212,7 @@ export type DateTimeRangeElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -19309,6 +20237,12 @@ export type DateTimeRangeElementBlockAutocompleteRelativePathArgs = {
 
 
 export type DateTimeRangeElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type DateTimeRangeElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -19349,6 +20283,7 @@ export type DateTimeRangeElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -19473,6 +20408,14 @@ export type DateTimeRangeElementBlockFacetSavedArgs = {
 };
 
 
+export type DateTimeRangeElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DateTimeRangeElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -19531,6 +20474,7 @@ export type DateTimeRangeElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -19576,6 +20520,7 @@ export type DateTimeRangeElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -19608,6 +20553,7 @@ export type DiscountItems = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -19632,6 +20578,7 @@ export type DiscountItemsAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -19656,6 +20603,12 @@ export type DiscountItemsAutocompleteRelativePathArgs = {
 
 
 export type DiscountItemsAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type DiscountItemsAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -19692,6 +20645,7 @@ export type DiscountItemsFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -19778,6 +20732,14 @@ export type DiscountItemsFacetSavedArgs = {
 };
 
 
+export type DiscountItemsFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DiscountItemsFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -19824,6 +20786,7 @@ export type DiscountItemsOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -19864,6 +20827,7 @@ export type DiscountItemsWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -19879,6 +20843,7 @@ export type DiscountItemsWhereInput = {
 export type DynamicProduct = IContent & {
   __typename?: 'DynamicProduct';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<DynamicProductAssociations>;
   AssociationsTitle?: Maybe<Scalars['String']>;
   /** Boost product in search results with default sort */
@@ -19931,6 +20896,7 @@ export type DynamicProduct = IContent & {
   SeoUri?: Maybe<Scalars['String']>;
   /** This will determine whether or not to show recommendations. */
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   Sizing?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -19971,6 +20937,7 @@ export type DynamicProductAssociationsWhereInput = {
 export type DynamicProductAutocomplete = {
   __typename?: 'DynamicProductAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<DynamicProductAssociationsAutocomplete>;
   Categories?: Maybe<DynamicProductCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -19986,6 +20953,7 @@ export type DynamicProductAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<DynamicProductSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   VariantsReference?: Maybe<ContentModelReferenceAutocomplete>;
@@ -20017,6 +20985,12 @@ export type DynamicProductAutocompleteRouteSegmentArgs = {
 
 
 export type DynamicProductAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type DynamicProductAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -20059,6 +21033,7 @@ export type DynamicProductCategoriesWhereInput = {
 export type DynamicProductFacet = {
   __typename?: 'DynamicProductFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<DynamicProductAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   Boost?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -20108,6 +21083,7 @@ export type DynamicProductFacet = {
   SeoInformation?: Maybe<DynamicProductSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   Sizing?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -20407,6 +21383,14 @@ export type DynamicProductFacetShowRecommendationsArgs = {
 };
 
 
+export type DynamicProductFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type DynamicProductFacetSizingArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -20452,6 +21436,7 @@ export type DynamicProductFacetWarrantyArgs = {
 
 export type DynamicProductOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<DynamicProductAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   Boost?: InputMaybe<OrderBy>;
@@ -20501,6 +21486,7 @@ export type DynamicProductOrderByInput = {
   SeoInformation?: InputMaybe<DynamicProductSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   Sizing?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -20625,6 +21611,7 @@ export type DynamicProductSeoInformationWhereInput = {
 
 export type DynamicProductWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<DynamicProductAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   Boost?: InputMaybe<IntFilterInput>;
@@ -20674,6 +21661,7 @@ export type DynamicProductWhereInput = {
   SeoInformation?: InputMaybe<DynamicProductSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   Sizing?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -20692,6 +21680,7 @@ export type DynamicProductWhereInput = {
 export type DynamicVariant = IContent & {
   __typename?: 'DynamicVariant';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<DynamicVariantAssociations>;
   AssociationsTitle?: Maybe<Scalars['String']>;
   CatalogId?: Maybe<Scalars['Int']>;
@@ -20714,7 +21703,9 @@ export type DynamicVariant = IContent & {
   IsCommonDraft?: Maybe<Scalars['Bool']>;
   Language?: Maybe<ContentLanguageModel>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
+  MaxQuantity?: Maybe<Scalars['Float']>;
   MetaClassId?: Maybe<Scalars['Int']>;
+  MinQuantity?: Maybe<Scalars['Float']>;
   Mpn?: Maybe<Scalars['String']>;
   Name?: Maybe<Scalars['String']>;
   PackageQuantity?: Maybe<Scalars['String']>;
@@ -20733,6 +21724,7 @@ export type DynamicVariant = IContent & {
   ShippingDimensions?: Maybe<DynamicVariantShippingDimensions>;
   ShippingPackageId?: Maybe<Scalars['Int']>;
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   Size?: Maybe<Scalars['String']>;
   Sku?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
@@ -20779,6 +21771,7 @@ export type DynamicVariantAssociationsWhereInput = {
 export type DynamicVariantAutocomplete = {
   __typename?: 'DynamicVariantAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<DynamicVariantAssociationsAutocomplete>;
   Categories?: Maybe<DynamicVariantCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -20796,6 +21789,7 @@ export type DynamicVariantAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<DynamicVariantSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -20826,6 +21820,12 @@ export type DynamicVariantAutocompleteRouteSegmentArgs = {
 
 
 export type DynamicVariantAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type DynamicVariantAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -20868,6 +21868,7 @@ export type DynamicVariantCategoriesWhereInput = {
 export type DynamicVariantFacet = {
   __typename?: 'DynamicVariantFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<DynamicVariantAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -20890,7 +21891,9 @@ export type DynamicVariantFacet = {
   IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
   Language?: Maybe<ContentLanguageModelFacet>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MaxQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   MetaClassId?: Maybe<Array<Maybe<NumberFacet>>>;
+  MinQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   Mpn?: Maybe<Array<Maybe<StringFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   PackageQuantity?: Maybe<Array<Maybe<StringFacet>>>;
@@ -20909,6 +21912,7 @@ export type DynamicVariantFacet = {
   ShippingDimensions?: Maybe<DynamicVariantShippingDimensionsFacet>;
   ShippingPackageId?: Maybe<Array<Maybe<NumberFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   Size?: Maybe<Array<Maybe<StringFacet>>>;
   Sku?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -21030,7 +22034,17 @@ export type DynamicVariantFacetIsCommonDraftArgs = {
 };
 
 
+export type DynamicVariantFacetMaxQuantityArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type DynamicVariantFacetMetaClassIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type DynamicVariantFacetMinQuantityArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
 
@@ -21119,6 +22133,14 @@ export type DynamicVariantFacetShippingPackageIdArgs = {
 
 
 export type DynamicVariantFacetShowRecommendationsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type DynamicVariantFacetSiteIdArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
   orderBy?: InputMaybe<OrderBy>;
@@ -21221,6 +22243,7 @@ export type DynamicVariantFacetWeightArgs = {
 
 export type DynamicVariantOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<DynamicVariantAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   CatalogId?: InputMaybe<OrderBy>;
@@ -21243,7 +22266,9 @@ export type DynamicVariantOrderByInput = {
   IsCommonDraft?: InputMaybe<OrderBy>;
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MaxQuantity?: InputMaybe<OrderBy>;
   MetaClassId?: InputMaybe<OrderBy>;
+  MinQuantity?: InputMaybe<OrderBy>;
   Mpn?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   PackageQuantity?: InputMaybe<OrderBy>;
@@ -21262,6 +22287,7 @@ export type DynamicVariantOrderByInput = {
   ShippingDimensions?: InputMaybe<DynamicVariantShippingDimensionsOrderByInput>;
   ShippingPackageId?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   Size?: InputMaybe<OrderBy>;
   Sku?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
@@ -21433,6 +22459,7 @@ export type DynamicVariantShippingDimensionsWhereInput = {
 
 export type DynamicVariantWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<DynamicVariantAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
@@ -21455,7 +22482,9 @@ export type DynamicVariantWhereInput = {
   IsCommonDraft?: InputMaybe<BoolFilterInput>;
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MaxQuantity?: InputMaybe<FloatFilterInput>;
   MetaClassId?: InputMaybe<IntFilterInput>;
+  MinQuantity?: InputMaybe<FloatFilterInput>;
   Mpn?: InputMaybe<SearchableStringFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   PackageQuantity?: InputMaybe<SearchableStringFilterInput>;
@@ -21474,6 +22503,7 @@ export type DynamicVariantWhereInput = {
   ShippingDimensions?: InputMaybe<DynamicVariantShippingDimensionsWhereInput>;
   ShippingPackageId?: InputMaybe<IntFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   Size?: InputMaybe<SearchableStringFilterInput>;
   Sku?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
@@ -21520,6 +22550,7 @@ export type ElevatedRoleBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -21544,6 +22575,7 @@ export type ElevatedRoleBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -21568,6 +22600,12 @@ export type ElevatedRoleBlockAutocompleteRelativePathArgs = {
 
 
 export type ElevatedRoleBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ElevatedRoleBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -21608,6 +22646,7 @@ export type ElevatedRoleBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -21718,6 +22757,14 @@ export type ElevatedRoleBlockFacetSavedArgs = {
 };
 
 
+export type ElevatedRoleBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ElevatedRoleBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -21768,6 +22815,7 @@ export type ElevatedRoleBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -21812,6 +22860,7 @@ export type ElevatedRoleBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -21843,6 +22892,7 @@ export type ExistsFilterBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -21866,6 +22916,7 @@ export type ExistsFilterBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -21890,6 +22941,12 @@ export type ExistsFilterBlockAutocompleteRelativePathArgs = {
 
 
 export type ExistsFilterBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ExistsFilterBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -21924,6 +22981,7 @@ export type ExistsFilterBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -22005,6 +23063,14 @@ export type ExistsFilterBlockFacetSavedArgs = {
 };
 
 
+export type ExistsFilterBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ExistsFilterBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -22049,6 +23115,7 @@ export type ExistsFilterBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -22087,6 +23154,7 @@ export type ExistsFilterBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -22124,6 +23192,7 @@ export type FacebookBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -22149,6 +23218,7 @@ export type FacebookBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -22173,6 +23243,12 @@ export type FacebookBlockAutocompleteRelativePathArgs = {
 
 
 export type FacebookBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FacebookBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -22213,6 +23289,7 @@ export type FacebookBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -22329,6 +23406,14 @@ export type FacebookBlockFacetSavedArgs = {
 };
 
 
+export type FacebookBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FacebookBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -22384,6 +23469,7 @@ export type FacebookBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -22429,6 +23515,7 @@ export type FacebookBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -22469,6 +23556,7 @@ export type FeedBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -22493,6 +23581,7 @@ export type FeedBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -22517,6 +23606,12 @@ export type FeedBlockAutocompleteRelativePathArgs = {
 
 
 export type FeedBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FeedBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -22559,6 +23654,7 @@ export type FeedBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -22690,6 +23786,14 @@ export type FeedBlockFacetShowHeadingArgs = {
 };
 
 
+export type FeedBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FeedBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -22742,6 +23846,7 @@ export type FeedBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -22788,6 +23893,7 @@ export type FeedBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -22823,6 +23929,7 @@ export type FileUploadElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -22847,6 +23954,7 @@ export type FileUploadElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -22871,6 +23979,12 @@ export type FileUploadElementBlockAutocompleteRelativePathArgs = {
 
 
 export type FileUploadElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FileUploadElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -22911,6 +24025,7 @@ export type FileUploadElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -23035,6 +24150,14 @@ export type FileUploadElementBlockFacetSavedArgs = {
 };
 
 
+export type FileUploadElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FileUploadElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -23093,6 +24216,7 @@ export type FileUploadElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -23138,6 +24262,7 @@ export type FileUploadElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -23176,6 +24301,7 @@ export type FilterActivitiesBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -23200,6 +24326,7 @@ export type FilterActivitiesBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -23224,6 +24351,12 @@ export type FilterActivitiesBlockAutocompleteRelativePathArgs = {
 
 
 export type FilterActivitiesBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FilterActivitiesBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -23264,6 +24397,7 @@ export type FilterActivitiesBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -23382,6 +24516,14 @@ export type FilterActivitiesBlockFacetSavedArgs = {
 };
 
 
+export type FilterActivitiesBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FilterActivitiesBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -23432,6 +24574,7 @@ export type FilterActivitiesBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -23476,6 +24619,7 @@ export type FilterActivitiesBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -23513,6 +24657,7 @@ export type FilterContinentsBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -23537,6 +24682,7 @@ export type FilterContinentsBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -23561,6 +24707,12 @@ export type FilterContinentsBlockAutocompleteRelativePathArgs = {
 
 
 export type FilterContinentsBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FilterContinentsBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -23601,6 +24753,7 @@ export type FilterContinentsBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -23719,6 +24872,14 @@ export type FilterContinentsBlockFacetSavedArgs = {
 };
 
 
+export type FilterContinentsBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FilterContinentsBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -23769,6 +24930,7 @@ export type FilterContinentsBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -23813,6 +24975,7 @@ export type FilterContinentsBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -23850,6 +25013,7 @@ export type FilterDistancesBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -23874,6 +25038,7 @@ export type FilterDistancesBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -23898,6 +25063,12 @@ export type FilterDistancesBlockAutocompleteRelativePathArgs = {
 
 
 export type FilterDistancesBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FilterDistancesBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -23938,6 +25109,7 @@ export type FilterDistancesBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -24056,6 +25228,14 @@ export type FilterDistancesBlockFacetSavedArgs = {
 };
 
 
+export type FilterDistancesBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FilterDistancesBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -24106,6 +25286,7 @@ export type FilterDistancesBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -24150,6 +25331,7 @@ export type FilterDistancesBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -24187,6 +25369,7 @@ export type FilterTemperaturesBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -24211,6 +25394,7 @@ export type FilterTemperaturesBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -24235,6 +25419,12 @@ export type FilterTemperaturesBlockAutocompleteRelativePathArgs = {
 
 
 export type FilterTemperaturesBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FilterTemperaturesBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -24275,6 +25465,7 @@ export type FilterTemperaturesBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -24393,6 +25584,14 @@ export type FilterTemperaturesBlockFacetSavedArgs = {
 };
 
 
+export type FilterTemperaturesBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FilterTemperaturesBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -24443,6 +25642,7 @@ export type FilterTemperaturesBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -24487,6 +25687,7 @@ export type FilterTemperaturesBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -24514,10 +25715,12 @@ export type FixedPricePurchaseQuantity = IContent & {
   MatchRecursive?: Maybe<Scalars['Bool']>;
   Name?: Maybe<Scalars['String']>;
   ParentLink?: Maybe<ContentModelReference>;
+  PartiallyFulfilledThreshold?: Maybe<Scalars['Float']>;
   RelativePath?: Maybe<Scalars['String']>;
   RequiredQuantity?: Maybe<Scalars['Int']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -24542,6 +25745,7 @@ export type FixedPricePurchaseQuantityAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -24566,6 +25770,12 @@ export type FixedPricePurchaseQuantityAutocompleteRelativePathArgs = {
 
 
 export type FixedPricePurchaseQuantityAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FixedPricePurchaseQuantityAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -24598,10 +25808,12 @@ export type FixedPricePurchaseQuantityFacet = {
   MatchRecursive?: Maybe<Array<Maybe<StringFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   ParentLink?: Maybe<ContentModelReferenceFacet>;
+  PartiallyFulfilledThreshold?: Maybe<Array<Maybe<NumberFacet>>>;
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RequiredQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -24661,6 +25873,11 @@ export type FixedPricePurchaseQuantityFacetNameArgs = {
 };
 
 
+export type FixedPricePurchaseQuantityFacetPartiallyFulfilledThresholdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type FixedPricePurchaseQuantityFacetRelativePathArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -24685,6 +25902,14 @@ export type FixedPricePurchaseQuantityFacetRouteSegmentArgs = {
 export type FixedPricePurchaseQuantityFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type FixedPricePurchaseQuantityFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -24730,10 +25955,12 @@ export type FixedPricePurchaseQuantityOrderByInput = {
   MatchRecursive?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<OrderBy>;
   RelativePath?: InputMaybe<OrderBy>;
   RequiredQuantity?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -24770,10 +25997,12 @@ export type FixedPricePurchaseQuantityWhereInput = {
   MatchRecursive?: InputMaybe<BoolFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<FloatFilterInput>;
   RelativePath?: InputMaybe<StringFilterInput>;
   RequiredQuantity?: InputMaybe<IntFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -24826,6 +26055,7 @@ export type FolderPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -24849,6 +26079,7 @@ export type FolderPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -24873,6 +26104,12 @@ export type FolderPageAutocompleteRelativePathArgs = {
 
 
 export type FolderPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FolderPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -24906,6 +26143,7 @@ export type FolderPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -24979,6 +26217,14 @@ export type FolderPageFacetSavedArgs = {
 };
 
 
+export type FolderPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FolderPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -25022,6 +26268,7 @@ export type FolderPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -25059,6 +26306,7 @@ export type FolderPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -25087,6 +26335,7 @@ export type FormContainerBlock = IContent & {
   ElementsArea?: Maybe<Array<Maybe<ContentAreaItemModelSearch>>>;
   ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
   FinalizedSubmissionRetentionPeriod?: Maybe<Scalars['String']>;
+  FormModel?: Maybe<FormContainerBlockModel>;
   IsCommonDraft?: Maybe<Scalars['Bool']>;
   Language?: Maybe<ContentLanguageModel>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
@@ -25101,6 +26350,7 @@ export type FormContainerBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   ShowNavigationBar?: Maybe<Scalars['Bool']>;
   ShowSummarizedData?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -25121,12 +26371,14 @@ export type FormContainerBlockAutocomplete = {
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
   ContentType?: Maybe<Array<Maybe<Scalars['String']>>>;
   ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  FormModel?: Maybe<FormContainerBlockModelAutocomplete>;
   Language?: Maybe<ContentLanguageModelAutocomplete>;
   MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RedirectToPage?: Maybe<Array<Maybe<Scalars['String']>>>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -25162,6 +26414,12 @@ export type FormContainerBlockAutocompleteRouteSegmentArgs = {
 };
 
 
+export type FormContainerBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type FormContainerBlockAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -25190,6 +26448,7 @@ export type FormContainerBlockFacet = {
   ElementsArea?: Maybe<ContentAreaItemModelSearchFacet>;
   ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
   FinalizedSubmissionRetentionPeriod?: Maybe<Array<Maybe<StringFacet>>>;
+  FormModel?: Maybe<FormContainerBlockModelFacet>;
   IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
   Language?: Maybe<ContentLanguageModelFacet>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
@@ -25204,6 +26463,7 @@ export type FormContainerBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowNavigationBar?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSummarizedData?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -25383,6 +26643,14 @@ export type FormContainerBlockFacetShowSummarizedDataArgs = {
 };
 
 
+export type FormContainerBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FormContainerBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -25426,6 +26694,43 @@ export type FormContainerBlockFacetUrlArgs = {
   orderType?: InputMaybe<OrderByFacetType>;
 };
 
+export type FormContainerBlockModel = {
+  __typename?: 'FormContainerBlockModel';
+  Template?: Maybe<Scalars['String']>;
+};
+
+export type FormContainerBlockModelAutocomplete = {
+  __typename?: 'FormContainerBlockModelAutocomplete';
+  Template?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+
+export type FormContainerBlockModelAutocompleteTemplateArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+export type FormContainerBlockModelFacet = {
+  __typename?: 'FormContainerBlockModelFacet';
+  Template?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type FormContainerBlockModelFacetTemplateArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type FormContainerBlockModelOrderByInput = {
+  Template?: InputMaybe<OrderBy>;
+};
+
+export type FormContainerBlockModelWhereInput = {
+  Template?: InputMaybe<StringFilterInput>;
+};
+
 export type FormContainerBlockOrderByInput = {
   AllowAnonymousSubmission?: InputMaybe<OrderBy>;
   AllowExposingDataFeeds?: InputMaybe<OrderBy>;
@@ -25442,6 +26747,7 @@ export type FormContainerBlockOrderByInput = {
   ElementsArea?: InputMaybe<ContentAreaItemModelSearchOrderByInput>;
   ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
   FinalizedSubmissionRetentionPeriod?: InputMaybe<OrderBy>;
+  FormModel?: InputMaybe<FormContainerBlockModelOrderByInput>;
   IsCommonDraft?: InputMaybe<OrderBy>;
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
@@ -25456,6 +26762,7 @@ export type FormContainerBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ShowNavigationBar?: InputMaybe<OrderBy>;
   ShowSummarizedData?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -25495,6 +26802,7 @@ export type FormContainerBlockWhereInput = {
   ElementsArea?: InputMaybe<ContentAreaItemModelSearchWhereInput>;
   ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
   FinalizedSubmissionRetentionPeriod?: InputMaybe<SearchableStringFilterInput>;
+  FormModel?: InputMaybe<FormContainerBlockModelWhereInput>;
   IsCommonDraft?: InputMaybe<BoolFilterInput>;
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
@@ -25509,6 +26817,7 @@ export type FormContainerBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ShowNavigationBar?: InputMaybe<BoolFilterInput>;
   ShowSummarizedData?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -25545,6 +26854,7 @@ export type FormStepBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -25570,6 +26880,7 @@ export type FormStepBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -25600,6 +26911,12 @@ export type FormStepBlockAutocompleteRelativePathArgs = {
 
 
 export type FormStepBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type FormStepBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -25639,6 +26956,7 @@ export type FormStepBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -25749,6 +27067,14 @@ export type FormStepBlockFacetSavedArgs = {
 };
 
 
+export type FormStepBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FormStepBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -25798,6 +27124,7 @@ export type FormStepBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -25841,6 +27168,7 @@ export type FormStepBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -25874,6 +27202,7 @@ export type FoundationPdfFile = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -25899,6 +27228,7 @@ export type FoundationPdfFileAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -25935,6 +27265,12 @@ export type FoundationPdfFileAutocompleteRouteSegmentArgs = {
 };
 
 
+export type FoundationPdfFileAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type FoundationPdfFileAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -25966,6 +27302,7 @@ export type FoundationPdfFileFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -26061,6 +27398,14 @@ export type FoundationPdfFileFacetSavedArgs = {
 };
 
 
+export type FoundationPdfFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type FoundationPdfFileFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -26107,6 +27452,7 @@ export type FoundationPdfFileOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -26148,6 +27494,7 @@ export type FoundationPdfFileWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -26164,6 +27511,7 @@ export type FoundationPdfFileWhereInput = {
 export type GenericBundle = IContent & {
   __typename?: 'GenericBundle';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<GenericBundleAssociations>;
   AssociationsTitle?: Maybe<Scalars['String']>;
   BundleReference?: Maybe<ContentModelReference>;
@@ -26200,6 +27548,7 @@ export type GenericBundle = IContent & {
   SeoInformation?: Maybe<GenericBundleSeoInformation>;
   SeoUri?: Maybe<Scalars['String']>;
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -26237,6 +27586,7 @@ export type GenericBundleAssociationsWhereInput = {
 export type GenericBundleAutocomplete = {
   __typename?: 'GenericBundleAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<GenericBundleAssociationsAutocomplete>;
   BundleReference?: Maybe<ContentModelReferenceAutocomplete>;
   Categories?: Maybe<GenericBundleCategoriesAutocomplete>;
@@ -26253,6 +27603,7 @@ export type GenericBundleAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<GenericBundleSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -26283,6 +27634,12 @@ export type GenericBundleAutocompleteRouteSegmentArgs = {
 
 
 export type GenericBundleAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GenericBundleAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -26325,6 +27682,7 @@ export type GenericBundleCategoriesWhereInput = {
 export type GenericBundleFacet = {
   __typename?: 'GenericBundleFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<GenericBundleAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   BundleReference?: Maybe<ContentModelReferenceFacet>;
@@ -26361,6 +27719,7 @@ export type GenericBundleFacet = {
   SeoInformation?: Maybe<GenericBundleSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -26548,6 +27907,14 @@ export type GenericBundleFacetShowRecommendationsArgs = {
 };
 
 
+export type GenericBundleFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GenericBundleFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -26577,6 +27944,7 @@ export type GenericBundleFacetUrlArgs = {
 
 export type GenericBundleOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<GenericBundleAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   BundleReference?: InputMaybe<ContentModelReferenceOrderByInput>;
@@ -26613,6 +27981,7 @@ export type GenericBundleOrderByInput = {
   SeoInformation?: InputMaybe<GenericBundleSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -26734,6 +28103,7 @@ export type GenericBundleSeoInformationWhereInput = {
 
 export type GenericBundleWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<GenericBundleAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   BundleReference?: InputMaybe<ContentModelReferenceWhereInput>;
@@ -26770,6 +28140,7 @@ export type GenericBundleWhereInput = {
   SeoInformation?: InputMaybe<GenericBundleSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -26784,6 +28155,7 @@ export type GenericBundleWhereInput = {
 export type GenericNode = IContent & {
   __typename?: 'GenericNode';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   CatalogId?: Maybe<Scalars['Int']>;
   Categories?: Maybe<GenericNodeCategories>;
   Changed?: Maybe<Scalars['Date']>;
@@ -26816,6 +28188,7 @@ export type GenericNode = IContent & {
   SeoInformation?: Maybe<GenericNodeSeoInformation>;
   SeoUri?: Maybe<Scalars['String']>;
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -26832,6 +28205,7 @@ export type GenericNode = IContent & {
 export type GenericNodeAutocomplete = {
   __typename?: 'GenericNodeAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Categories?: Maybe<GenericNodeCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
   ContentType?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -26845,6 +28219,7 @@ export type GenericNodeAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<GenericNodeSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -26875,6 +28250,12 @@ export type GenericNodeAutocompleteRouteSegmentArgs = {
 
 
 export type GenericNodeAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GenericNodeAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -26917,6 +28298,7 @@ export type GenericNodeCategoriesWhereInput = {
 export type GenericNodeFacet = {
   __typename?: 'GenericNodeFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
   Categories?: Maybe<GenericNodeCategoriesFacet>;
   Changed?: Maybe<Array<Maybe<DateFacet>>>;
@@ -26949,6 +28331,7 @@ export type GenericNodeFacet = {
   SeoInformation?: Maybe<GenericNodeSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -27127,6 +28510,14 @@ export type GenericNodeFacetShowRecommendationsArgs = {
 };
 
 
+export type GenericNodeFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GenericNodeFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -27164,6 +28555,7 @@ export type GenericNodeFacetUrlArgs = {
 
 export type GenericNodeOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
   Categories?: InputMaybe<GenericNodeCategoriesOrderByInput>;
   Changed?: InputMaybe<OrderBy>;
@@ -27196,6 +28588,7 @@ export type GenericNodeOrderByInput = {
   SeoInformation?: InputMaybe<GenericNodeSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -27296,6 +28689,7 @@ export type GenericNodeSeoInformationWhereInput = {
 
 export type GenericNodeWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
   Categories?: InputMaybe<GenericNodeCategoriesWhereInput>;
   Changed?: InputMaybe<DateFilterInput>;
@@ -27328,6 +28722,7 @@ export type GenericNodeWhereInput = {
   SeoInformation?: InputMaybe<GenericNodeSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -27344,6 +28739,7 @@ export type GenericNodeWhereInput = {
 export type GenericPackage = IContent & {
   __typename?: 'GenericPackage';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<GenericPackageAssociations>;
   /** This is title of the Associations tab. */
   AssociationsTitle?: Maybe<Scalars['String']>;
@@ -27368,7 +28764,9 @@ export type GenericPackage = IContent & {
   Language?: Maybe<ContentLanguageModel>;
   LongDescription?: Maybe<Scalars['String']>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
+  MaxQuantity?: Maybe<Scalars['Float']>;
   MetaClassId?: Maybe<Scalars['Int']>;
+  MinQuantity?: Maybe<Scalars['Float']>;
   Name?: Maybe<Scalars['String']>;
   NewArrival?: Maybe<Scalars['Bool']>;
   OnSale?: Maybe<Scalars['Bool']>;
@@ -27386,6 +28784,7 @@ export type GenericPackage = IContent & {
   ShippingDimensions?: Maybe<GenericPackageShippingDimensions>;
   ShippingPackageId?: Maybe<Scalars['Int']>;
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -27426,6 +28825,7 @@ export type GenericPackageAssociationsWhereInput = {
 export type GenericPackageAutocomplete = {
   __typename?: 'GenericPackageAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<GenericPackageAssociationsAutocomplete>;
   Categories?: Maybe<GenericPackageCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -27444,6 +28844,7 @@ export type GenericPackageAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<GenericPackageSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -27474,6 +28875,12 @@ export type GenericPackageAutocompleteRouteSegmentArgs = {
 
 
 export type GenericPackageAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GenericPackageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -27516,6 +28923,7 @@ export type GenericPackageCategoriesWhereInput = {
 export type GenericPackageFacet = {
   __typename?: 'GenericPackageFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<GenericPackageAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -27538,7 +28946,9 @@ export type GenericPackageFacet = {
   Language?: Maybe<ContentLanguageModelFacet>;
   LongDescription?: Maybe<Array<Maybe<StringFacet>>>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MaxQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   MetaClassId?: Maybe<Array<Maybe<NumberFacet>>>;
+  MinQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   NewArrival?: Maybe<Array<Maybe<StringFacet>>>;
   OnSale?: Maybe<Array<Maybe<StringFacet>>>;
@@ -27556,6 +28966,7 @@ export type GenericPackageFacet = {
   ShippingDimensions?: Maybe<GenericPackageShippingDimensionsFacet>;
   ShippingPackageId?: Maybe<Array<Maybe<NumberFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -27671,7 +29082,17 @@ export type GenericPackageFacetLongDescriptionArgs = {
 };
 
 
+export type GenericPackageFacetMaxQuantityArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type GenericPackageFacetMetaClassIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type GenericPackageFacetMinQuantityArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
 
@@ -27751,6 +29172,14 @@ export type GenericPackageFacetShowRecommendationsArgs = {
 };
 
 
+export type GenericPackageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GenericPackageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -27798,6 +29227,7 @@ export type GenericPackageFacetWeightArgs = {
 
 export type GenericPackageOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<GenericPackageAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   CatalogId?: InputMaybe<OrderBy>;
@@ -27820,7 +29250,9 @@ export type GenericPackageOrderByInput = {
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   LongDescription?: InputMaybe<OrderBy>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MaxQuantity?: InputMaybe<OrderBy>;
   MetaClassId?: InputMaybe<OrderBy>;
+  MinQuantity?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   NewArrival?: InputMaybe<OrderBy>;
   OnSale?: InputMaybe<OrderBy>;
@@ -27838,6 +29270,7 @@ export type GenericPackageOrderByInput = {
   ShippingDimensions?: InputMaybe<GenericPackageShippingDimensionsOrderByInput>;
   ShippingPackageId?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -28003,6 +29436,7 @@ export type GenericPackageShippingDimensionsWhereInput = {
 
 export type GenericPackageWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<GenericPackageAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
@@ -28025,7 +29459,9 @@ export type GenericPackageWhereInput = {
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   LongDescription?: InputMaybe<SearchableStringFilterInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MaxQuantity?: InputMaybe<FloatFilterInput>;
   MetaClassId?: InputMaybe<IntFilterInput>;
+  MinQuantity?: InputMaybe<FloatFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   NewArrival?: InputMaybe<BoolFilterInput>;
   OnSale?: InputMaybe<BoolFilterInput>;
@@ -28043,6 +29479,7 @@ export type GenericPackageWhereInput = {
   ShippingDimensions?: InputMaybe<GenericPackageShippingDimensionsWhereInput>;
   ShippingPackageId?: InputMaybe<IntFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -28061,6 +29498,7 @@ export type GenericPackageWhereInput = {
 export type GenericProduct = IContent & {
   __typename?: 'GenericProduct';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<GenericProductAssociations>;
   AssociationsTitle?: Maybe<Scalars['String']>;
   /** Boost product in search results with default sort */
@@ -28113,6 +29551,7 @@ export type GenericProduct = IContent & {
   SeoUri?: Maybe<Scalars['String']>;
   /** This will determine whether or not to show recommendations. */
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   Sizing?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -28153,6 +29592,7 @@ export type GenericProductAssociationsWhereInput = {
 export type GenericProductAutocomplete = {
   __typename?: 'GenericProductAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<GenericProductAssociationsAutocomplete>;
   Categories?: Maybe<GenericProductCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -28168,6 +29608,7 @@ export type GenericProductAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<GenericProductSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   VariantsReference?: Maybe<ContentModelReferenceAutocomplete>;
@@ -28199,6 +29640,12 @@ export type GenericProductAutocompleteRouteSegmentArgs = {
 
 
 export type GenericProductAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GenericProductAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -28241,6 +29688,7 @@ export type GenericProductCategoriesWhereInput = {
 export type GenericProductFacet = {
   __typename?: 'GenericProductFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<GenericProductAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   Boost?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -28290,6 +29738,7 @@ export type GenericProductFacet = {
   SeoInformation?: Maybe<GenericProductSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   Sizing?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -28589,6 +30038,14 @@ export type GenericProductFacetShowRecommendationsArgs = {
 };
 
 
+export type GenericProductFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GenericProductFacetSizingArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -28634,6 +30091,7 @@ export type GenericProductFacetWarrantyArgs = {
 
 export type GenericProductOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<GenericProductAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   Boost?: InputMaybe<OrderBy>;
@@ -28683,6 +30141,7 @@ export type GenericProductOrderByInput = {
   SeoInformation?: InputMaybe<GenericProductSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   Sizing?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -28807,6 +30266,7 @@ export type GenericProductSeoInformationWhereInput = {
 
 export type GenericProductWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<GenericProductAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   Boost?: InputMaybe<IntFilterInput>;
@@ -28856,6 +30316,7 @@ export type GenericProductWhereInput = {
   SeoInformation?: InputMaybe<GenericProductSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   Sizing?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -28874,6 +30335,7 @@ export type GenericProductWhereInput = {
 export type GenericVariant = IContent & {
   __typename?: 'GenericVariant';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<GenericVariantAssociations>;
   AssociationsTitle?: Maybe<Scalars['String']>;
   CatalogId?: Maybe<Scalars['Int']>;
@@ -28896,7 +30358,9 @@ export type GenericVariant = IContent & {
   IsCommonDraft?: Maybe<Scalars['Bool']>;
   Language?: Maybe<ContentLanguageModel>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
+  MaxQuantity?: Maybe<Scalars['Float']>;
   MetaClassId?: Maybe<Scalars['Int']>;
+  MinQuantity?: Maybe<Scalars['Float']>;
   Mpn?: Maybe<Scalars['String']>;
   Name?: Maybe<Scalars['String']>;
   PackageQuantity?: Maybe<Scalars['String']>;
@@ -28915,6 +30379,7 @@ export type GenericVariant = IContent & {
   ShippingDimensions?: Maybe<GenericVariantShippingDimensions>;
   ShippingPackageId?: Maybe<Scalars['Int']>;
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   Size?: Maybe<Scalars['String']>;
   Sku?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
@@ -28961,6 +30426,7 @@ export type GenericVariantAssociationsWhereInput = {
 export type GenericVariantAutocomplete = {
   __typename?: 'GenericVariantAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<GenericVariantAssociationsAutocomplete>;
   Categories?: Maybe<GenericVariantCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -28978,6 +30444,7 @@ export type GenericVariantAutocomplete = {
   ScriptFiles?: Maybe<LinkItemNodeAutocomplete>;
   SeoInformation?: Maybe<GenericVariantSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -29008,6 +30475,12 @@ export type GenericVariantAutocompleteRouteSegmentArgs = {
 
 
 export type GenericVariantAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GenericVariantAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -29050,6 +30523,7 @@ export type GenericVariantCategoriesWhereInput = {
 export type GenericVariantFacet = {
   __typename?: 'GenericVariantFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<GenericVariantAssociationsFacet>;
   AssociationsTitle?: Maybe<Array<Maybe<StringFacet>>>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -29072,7 +30546,9 @@ export type GenericVariantFacet = {
   IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
   Language?: Maybe<ContentLanguageModelFacet>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MaxQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   MetaClassId?: Maybe<Array<Maybe<NumberFacet>>>;
+  MinQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   Mpn?: Maybe<Array<Maybe<StringFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   PackageQuantity?: Maybe<Array<Maybe<StringFacet>>>;
@@ -29091,6 +30567,7 @@ export type GenericVariantFacet = {
   ShippingDimensions?: Maybe<GenericVariantShippingDimensionsFacet>;
   ShippingPackageId?: Maybe<Array<Maybe<NumberFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   Size?: Maybe<Array<Maybe<StringFacet>>>;
   Sku?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -29212,7 +30689,17 @@ export type GenericVariantFacetIsCommonDraftArgs = {
 };
 
 
+export type GenericVariantFacetMaxQuantityArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type GenericVariantFacetMetaClassIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type GenericVariantFacetMinQuantityArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
 
@@ -29301,6 +30788,14 @@ export type GenericVariantFacetShippingPackageIdArgs = {
 
 
 export type GenericVariantFacetShowRecommendationsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type GenericVariantFacetSiteIdArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
   orderBy?: InputMaybe<OrderBy>;
@@ -29403,6 +30898,7 @@ export type GenericVariantFacetWeightArgs = {
 
 export type GenericVariantOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<GenericVariantAssociationsOrderByInput>;
   AssociationsTitle?: InputMaybe<OrderBy>;
   CatalogId?: InputMaybe<OrderBy>;
@@ -29425,7 +30921,9 @@ export type GenericVariantOrderByInput = {
   IsCommonDraft?: InputMaybe<OrderBy>;
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MaxQuantity?: InputMaybe<OrderBy>;
   MetaClassId?: InputMaybe<OrderBy>;
+  MinQuantity?: InputMaybe<OrderBy>;
   Mpn?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   PackageQuantity?: InputMaybe<OrderBy>;
@@ -29444,6 +30942,7 @@ export type GenericVariantOrderByInput = {
   ShippingDimensions?: InputMaybe<GenericVariantShippingDimensionsOrderByInput>;
   ShippingPackageId?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   Size?: InputMaybe<OrderBy>;
   Sku?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
@@ -29615,6 +31114,7 @@ export type GenericVariantShippingDimensionsWhereInput = {
 
 export type GenericVariantWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<GenericVariantAssociationsWhereInput>;
   AssociationsTitle?: InputMaybe<SearchableStringFilterInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
@@ -29637,7 +31137,9 @@ export type GenericVariantWhereInput = {
   IsCommonDraft?: InputMaybe<BoolFilterInput>;
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MaxQuantity?: InputMaybe<FloatFilterInput>;
   MetaClassId?: InputMaybe<IntFilterInput>;
+  MinQuantity?: InputMaybe<FloatFilterInput>;
   Mpn?: InputMaybe<SearchableStringFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   PackageQuantity?: InputMaybe<SearchableStringFilterInput>;
@@ -29656,6 +31158,7 @@ export type GenericVariantWhereInput = {
   ShippingDimensions?: InputMaybe<GenericVariantShippingDimensionsWhereInput>;
   ShippingPackageId?: InputMaybe<IntFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   Size?: InputMaybe<SearchableStringFilterInput>;
   Sku?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
@@ -29717,6 +31220,7 @@ export type GiftCardPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -29753,6 +31257,7 @@ export type GiftCardPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -29800,6 +31305,12 @@ export type GiftCardPageAutocompleteRelativePathArgs = {
 
 
 export type GiftCardPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GiftCardPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -29878,6 +31389,7 @@ export type GiftCardPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -30094,6 +31606,14 @@ export type GiftCardPageFacetSavedArgs = {
 };
 
 
+export type GiftCardPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GiftCardPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -30206,6 +31726,7 @@ export type GiftCardPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -30271,6 +31792,7 @@ export type GiftCardPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -30316,6 +31838,7 @@ export type GoogleMapsBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   SearchTerm?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -30340,6 +31863,7 @@ export type GoogleMapsBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -30364,6 +31888,12 @@ export type GoogleMapsBlockAutocompleteRelativePathArgs = {
 
 
 export type GoogleMapsBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GoogleMapsBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -30405,6 +31935,7 @@ export type GoogleMapsBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SearchTerm?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -30528,6 +32059,14 @@ export type GoogleMapsBlockFacetSearchTermArgs = {
 };
 
 
+export type GoogleMapsBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GoogleMapsBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -30579,6 +32118,7 @@ export type GoogleMapsBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   SearchTerm?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -30624,6 +32164,7 @@ export type GoogleMapsBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   SearchTerm?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -30656,6 +32197,7 @@ export type GroupAdmissionBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -30679,6 +32221,7 @@ export type GroupAdmissionBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -30703,6 +32246,12 @@ export type GroupAdmissionBlockAutocompleteRelativePathArgs = {
 
 
 export type GroupAdmissionBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GroupAdmissionBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -30739,6 +32288,7 @@ export type GroupAdmissionBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -30836,6 +32386,14 @@ export type GroupAdmissionBlockFacetShowHeadingArgs = {
 };
 
 
+export type GroupAdmissionBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GroupAdmissionBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -30882,6 +32440,7 @@ export type GroupAdmissionBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -30922,6 +32481,7 @@ export type GroupAdmissionBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -30953,6 +32513,7 @@ export type GroupCreationBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -30976,6 +32537,7 @@ export type GroupCreationBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -31000,6 +32562,12 @@ export type GroupCreationBlockAutocompleteRelativePathArgs = {
 
 
 export type GroupCreationBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type GroupCreationBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -31035,6 +32603,7 @@ export type GroupCreationBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -31124,6 +32693,14 @@ export type GroupCreationBlockFacetShowHeadingArgs = {
 };
 
 
+export type GroupCreationBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type GroupCreationBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -31169,6 +32746,7 @@ export type GroupCreationBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -31208,6 +32786,7 @@ export type GroupCreationBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -31238,6 +32817,7 @@ export type HcaptchaElementBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   ScoreThreshold?: Maybe<Scalars['Float']>;
   SecretKey?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   SiteKey?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -31263,6 +32843,7 @@ export type HcaptchaElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -31287,6 +32868,12 @@ export type HcaptchaElementBlockAutocompleteRelativePathArgs = {
 
 
 export type HcaptchaElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HcaptchaElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -31322,6 +32909,7 @@ export type HcaptchaElementBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ScoreThreshold?: Maybe<Array<Maybe<NumberFacet>>>;
   SecretKey?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SiteKey?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -31410,6 +32998,14 @@ export type HcaptchaElementBlockFacetSecretKeyArgs = {
 };
 
 
+export type HcaptchaElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type HcaptchaElementBlockFacetSiteKeyArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -31471,6 +33067,7 @@ export type HcaptchaElementBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ScoreThreshold?: InputMaybe<OrderBy>;
   SecretKey?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SiteKey?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -31512,6 +33109,7 @@ export type HcaptchaElementBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ScoreThreshold?: InputMaybe<FloatFilterInput>;
   SecretKey?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SiteKey?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -31555,6 +33153,7 @@ export type HealthChatbotBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -31579,6 +33178,7 @@ export type HealthChatbotBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -31603,6 +33203,12 @@ export type HealthChatbotBlockAutocompleteRelativePathArgs = {
 
 
 export type HealthChatbotBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HealthChatbotBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -31644,6 +33250,7 @@ export type HealthChatbotBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -31767,6 +33374,14 @@ export type HealthChatbotBlockFacetSavedArgs = {
 };
 
 
+export type HealthChatbotBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type HealthChatbotBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -31818,6 +33433,7 @@ export type HealthChatbotBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -31863,6 +33479,7 @@ export type HealthChatbotBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -31903,6 +33520,7 @@ export type HeroBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -31931,6 +33549,7 @@ export type HeroBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -31961,6 +33580,12 @@ export type HeroBlockAutocompleteRelativePathArgs = {
 
 
 export type HeroBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HeroBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -32004,6 +33629,7 @@ export type HeroBlockCallout = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -32027,6 +33653,7 @@ export type HeroBlockCalloutAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -32051,6 +33678,12 @@ export type HeroBlockCalloutAutocompleteRelativePathArgs = {
 
 
 export type HeroBlockCalloutAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HeroBlockCalloutAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -32093,6 +33726,7 @@ export type HeroBlockCalloutFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -32235,6 +33869,14 @@ export type HeroBlockCalloutFacetSavedArgs = {
 };
 
 
+export type HeroBlockCalloutFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type HeroBlockCalloutFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -32287,6 +33929,7 @@ export type HeroBlockCalloutOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -32333,6 +33976,7 @@ export type HeroBlockCalloutWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -32371,6 +34015,7 @@ export type HeroBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -32486,6 +34131,14 @@ export type HeroBlockFacetRouteSegmentArgs = {
 export type HeroBlockFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type HeroBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -32714,6 +34367,7 @@ export type HeroBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -32761,6 +34415,7 @@ export type HeroBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -32814,6 +34469,7 @@ export type HomePage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -32851,6 +34507,7 @@ export type HomePageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -32898,6 +34555,12 @@ export type HomePageAutocompleteRelativePathArgs = {
 
 
 export type HomePageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HomePageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -32977,6 +34640,7 @@ export type HomePageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -33194,6 +34858,14 @@ export type HomePageFacetSavedArgs = {
 };
 
 
+export type HomePageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type HomePageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -33307,6 +34979,7 @@ export type HomePageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -33374,6 +35047,7 @@ export type HomePageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -33473,6 +35147,7 @@ export type HtmlBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -33496,6 +35171,7 @@ export type HtmlBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -33520,6 +35196,12 @@ export type HtmlBlockAutocompleteRelativePathArgs = {
 
 
 export type HtmlBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type HtmlBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -33554,6 +35236,7 @@ export type HtmlBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -33635,6 +35318,14 @@ export type HtmlBlockFacetSavedArgs = {
 };
 
 
+export type HtmlBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type HtmlBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -33679,6 +35370,7 @@ export type HtmlBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -33717,6 +35409,7 @@ export type HtmlBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -33743,6 +35436,7 @@ export type IContent = {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -33778,6 +35472,7 @@ export type IframeBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -33802,6 +35497,7 @@ export type IframeBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -33826,6 +35522,12 @@ export type IframeBlockAutocompleteRelativePathArgs = {
 
 
 export type IframeBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type IframeBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -33865,6 +35567,7 @@ export type IframeBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -33975,6 +35678,14 @@ export type IframeBlockFacetSavedArgs = {
 };
 
 
+export type IframeBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type IframeBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -34024,6 +35735,7 @@ export type IframeBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -34067,6 +35779,7 @@ export type IframeBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -34102,6 +35815,7 @@ export type ImageChoiceElementBlock = IContent & {
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowSelectionInputControl?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -34127,6 +35841,7 @@ export type ImageChoiceElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -34151,6 +35866,12 @@ export type ImageChoiceElementBlockAutocompleteRelativePathArgs = {
 
 
 export type ImageChoiceElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ImageChoiceElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -34191,6 +35912,7 @@ export type ImageChoiceElementBlockFacet = {
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowSelectionInputControl?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -34310,6 +36032,14 @@ export type ImageChoiceElementBlockFacetShowSelectionInputControlArgs = {
 };
 
 
+export type ImageChoiceElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ImageChoiceElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -34368,6 +36098,7 @@ export type ImageChoiceElementBlockOrderByInput = {
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowSelectionInputControl?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -34413,6 +36144,7 @@ export type ImageChoiceElementBlockWhereInput = {
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowSelectionInputControl?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -34471,6 +36203,7 @@ export type ImageMediaData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -34503,6 +36236,7 @@ export type ImageMediaDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
@@ -34553,6 +36287,12 @@ export type ImageMediaDataAutocompleteRelativePathArgs = {
 
 
 export type ImageMediaDataAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ImageMediaDataAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -34618,6 +36358,7 @@ export type ImageMediaDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -34874,6 +36615,14 @@ export type ImageMediaDataFacetSavedArgs = {
 };
 
 
+export type ImageMediaDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ImageMediaDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -34959,6 +36708,7 @@ export type ImageMediaDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -35025,6 +36775,7 @@ export type ImageMediaDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -35152,6 +36903,7 @@ export type JourneyContainerBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -35176,6 +36928,7 @@ export type JourneyContainerBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -35200,6 +36953,12 @@ export type JourneyContainerBlockAutocompleteRelativePathArgs = {
 
 
 export type JourneyContainerBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type JourneyContainerBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -35241,6 +37000,7 @@ export type JourneyContainerBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -35357,6 +37117,14 @@ export type JourneyContainerBlockFacetSavedArgs = {
 };
 
 
+export type JourneyContainerBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type JourneyContainerBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -35408,6 +37176,7 @@ export type JourneyContainerBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -35453,6 +37222,7 @@ export type JourneyContainerBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -35505,6 +37275,7 @@ export type LandingPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -35542,6 +37313,7 @@ export type LandingPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -35589,6 +37361,12 @@ export type LandingPageAutocompleteRelativePathArgs = {
 
 
 export type LandingPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type LandingPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -35667,6 +37445,7 @@ export type LandingPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -35884,6 +37663,14 @@ export type LandingPageFacetSavedArgs = {
 };
 
 
+export type LandingPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type LandingPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -35996,6 +37783,7 @@ export type LandingPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -36062,6 +37850,7 @@ export type LandingPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -36105,6 +37894,7 @@ export type LikeButtonBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -36129,6 +37919,7 @@ export type LikeButtonBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -36153,6 +37944,12 @@ export type LikeButtonBlockAutocompleteRelativePathArgs = {
 
 
 export type LikeButtonBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type LikeButtonBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -36191,6 +37988,7 @@ export type LikeButtonBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -36293,6 +38091,14 @@ export type LikeButtonBlockFacetSavedArgs = {
 };
 
 
+export type LikeButtonBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type LikeButtonBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -36341,6 +38147,7 @@ export type LikeButtonBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -36383,6 +38190,7 @@ export type LikeButtonBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -36552,6 +38360,7 @@ export type LocationItemPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -36590,6 +38399,7 @@ export type LocationItemPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -36637,6 +38447,12 @@ export type LocationItemPageAutocompleteRelativePathArgs = {
 
 
 export type LocationItemPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type LocationItemPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -36726,6 +38542,7 @@ export type LocationItemPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -37006,6 +38823,14 @@ export type LocationItemPageFacetSavedArgs = {
 };
 
 
+export type LocationItemPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type LocationItemPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -37134,6 +38959,7 @@ export type LocationItemPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -37211,6 +39037,7 @@ export type LocationItemPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -37272,6 +39099,7 @@ export type LocationListPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -37308,6 +39136,7 @@ export type LocationListPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -37355,6 +39184,12 @@ export type LocationListPageAutocompleteRelativePathArgs = {
 
 
 export type LocationListPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type LocationListPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -37434,6 +39269,7 @@ export type LocationListPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -37650,6 +39486,14 @@ export type LocationListPageFacetSavedArgs = {
 };
 
 
+export type LocationListPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type LocationListPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -37763,6 +39607,7 @@ export type LocationListPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -37829,6 +39674,7 @@ export type LocationListPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -37874,6 +39720,7 @@ export type MembershipAffiliationBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -37898,6 +39745,7 @@ export type MembershipAffiliationBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -37922,6 +39770,12 @@ export type MembershipAffiliationBlockAutocompleteRelativePathArgs = {
 
 
 export type MembershipAffiliationBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type MembershipAffiliationBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -37963,6 +39817,7 @@ export type MembershipAffiliationBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -38086,6 +39941,14 @@ export type MembershipAffiliationBlockFacetShowHeadingArgs = {
 };
 
 
+export type MembershipAffiliationBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type MembershipAffiliationBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -38137,6 +40000,7 @@ export type MembershipAffiliationBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -38182,6 +40046,7 @@ export type MembershipAffiliationBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -38221,6 +40086,7 @@ export type MembershipDisplayBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -38245,6 +40111,7 @@ export type MembershipDisplayBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -38269,6 +40136,12 @@ export type MembershipDisplayBlockAutocompleteRelativePathArgs = {
 
 
 export type MembershipDisplayBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type MembershipDisplayBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -38311,6 +40184,7 @@ export type MembershipDisplayBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -38442,6 +40316,14 @@ export type MembershipDisplayBlockFacetShowHeadingArgs = {
 };
 
 
+export type MembershipDisplayBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type MembershipDisplayBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -38494,6 +40376,7 @@ export type MembershipDisplayBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -38540,6 +40423,7 @@ export type MembershipDisplayBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -38575,6 +40459,7 @@ export type MenuItemBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -38602,6 +40487,7 @@ export type MenuItemBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -38643,6 +40529,12 @@ export type MenuItemBlockAutocompleteRouteSegmentArgs = {
 };
 
 
+export type MenuItemBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type MenuItemBlockAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -38675,6 +40567,7 @@ export type MenuItemBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -38773,6 +40666,14 @@ export type MenuItemBlockFacetSavedArgs = {
 };
 
 
+export type MenuItemBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type MenuItemBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -38828,6 +40729,7 @@ export type MenuItemBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -38870,6 +40772,7 @@ export type MenuItemBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -38933,6 +40836,7 @@ export type ModalBlock = IContent & {
   ShowModalOnScrollPercentage?: Maybe<Scalars['Int']>;
   /** Check this box to show button on page to open modal */
   ShowModalOpenButton?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -38959,6 +40863,7 @@ export type ModalBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -38989,6 +40894,12 @@ export type ModalBlockAutocompleteRelativePathArgs = {
 
 
 export type ModalBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ModalBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -39040,6 +40951,7 @@ export type ModalBlockFacet = {
   ShowModalOnPageLoad?: Maybe<Array<Maybe<StringFacet>>>;
   ShowModalOnScrollPercentage?: Maybe<Array<Maybe<NumberFacet>>>;
   ShowModalOpenButton?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -39224,6 +41136,14 @@ export type ModalBlockFacetShowModalOpenButtonArgs = {
 };
 
 
+export type ModalBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ModalBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -39285,6 +41205,7 @@ export type ModalBlockOrderByInput = {
   ShowModalOnPageLoad?: InputMaybe<OrderBy>;
   ShowModalOnScrollPercentage?: InputMaybe<OrderBy>;
   ShowModalOpenButton?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -39340,6 +41261,7 @@ export type ModalBlockWhereInput = {
   ShowModalOnPageLoad?: InputMaybe<BoolFilterInput>;
   ShowModalOnScrollPercentage?: InputMaybe<IntFilterInput>;
   ShowModalOpenButton?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -39365,9 +41287,11 @@ export type MonetaryReward = IContent & {
   MasterLanguage?: Maybe<ContentLanguageModel>;
   Name?: Maybe<Scalars['String']>;
   ParentLink?: Maybe<ContentModelReference>;
+  Percentage?: Maybe<Scalars['Float']>;
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -39392,6 +41316,7 @@ export type MonetaryRewardAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -39416,6 +41341,12 @@ export type MonetaryRewardAutocompleteRelativePathArgs = {
 
 
 export type MonetaryRewardAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type MonetaryRewardAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -39446,9 +41377,11 @@ export type MonetaryRewardFacet = {
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   ParentLink?: Maybe<ContentModelReferenceFacet>;
+  Percentage?: Maybe<Array<Maybe<NumberFacet>>>;
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -39501,6 +41434,11 @@ export type MonetaryRewardFacetNameArgs = {
 };
 
 
+export type MonetaryRewardFacetPercentageArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type MonetaryRewardFacetRelativePathArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -39520,6 +41458,14 @@ export type MonetaryRewardFacetRouteSegmentArgs = {
 export type MonetaryRewardFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type MonetaryRewardFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -39571,9 +41517,11 @@ export type MonetaryRewardOrderByInput = {
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
   Name?: InputMaybe<OrderBy>;
   ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  Percentage?: InputMaybe<OrderBy>;
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -39609,9 +41557,11 @@ export type MonetaryRewardWhereInput = {
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  Percentage?: InputMaybe<FloatFilterInput>;
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -39650,6 +41600,7 @@ export type NavigationBlock = IContent & {
   RootPage?: Maybe<ContentModelReference>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -39675,6 +41626,7 @@ export type NavigationBlockAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RootPage?: Maybe<ContentModelReferenceAutocomplete>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -39699,6 +41651,12 @@ export type NavigationBlockAutocompleteRelativePathArgs = {
 
 
 export type NavigationBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type NavigationBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -39739,6 +41697,7 @@ export type NavigationBlockFacet = {
   RootPage?: Maybe<ContentModelReferenceFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -39849,6 +41808,14 @@ export type NavigationBlockFacetSavedArgs = {
 };
 
 
+export type NavigationBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type NavigationBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -39899,6 +41866,7 @@ export type NavigationBlockOrderByInput = {
   RootPage?: InputMaybe<ContentModelReferenceOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -39943,6 +41911,7 @@ export type NavigationBlockWhereInput = {
   RootPage?: InputMaybe<ContentModelReferenceWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -40001,6 +41970,7 @@ export type NewProductsPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -40039,6 +42009,7 @@ export type NewProductsPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -40086,6 +42057,12 @@ export type NewProductsPageAutocompleteRelativePathArgs = {
 
 
 export type NewProductsPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type NewProductsPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -40170,6 +42147,7 @@ export type NewProductsPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -40412,6 +42390,14 @@ export type NewProductsPageFacetSavedArgs = {
 };
 
 
+export type NewProductsPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type NewProductsPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -40530,6 +42516,7 @@ export type NewProductsPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -40601,6 +42588,7 @@ export type NewProductsPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -40622,6 +42610,7 @@ export type NewProductsPageWhereInput = {
 export type NodeContent = IContent & {
   __typename?: 'NodeContent';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   CatalogId?: Maybe<Scalars['Int']>;
   Categories?: Maybe<NodeContentCategories>;
   Changed?: Maybe<Scalars['Date']>;
@@ -40642,6 +42631,7 @@ export type NodeContent = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SeoInformation?: Maybe<NodeContentSeoInformation>;
   SeoUri?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -40656,6 +42646,7 @@ export type NodeContent = IContent & {
 export type NodeContentAutocomplete = {
   __typename?: 'NodeContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Categories?: Maybe<NodeContentCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
   ContentType?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -40667,6 +42658,7 @@ export type NodeContentAutocomplete = {
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SeoInformation?: Maybe<NodeContentSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -40697,6 +42689,12 @@ export type NodeContentAutocompleteRouteSegmentArgs = {
 
 
 export type NodeContentAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type NodeContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -40739,6 +42737,7 @@ export type NodeContentCategoriesWhereInput = {
 export type NodeContentFacet = {
   __typename?: 'NodeContentFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
   Categories?: Maybe<NodeContentCategoriesFacet>;
   Changed?: Maybe<Array<Maybe<DateFacet>>>;
@@ -40759,6 +42758,7 @@ export type NodeContentFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SeoInformation?: Maybe<NodeContentSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -40866,6 +42866,14 @@ export type NodeContentFacetSeoUriArgs = {
 };
 
 
+export type NodeContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type NodeContentFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -40895,6 +42903,7 @@ export type NodeContentFacetUrlArgs = {
 
 export type NodeContentOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
   Categories?: InputMaybe<NodeContentCategoriesOrderByInput>;
   Changed?: InputMaybe<OrderBy>;
@@ -40915,6 +42924,7 @@ export type NodeContentOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SeoInformation?: InputMaybe<NodeContentSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -41013,6 +43023,7 @@ export type NodeContentSeoInformationWhereInput = {
 
 export type NodeContentWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
   Categories?: InputMaybe<NodeContentCategoriesWhereInput>;
   Changed?: InputMaybe<DateFilterInput>;
@@ -41033,6 +43044,7 @@ export type NodeContentWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SeoInformation?: InputMaybe<NodeContentSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -41067,6 +43079,7 @@ export type NumberElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -41091,6 +43104,7 @@ export type NumberElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -41115,6 +43129,12 @@ export type NumberElementBlockAutocompleteRelativePathArgs = {
 
 
 export type NumberElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type NumberElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -41154,6 +43174,7 @@ export type NumberElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -41270,6 +43291,14 @@ export type NumberElementBlockFacetSavedArgs = {
 };
 
 
+export type NumberElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type NumberElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -41327,6 +43356,7 @@ export type NumberElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -41371,6 +43401,7 @@ export type NumberElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -41412,6 +43443,7 @@ export type NumericFilterBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -41435,6 +43467,7 @@ export type NumericFilterBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -41459,6 +43492,12 @@ export type NumericFilterBlockAutocompleteRelativePathArgs = {
 
 
 export type NumericFilterBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type NumericFilterBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -41495,6 +43534,7 @@ export type NumericFilterBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -41589,6 +43629,14 @@ export type NumericFilterBlockFacetSavedArgs = {
 };
 
 
+export type NumericFilterBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type NumericFilterBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -41635,6 +43683,7 @@ export type NumericFilterBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -41675,6 +43724,7 @@ export type NumericFilterBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -41712,6 +43762,7 @@ export type OdpEmailEventBlock = IContent & {
   ShowSnippetEditMode?: Maybe<Scalars['Bool']>;
   /** Check this box to display the sample snippet in front end */
   ShowSnippetFrontEnd?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -41735,6 +43786,7 @@ export type OdpEmailEventBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -41759,6 +43811,12 @@ export type OdpEmailEventBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpEmailEventBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpEmailEventBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -41797,6 +43855,7 @@ export type OdpEmailEventBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowSnippetEditMode?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSnippetFrontEnd?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -41908,6 +43967,14 @@ export type OdpEmailEventBlockFacetShowSnippetFrontEndArgs = {
 };
 
 
+export type OdpEmailEventBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpEmailEventBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -41956,6 +44023,7 @@ export type OdpEmailEventBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ShowSnippetEditMode?: InputMaybe<OrderBy>;
   ShowSnippetFrontEnd?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -41998,6 +44066,7 @@ export type OdpEmailEventBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ShowSnippetEditMode?: InputMaybe<BoolFilterInput>;
   ShowSnippetFrontEnd?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -42040,6 +44109,7 @@ export type OdpEventTrackingBlock = IContent & {
   ShowSnippetEditMode?: Maybe<Scalars['Bool']>;
   /** Check this box to display the sample snippet in front end */
   ShowSnippetFrontEnd?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -42063,6 +44133,7 @@ export type OdpEventTrackingBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -42087,6 +44158,12 @@ export type OdpEventTrackingBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpEventTrackingBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpEventTrackingBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -42128,6 +44205,7 @@ export type OdpEventTrackingBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowSnippetEditMode?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSnippetFrontEnd?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -42263,6 +44341,14 @@ export type OdpEventTrackingBlockFacetShowSnippetFrontEndArgs = {
 };
 
 
+export type OdpEventTrackingBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpEventTrackingBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -42314,6 +44400,7 @@ export type OdpEventTrackingBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ShowSnippetEditMode?: InputMaybe<OrderBy>;
   ShowSnippetFrontEnd?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -42359,6 +44446,7 @@ export type OdpEventTrackingBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ShowSnippetEditMode?: InputMaybe<BoolFilterInput>;
   ShowSnippetFrontEnd?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -42394,6 +44482,7 @@ export type OdpListConsentFormBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -42418,6 +44507,7 @@ export type OdpListConsentFormBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -42442,6 +44532,12 @@ export type OdpListConsentFormBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpListConsentFormBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpListConsentFormBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -42482,6 +44578,7 @@ export type OdpListConsentFormBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -42606,6 +44703,14 @@ export type OdpListConsentFormBlockFacetSavedArgs = {
 };
 
 
+export type OdpListConsentFormBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpListConsentFormBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -42664,6 +44769,7 @@ export type OdpListConsentFormBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -42709,6 +44815,7 @@ export type OdpListConsentFormBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -42740,6 +44847,7 @@ export type OdpListFormBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -42763,6 +44871,7 @@ export type OdpListFormBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -42787,6 +44896,12 @@ export type OdpListFormBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpListFormBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpListFormBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -42822,6 +44937,7 @@ export type OdpListFormBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -42911,6 +45027,14 @@ export type OdpListFormBlockFacetSavedArgs = {
 };
 
 
+export type OdpListFormBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpListFormBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -42956,6 +45080,7 @@ export type OdpListFormBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -42995,6 +45120,7 @@ export type OdpListFormBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -43031,6 +45157,7 @@ export type OdpSearchEventBlock = IContent & {
   ShowSnippetEditMode?: Maybe<Scalars['Bool']>;
   /** Check this box to display the sample snippet in front end */
   ShowSnippetFrontEnd?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -43054,6 +45181,7 @@ export type OdpSearchEventBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -43078,6 +45206,12 @@ export type OdpSearchEventBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpSearchEventBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpSearchEventBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -43115,6 +45249,7 @@ export type OdpSearchEventBlockFacet = {
   SearchTerm?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSnippetEditMode?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSnippetFrontEnd?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -43218,6 +45353,14 @@ export type OdpSearchEventBlockFacetShowSnippetFrontEndArgs = {
 };
 
 
+export type OdpSearchEventBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpSearchEventBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -43265,6 +45408,7 @@ export type OdpSearchEventBlockOrderByInput = {
   SearchTerm?: InputMaybe<OrderBy>;
   ShowSnippetEditMode?: InputMaybe<OrderBy>;
   ShowSnippetFrontEnd?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -43306,6 +45450,7 @@ export type OdpSearchEventBlockWhereInput = {
   SearchTerm?: InputMaybe<SearchableStringFilterInput>;
   ShowSnippetEditMode?: InputMaybe<BoolFilterInput>;
   ShowSnippetFrontEnd?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -43344,6 +45489,7 @@ export type OdpUpdateProfileBlock = IContent & {
   ShowSnippetEditMode?: Maybe<Scalars['Bool']>;
   /** Check this box to display the sample snippet in front end */
   ShowSnippetFrontEnd?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -43367,6 +45513,7 @@ export type OdpUpdateProfileBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -43391,6 +45538,12 @@ export type OdpUpdateProfileBlockAutocompleteRelativePathArgs = {
 
 
 export type OdpUpdateProfileBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OdpUpdateProfileBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -43429,6 +45582,7 @@ export type OdpUpdateProfileBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowSnippetEditMode?: Maybe<Array<Maybe<StringFacet>>>;
   ShowSnippetFrontEnd?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -43540,6 +45694,14 @@ export type OdpUpdateProfileBlockFacetShowSnippetFrontEndArgs = {
 };
 
 
+export type OdpUpdateProfileBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OdpUpdateProfileBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -43588,6 +45750,7 @@ export type OdpUpdateProfileBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ShowSnippetEditMode?: InputMaybe<OrderBy>;
   ShowSnippetFrontEnd?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -43630,6 +45793,7 @@ export type OdpUpdateProfileBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ShowSnippetEditMode?: InputMaybe<BoolFilterInput>;
   ShowSnippetFrontEnd?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -43692,6 +45856,7 @@ export type OrderConfirmationMailPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -43729,6 +45894,7 @@ export type OrderConfirmationMailPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -43776,6 +45942,12 @@ export type OrderConfirmationMailPageAutocompleteRelativePathArgs = {
 
 
 export type OrderConfirmationMailPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderConfirmationMailPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -43854,6 +46026,7 @@ export type OrderConfirmationMailPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -44071,6 +46244,14 @@ export type OrderConfirmationMailPageFacetSavedArgs = {
 };
 
 
+export type OrderConfirmationMailPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderConfirmationMailPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -44191,6 +46372,7 @@ export type OrderConfirmationMailPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -44257,6 +46439,7 @@ export type OrderConfirmationMailPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -44319,6 +46502,7 @@ export type OrderConfirmationPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -44356,6 +46540,7 @@ export type OrderConfirmationPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -44403,6 +46588,12 @@ export type OrderConfirmationPageAutocompleteRelativePathArgs = {
 
 
 export type OrderConfirmationPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderConfirmationPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -44483,6 +46674,7 @@ export type OrderConfirmationPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -44708,6 +46900,14 @@ export type OrderConfirmationPageFacetSavedArgs = {
 };
 
 
+export type OrderConfirmationPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderConfirmationPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -44830,6 +47030,7 @@ export type OrderConfirmationPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -44898,6 +47099,7 @@ export type OrderConfirmationPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -44958,6 +47160,7 @@ export type OrderDetailsPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -44994,6 +47197,7 @@ export type OrderDetailsPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -45041,6 +47245,12 @@ export type OrderDetailsPageAutocompleteRelativePathArgs = {
 
 
 export type OrderDetailsPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderDetailsPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -45119,6 +47329,7 @@ export type OrderDetailsPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -45335,6 +47546,14 @@ export type OrderDetailsPageFacetSavedArgs = {
 };
 
 
+export type OrderDetailsPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderDetailsPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -45447,6 +47666,7 @@ export type OrderDetailsPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -45512,6 +47732,7 @@ export type OrderDetailsPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -45554,6 +47775,7 @@ export type OrderHistoryBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -45578,6 +47800,7 @@ export type OrderHistoryBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -45602,6 +47825,12 @@ export type OrderHistoryBlockAutocompleteRelativePathArgs = {
 
 
 export type OrderHistoryBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderHistoryBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -45641,6 +47870,7 @@ export type OrderHistoryBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -45751,6 +47981,14 @@ export type OrderHistoryBlockFacetSavedArgs = {
 };
 
 
+export type OrderHistoryBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderHistoryBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -45800,6 +48038,7 @@ export type OrderHistoryBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -45843,6 +48082,7 @@ export type OrderHistoryBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -45895,6 +48135,7 @@ export type OrderHistoryPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -45931,6 +48172,7 @@ export type OrderHistoryPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -45978,6 +48220,12 @@ export type OrderHistoryPageAutocompleteRelativePathArgs = {
 
 
 export type OrderHistoryPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderHistoryPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -46056,6 +48304,7 @@ export type OrderHistoryPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -46272,6 +48521,14 @@ export type OrderHistoryPageFacetSavedArgs = {
 };
 
 
+export type OrderHistoryPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderHistoryPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -46384,6 +48641,7 @@ export type OrderHistoryPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -46449,6 +48707,7 @@ export type OrderHistoryPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -46508,6 +48767,7 @@ export type OrderPadsPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -46544,6 +48804,7 @@ export type OrderPadsPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -46591,6 +48852,12 @@ export type OrderPadsPageAutocompleteRelativePathArgs = {
 
 
 export type OrderPadsPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderPadsPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -46669,6 +48936,7 @@ export type OrderPadsPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -46885,6 +49153,14 @@ export type OrderPadsPageFacetSavedArgs = {
 };
 
 
+export type OrderPadsPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderPadsPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -46997,6 +49273,7 @@ export type OrderPadsPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -47062,6 +49339,7 @@ export type OrderPadsPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -47104,6 +49382,7 @@ export type OrderSearchBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -47128,6 +49407,7 @@ export type OrderSearchBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -47152,6 +49432,12 @@ export type OrderSearchBlockAutocompleteRelativePathArgs = {
 
 
 export type OrderSearchBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrderSearchBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -47190,6 +49476,7 @@ export type OrderSearchBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -47292,6 +49579,14 @@ export type OrderSearchBlockFacetSavedArgs = {
 };
 
 
+export type OrderSearchBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrderSearchBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -47340,6 +49635,7 @@ export type OrderSearchBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -47382,6 +49678,7 @@ export type OrderSearchBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -47434,6 +49731,7 @@ export type OrdersPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -47470,6 +49768,7 @@ export type OrdersPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -47517,6 +49816,12 @@ export type OrdersPageAutocompleteRelativePathArgs = {
 
 
 export type OrdersPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrdersPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -47595,6 +49900,7 @@ export type OrdersPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -47811,6 +50117,14 @@ export type OrdersPageFacetSavedArgs = {
 };
 
 
+export type OrdersPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrdersPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -47923,6 +50237,7 @@ export type OrdersPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -47988,6 +50303,7 @@ export type OrdersPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -48047,6 +50363,7 @@ export type OrganizationPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -48083,6 +50400,7 @@ export type OrganizationPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -48130,6 +50448,12 @@ export type OrganizationPageAutocompleteRelativePathArgs = {
 
 
 export type OrganizationPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type OrganizationPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -48208,6 +50532,7 @@ export type OrganizationPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -48424,6 +50749,14 @@ export type OrganizationPageFacetSavedArgs = {
 };
 
 
+export type OrganizationPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type OrganizationPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -48536,6 +50869,7 @@ export type OrganizationPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -48601,6 +50935,7 @@ export type OrganizationPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -48622,6 +50957,7 @@ export type OrganizationPageWhereInput = {
 export type PackageContent = IContent & {
   __typename?: 'PackageContent';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<PackageContentAssociations>;
   CatalogId?: Maybe<Scalars['Int']>;
   Categories?: Maybe<PackageContentCategories>;
@@ -48636,7 +50972,9 @@ export type PackageContent = IContent & {
   IsCommonDraft?: Maybe<Scalars['Bool']>;
   Language?: Maybe<ContentLanguageModel>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
+  MaxQuantity?: Maybe<Scalars['Float']>;
   MetaClassId?: Maybe<Scalars['Int']>;
+  MinQuantity?: Maybe<Scalars['Float']>;
   Name?: Maybe<Scalars['String']>;
   PackageReference?: Maybe<ContentModelReference>;
   ParentEntries?: Maybe<PackageContentRelations>;
@@ -48649,6 +50987,7 @@ export type PackageContent = IContent & {
   SeoUri?: Maybe<Scalars['String']>;
   ShippingDimensions?: Maybe<PackageContentShippingDimensions>;
   ShippingPackageId?: Maybe<Scalars['Int']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -48689,6 +51028,7 @@ export type PackageContentAssociationsWhereInput = {
 export type PackageContentAutocomplete = {
   __typename?: 'PackageContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<PackageContentAssociationsAutocomplete>;
   Categories?: Maybe<PackageContentCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -48705,6 +51045,7 @@ export type PackageContentAutocomplete = {
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SeoInformation?: Maybe<PackageContentSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -48735,6 +51076,12 @@ export type PackageContentAutocompleteRouteSegmentArgs = {
 
 
 export type PackageContentAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PackageContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -48777,6 +51124,7 @@ export type PackageContentCategoriesWhereInput = {
 export type PackageContentFacet = {
   __typename?: 'PackageContentFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<PackageContentAssociationsFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
   Categories?: Maybe<PackageContentCategoriesFacet>;
@@ -48791,7 +51139,9 @@ export type PackageContentFacet = {
   IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
   Language?: Maybe<ContentLanguageModelFacet>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MaxQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   MetaClassId?: Maybe<Array<Maybe<NumberFacet>>>;
+  MinQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   PackageReference?: Maybe<ContentModelReferenceFacet>;
   ParentEntries?: Maybe<PackageContentRelationsFacet>;
@@ -48804,6 +51154,7 @@ export type PackageContentFacet = {
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShippingDimensions?: Maybe<PackageContentShippingDimensionsFacet>;
   ShippingPackageId?: Maybe<Array<Maybe<NumberFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -48871,7 +51222,17 @@ export type PackageContentFacetIsCommonDraftArgs = {
 };
 
 
+export type PackageContentFacetMaxQuantityArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type PackageContentFacetMetaClassIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type PackageContentFacetMinQuantityArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
 
@@ -48916,6 +51277,14 @@ export type PackageContentFacetSeoUriArgs = {
 
 export type PackageContentFacetShippingPackageIdArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type PackageContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -48966,6 +51335,7 @@ export type PackageContentFacetWeightArgs = {
 
 export type PackageContentOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<PackageContentAssociationsOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
   Categories?: InputMaybe<PackageContentCategoriesOrderByInput>;
@@ -48980,7 +51350,9 @@ export type PackageContentOrderByInput = {
   IsCommonDraft?: InputMaybe<OrderBy>;
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MaxQuantity?: InputMaybe<OrderBy>;
   MetaClassId?: InputMaybe<OrderBy>;
+  MinQuantity?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   PackageReference?: InputMaybe<ContentModelReferenceOrderByInput>;
   ParentEntries?: InputMaybe<PackageContentRelationsOrderByInput>;
@@ -48993,6 +51365,7 @@ export type PackageContentOrderByInput = {
   SeoUri?: InputMaybe<OrderBy>;
   ShippingDimensions?: InputMaybe<PackageContentShippingDimensionsOrderByInput>;
   ShippingPackageId?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -49158,6 +51531,7 @@ export type PackageContentShippingDimensionsWhereInput = {
 
 export type PackageContentWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<PackageContentAssociationsWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
   Categories?: InputMaybe<PackageContentCategoriesWhereInput>;
@@ -49172,7 +51546,9 @@ export type PackageContentWhereInput = {
   IsCommonDraft?: InputMaybe<BoolFilterInput>;
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MaxQuantity?: InputMaybe<FloatFilterInput>;
   MetaClassId?: InputMaybe<IntFilterInput>;
+  MinQuantity?: InputMaybe<FloatFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   PackageReference?: InputMaybe<ContentModelReferenceWhereInput>;
   ParentEntries?: InputMaybe<PackageContentRelationsWhereInput>;
@@ -49185,6 +51561,7 @@ export type PackageContentWhereInput = {
   SeoUri?: InputMaybe<StringFilterInput>;
   ShippingDimensions?: InputMaybe<PackageContentShippingDimensionsWhereInput>;
   ShippingPackageId?: InputMaybe<IntFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -49239,6 +51616,7 @@ export type PageListBlock = IContent & {
   Roots?: Maybe<Array<Maybe<ContentAreaItemModelSearch>>>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   SortOrder?: Maybe<Scalars['Int']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -49268,6 +51646,7 @@ export type PageListBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -49298,6 +51677,12 @@ export type PageListBlockAutocompleteRelativePathArgs = {
 
 
 export type PageListBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PageListBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -49348,6 +51733,7 @@ export type PageListBlockFacet = {
   Roots?: Maybe<ContentAreaItemModelSearchFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SortOrder?: Maybe<Array<Maybe<NumberFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -49529,6 +51915,14 @@ export type PageListBlockFacetSavedArgs = {
 };
 
 
+export type PageListBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PageListBlockFacetSortOrderArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
@@ -49602,6 +51996,7 @@ export type PageListBlockOrderByInput = {
   Roots?: InputMaybe<ContentAreaItemModelSearchOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SortOrder?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -49658,6 +52053,7 @@ export type PageListBlockWhereInput = {
   Roots?: InputMaybe<ContentAreaItemModelSearchWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SortOrder?: InputMaybe<IntFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -49693,6 +52089,7 @@ export type ParagraphTextElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -49716,6 +52113,7 @@ export type ParagraphTextElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -49740,6 +52138,12 @@ export type ParagraphTextElementBlockAutocompleteRelativePathArgs = {
 
 
 export type ParagraphTextElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ParagraphTextElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -49778,6 +52182,7 @@ export type ParagraphTextElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -49888,6 +52293,14 @@ export type ParagraphTextElementBlockFacetSavedArgs = {
 };
 
 
+export type ParagraphTextElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ParagraphTextElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -49936,6 +52349,7 @@ export type ParagraphTextElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -49978,6 +52392,7 @@ export type ParagraphTextElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -50009,6 +52424,7 @@ export type PdfFile = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -50034,6 +52450,7 @@ export type PdfFileAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -50070,6 +52487,12 @@ export type PdfFileAutocompleteRouteSegmentArgs = {
 };
 
 
+export type PdfFileAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type PdfFileAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -50100,6 +52523,7 @@ export type PdfFileFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -50190,6 +52614,14 @@ export type PdfFileFacetSavedArgs = {
 };
 
 
+export type PdfFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PdfFileFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -50235,6 +52667,7 @@ export type PdfFileOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -50275,6 +52708,7 @@ export type PdfFileWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -50328,6 +52762,7 @@ export type PersonList = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -50364,6 +52799,7 @@ export type PersonListAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -50411,6 +52847,12 @@ export type PersonListAutocompleteRelativePathArgs = {
 
 
 export type PersonListAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PersonListAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -50489,6 +52931,7 @@ export type PersonListFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -50705,6 +53148,14 @@ export type PersonListFacetSavedArgs = {
 };
 
 
+export type PersonListFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PersonListFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -50817,6 +53268,7 @@ export type PersonListOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -50882,6 +53334,7 @@ export type PersonListWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -50948,6 +53401,7 @@ export type PersonPage = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   Sector?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -50985,6 +53439,7 @@ export type PersonPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -51032,6 +53487,12 @@ export type PersonPageAutocompleteRelativePathArgs = {
 
 
 export type PersonPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PersonPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -51117,6 +53578,7 @@ export type PersonPageFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   Sector?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -51381,6 +53843,14 @@ export type PersonPageFacetSectorArgs = {
 };
 
 
+export type PersonPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PersonPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -51500,6 +53970,7 @@ export type PersonPageOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   Sector?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -51572,6 +54043,7 @@ export type PersonPageWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   Sector?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -51608,6 +54080,7 @@ export type PredefinedHiddenElementBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -51631,6 +54104,7 @@ export type PredefinedHiddenElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -51655,6 +54129,12 @@ export type PredefinedHiddenElementBlockAutocompleteRelativePathArgs = {
 
 
 export type PredefinedHiddenElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PredefinedHiddenElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -51689,6 +54169,7 @@ export type PredefinedHiddenElementBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -51770,6 +54251,14 @@ export type PredefinedHiddenElementBlockFacetSavedArgs = {
 };
 
 
+export type PredefinedHiddenElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PredefinedHiddenElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -51814,6 +54303,7 @@ export type PredefinedHiddenElementBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -51852,6 +54342,7 @@ export type PredefinedHiddenElementBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -51866,6 +54357,7 @@ export type PredefinedHiddenElementBlockWhereInput = {
 export type ProductContent = IContent & {
   __typename?: 'ProductContent';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<ProductContentAssociations>;
   CatalogId?: Maybe<Scalars['Int']>;
   Categories?: Maybe<ProductContentCategories>;
@@ -51888,6 +54380,7 @@ export type ProductContent = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SeoInformation?: Maybe<ProductContentSeoInformation>;
   SeoUri?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -51926,6 +54419,7 @@ export type ProductContentAssociationsWhereInput = {
 export type ProductContentAutocomplete = {
   __typename?: 'ProductContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<ProductContentAssociationsAutocomplete>;
   Categories?: Maybe<ProductContentCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -51939,6 +54433,7 @@ export type ProductContentAutocomplete = {
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SeoInformation?: Maybe<ProductContentSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   VariantsReference?: Maybe<ContentModelReferenceAutocomplete>;
@@ -51970,6 +54465,12 @@ export type ProductContentAutocompleteRouteSegmentArgs = {
 
 
 export type ProductContentAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProductContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -52012,6 +54513,7 @@ export type ProductContentCategoriesWhereInput = {
 export type ProductContentFacet = {
   __typename?: 'ProductContentFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<ProductContentAssociationsFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
   Categories?: Maybe<ProductContentCategoriesFacet>;
@@ -52034,6 +54536,7 @@ export type ProductContentFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SeoInformation?: Maybe<ProductContentSeoInformationFacet>;
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -52142,6 +54645,14 @@ export type ProductContentFacetSeoUriArgs = {
 };
 
 
+export type ProductContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProductContentFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -52171,6 +54682,7 @@ export type ProductContentFacetUrlArgs = {
 
 export type ProductContentOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<ProductContentAssociationsOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
   Categories?: InputMaybe<ProductContentCategoriesOrderByInput>;
@@ -52193,6 +54705,7 @@ export type ProductContentOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SeoInformation?: InputMaybe<ProductContentSeoInformationOrderByInput>;
   SeoUri?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -52315,6 +54828,7 @@ export type ProductContentSeoInformationWhereInput = {
 
 export type ProductContentWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<ProductContentAssociationsWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
   Categories?: InputMaybe<ProductContentCategoriesWhereInput>;
@@ -52337,6 +54851,7 @@ export type ProductContentWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SeoInformation?: InputMaybe<ProductContentSeoInformationWhereInput>;
   SeoUri?: InputMaybe<StringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -52376,6 +54891,7 @@ export type ProductHeroBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -52402,6 +54918,7 @@ export type ProductHeroBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -52426,6 +54943,12 @@ export type ProductHeroBlockAutocompleteRelativePathArgs = {
 
 
 export type ProductHeroBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProductHeroBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -52462,6 +54985,7 @@ export type ProductHeroBlockCallout = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -52486,6 +55010,7 @@ export type ProductHeroBlockCalloutAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -52510,6 +55035,12 @@ export type ProductHeroBlockCalloutAutocompleteRelativePathArgs = {
 
 
 export type ProductHeroBlockCalloutAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProductHeroBlockCalloutAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -52546,6 +55077,7 @@ export type ProductHeroBlockCalloutFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -52644,6 +55176,14 @@ export type ProductHeroBlockCalloutFacetSavedArgs = {
 };
 
 
+export type ProductHeroBlockCalloutFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProductHeroBlockCalloutFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -52698,6 +55238,7 @@ export type ProductHeroBlockCalloutOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -52739,6 +55280,7 @@ export type ProductHeroBlockCalloutWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -52776,6 +55318,7 @@ export type ProductHeroBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -52886,6 +55429,14 @@ export type ProductHeroBlockFacetSavedArgs = {
 };
 
 
+export type ProductHeroBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProductHeroBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -52939,6 +55490,7 @@ export type ProductHeroBlockImage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -52962,6 +55514,7 @@ export type ProductHeroBlockImageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -52986,6 +55539,12 @@ export type ProductHeroBlockImageAutocompleteRelativePathArgs = {
 
 
 export type ProductHeroBlockImageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProductHeroBlockImageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -53027,6 +55586,7 @@ export type ProductHeroBlockImageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -53138,6 +55698,14 @@ export type ProductHeroBlockImageFacetSavedArgs = {
 };
 
 
+export type ProductHeroBlockImageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProductHeroBlockImageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -53189,6 +55757,7 @@ export type ProductHeroBlockImageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -53234,6 +55803,7 @@ export type ProductHeroBlockImageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -53269,6 +55839,7 @@ export type ProductHeroBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -53504,6 +56075,7 @@ export type ProductHeroBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -53559,6 +56131,7 @@ export type ProductSearchBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   SearchTerm?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   /** Sort order to apply to the search result */
   SortOrder?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
@@ -53585,6 +56158,7 @@ export type ProductSearchBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -53609,6 +56183,12 @@ export type ProductSearchBlockAutocompleteRelativePathArgs = {
 
 
 export type ProductSearchBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProductSearchBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -53658,6 +56238,7 @@ export type ProductSearchBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SearchTerm?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SortOrder?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -53813,6 +56394,14 @@ export type ProductSearchBlockFacetSearchTermArgs = {
 };
 
 
+export type ProductSearchBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProductSearchBlockFacetSortOrderArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -53880,6 +56469,7 @@ export type ProductSearchBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   SearchTerm?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SortOrder?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -53934,6 +56524,7 @@ export type ProductSearchBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   SearchTerm?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SortOrder?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -53987,6 +56578,7 @@ export type ProfilePage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -54023,6 +56615,7 @@ export type ProfilePageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -54070,6 +56663,12 @@ export type ProfilePageAutocompleteRelativePathArgs = {
 
 
 export type ProfilePageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ProfilePageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -54148,6 +56747,7 @@ export type ProfilePageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -54364,6 +56964,14 @@ export type ProfilePageFacetSavedArgs = {
 };
 
 
+export type ProfilePageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ProfilePageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -54476,6 +57084,7 @@ export type ProfilePageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -54541,6 +57150,7 @@ export type ProfilePageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -54577,6 +57187,7 @@ export type PromotionSchedule = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -54604,6 +57215,7 @@ export type PromotionScheduleAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -54628,6 +57240,12 @@ export type PromotionScheduleAutocompleteRelativePathArgs = {
 
 
 export type PromotionScheduleAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PromotionScheduleAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -54662,6 +57280,7 @@ export type PromotionScheduleFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -54738,6 +57357,14 @@ export type PromotionScheduleFacetSavedArgs = {
 };
 
 
+export type PromotionScheduleFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type PromotionScheduleFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -54802,6 +57429,7 @@ export type PromotionScheduleOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -54843,6 +57471,7 @@ export type PromotionScheduleWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -54871,9 +57500,11 @@ export type PurchaseAmount = IContent & {
   MasterLanguage?: Maybe<ContentLanguageModel>;
   Name?: Maybe<Scalars['String']>;
   ParentLink?: Maybe<ContentModelReference>;
+  PartiallyFulfilledThreshold?: Maybe<Scalars['Float']>;
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -54897,6 +57528,7 @@ export type PurchaseAmountAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -54921,6 +57553,12 @@ export type PurchaseAmountAutocompleteRelativePathArgs = {
 
 
 export type PurchaseAmountAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PurchaseAmountAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -54951,9 +57589,11 @@ export type PurchaseAmountFacet = {
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   ParentLink?: Maybe<ContentModelReferenceFacet>;
+  PartiallyFulfilledThreshold?: Maybe<Array<Maybe<NumberFacet>>>;
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -55005,6 +57645,11 @@ export type PurchaseAmountFacetNameArgs = {
 };
 
 
+export type PurchaseAmountFacetPartiallyFulfilledThresholdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type PurchaseAmountFacetRelativePathArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -55024,6 +57669,14 @@ export type PurchaseAmountFacetRouteSegmentArgs = {
 export type PurchaseAmountFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type PurchaseAmountFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -55067,9 +57720,11 @@ export type PurchaseAmountOrderByInput = {
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
   Name?: InputMaybe<OrderBy>;
   ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<OrderBy>;
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -55104,9 +57759,11 @@ export type PurchaseAmountWhereInput = {
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<FloatFilterInput>;
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -55134,10 +57791,12 @@ export type PurchaseQuantity = IContent & {
   MatchRecursive?: Maybe<Scalars['Bool']>;
   Name?: Maybe<Scalars['String']>;
   ParentLink?: Maybe<ContentModelReference>;
+  PartiallyFulfilledThreshold?: Maybe<Scalars['Float']>;
   RelativePath?: Maybe<Scalars['String']>;
   RequiredQuantity?: Maybe<Scalars['Int']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -55162,6 +57821,7 @@ export type PurchaseQuantityAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -55186,6 +57846,12 @@ export type PurchaseQuantityAutocompleteRelativePathArgs = {
 
 
 export type PurchaseQuantityAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type PurchaseQuantityAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -55218,10 +57884,12 @@ export type PurchaseQuantityFacet = {
   MatchRecursive?: Maybe<Array<Maybe<StringFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   ParentLink?: Maybe<ContentModelReferenceFacet>;
+  PartiallyFulfilledThreshold?: Maybe<Array<Maybe<NumberFacet>>>;
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RequiredQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -55281,6 +57949,11 @@ export type PurchaseQuantityFacetNameArgs = {
 };
 
 
+export type PurchaseQuantityFacetPartiallyFulfilledThresholdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type PurchaseQuantityFacetRelativePathArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -55305,6 +57978,14 @@ export type PurchaseQuantityFacetRouteSegmentArgs = {
 export type PurchaseQuantityFacetSavedArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type PurchaseQuantityFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -55350,10 +58031,12 @@ export type PurchaseQuantityOrderByInput = {
   MatchRecursive?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<OrderBy>;
   RelativePath?: InputMaybe<OrderBy>;
   RequiredQuantity?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -55390,10 +58073,12 @@ export type PurchaseQuantityWhereInput = {
   MatchRecursive?: InputMaybe<BoolFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  PartiallyFulfilledThreshold?: InputMaybe<FloatFilterInput>;
   RelativePath?: InputMaybe<StringFilterInput>;
   RequiredQuantity?: InputMaybe<IntFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -59566,6 +62251,7 @@ export type QuickOrderBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -59591,6 +62277,7 @@ export type QuickOrderBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -59615,6 +62302,12 @@ export type QuickOrderBlockAutocompleteRelativePathArgs = {
 
 
 export type QuickOrderBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type QuickOrderBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -59654,6 +62347,7 @@ export type QuickOrderBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -59765,6 +62459,14 @@ export type QuickOrderBlockFacetSavedArgs = {
 };
 
 
+export type QuickOrderBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type QuickOrderBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -59822,6 +62524,7 @@ export type QuickOrderBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -59866,6 +62569,7 @@ export type QuickOrderBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -59919,6 +62623,7 @@ export type QuickOrderPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -59955,6 +62660,7 @@ export type QuickOrderPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -60002,6 +62708,12 @@ export type QuickOrderPageAutocompleteRelativePathArgs = {
 
 
 export type QuickOrderPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type QuickOrderPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -60081,6 +62793,7 @@ export type QuickOrderPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -60297,6 +63010,14 @@ export type QuickOrderPageFacetSavedArgs = {
 };
 
 
+export type QuickOrderPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type QuickOrderPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -60410,6 +63131,7 @@ export type QuickOrderPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -60476,6 +63198,7 @@ export type QuickOrderPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -60518,6 +63241,7 @@ export type RangeElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   Step?: Maybe<Scalars['Int']>;
@@ -60542,6 +63266,7 @@ export type RangeElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -60566,6 +63291,12 @@ export type RangeElementBlockAutocompleteRelativePathArgs = {
 
 
 export type RangeElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RangeElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -60606,6 +63337,7 @@ export type RangeElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   Step?: Maybe<Array<Maybe<NumberFacet>>>;
@@ -60727,6 +63459,14 @@ export type RangeElementBlockFacetSavedArgs = {
 };
 
 
+export type RangeElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RangeElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -60782,6 +63522,7 @@ export type RangeElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   Step?: InputMaybe<OrderBy>;
@@ -60827,6 +63568,7 @@ export type RangeElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   Step?: InputMaybe<IntFilterInput>;
@@ -60877,6 +63619,7 @@ export type RatingBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SendActivity?: Maybe<Scalars['Bool']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -60901,6 +63644,7 @@ export type RatingBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -60925,6 +63669,12 @@ export type RatingBlockAutocompleteRelativePathArgs = {
 
 
 export type RatingBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RatingBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -60966,6 +63716,7 @@ export type RatingBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SendActivity?: Maybe<Array<Maybe<StringFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -61092,6 +63843,14 @@ export type RatingBlockFacetShowHeadingArgs = {
 };
 
 
+export type RatingBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RatingBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -61143,6 +63902,7 @@ export type RatingBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SendActivity?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -61188,6 +63948,7 @@ export type RatingBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SendActivity?: InputMaybe<BoolFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -61218,6 +63979,7 @@ export type RecaptchaElementBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   ScoreThreshold?: Maybe<Scalars['Float']>;
   SecretKey?: Maybe<Scalars['String']>;
+  SiteId?: Maybe<Scalars['String']>;
   SiteKey?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
@@ -61243,6 +64005,7 @@ export type RecaptchaElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -61267,6 +64030,12 @@ export type RecaptchaElementBlockAutocompleteRelativePathArgs = {
 
 
 export type RecaptchaElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RecaptchaElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -61302,6 +64071,7 @@ export type RecaptchaElementBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ScoreThreshold?: Maybe<Array<Maybe<NumberFacet>>>;
   SecretKey?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   SiteKey?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
@@ -61390,6 +64160,14 @@ export type RecaptchaElementBlockFacetSecretKeyArgs = {
 };
 
 
+export type RecaptchaElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RecaptchaElementBlockFacetSiteKeyArgs = {
   filters?: InputMaybe<Array<Scalars['String']>>;
   limit?: Scalars['Int'];
@@ -61451,6 +64229,7 @@ export type RecaptchaElementBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   ScoreThreshold?: InputMaybe<OrderBy>;
   SecretKey?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   SiteKey?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
@@ -61492,6 +64271,7 @@ export type RecaptchaElementBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   ScoreThreshold?: InputMaybe<FloatFilterInput>;
   SecretKey?: InputMaybe<SearchableStringFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   SiteKey?: InputMaybe<SearchableStringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
@@ -61525,6 +64305,7 @@ export type RedemptionLimitsData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -61548,6 +64329,7 @@ export type RedemptionLimitsDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -61572,6 +64354,12 @@ export type RedemptionLimitsDataAutocompleteRelativePathArgs = {
 
 
 export type RedemptionLimitsDataAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RedemptionLimitsDataAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -61608,6 +64396,7 @@ export type RedemptionLimitsDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -61696,6 +64485,14 @@ export type RedemptionLimitsDataFacetSavedArgs = {
 };
 
 
+export type RedemptionLimitsDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RedemptionLimitsDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -61742,6 +64539,7 @@ export type RedemptionLimitsDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -61782,6 +64580,7 @@ export type RedemptionLimitsDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -61810,6 +64609,7 @@ export type Relations = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -61833,6 +64633,7 @@ export type RelationsAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -61857,6 +64658,12 @@ export type RelationsAutocompleteRelativePathArgs = {
 
 
 export type RelationsAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RelationsAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -61890,6 +64697,7 @@ export type RelationsFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -61963,6 +64771,14 @@ export type RelationsFacetSavedArgs = {
 };
 
 
+export type RelationsFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RelationsFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -62006,6 +64822,7 @@ export type RelationsOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -62043,6 +64860,7 @@ export type RelationsWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -62073,6 +64891,7 @@ export type ReportingMediaData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -62098,6 +64917,7 @@ export type ReportingMediaDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -62134,6 +64954,12 @@ export type ReportingMediaDataAutocompleteRouteSegmentArgs = {
 };
 
 
+export type ReportingMediaDataAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type ReportingMediaDataAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -62164,6 +64990,7 @@ export type ReportingMediaDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -62254,6 +65081,14 @@ export type ReportingMediaDataFacetSavedArgs = {
 };
 
 
+export type ReportingMediaDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ReportingMediaDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -62299,6 +65134,7 @@ export type ReportingMediaDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -62339,6 +65175,7 @@ export type ReportingMediaDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -62370,6 +65207,7 @@ export type ResetButtonElementBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -62393,6 +65231,7 @@ export type ResetButtonElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -62417,6 +65256,12 @@ export type ResetButtonElementBlockAutocompleteRelativePathArgs = {
 
 
 export type ResetButtonElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ResetButtonElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -62452,6 +65297,7 @@ export type ResetButtonElementBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -62541,6 +65387,14 @@ export type ResetButtonElementBlockFacetSavedArgs = {
 };
 
 
+export type ResetButtonElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ResetButtonElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -62586,6 +65440,7 @@ export type ResetButtonElementBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -62625,6 +65480,7 @@ export type ResetButtonElementBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -62677,6 +65533,7 @@ export type ResetPasswordMailPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -62714,6 +65571,7 @@ export type ResetPasswordMailPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -62761,6 +65619,12 @@ export type ResetPasswordMailPageAutocompleteRelativePathArgs = {
 
 
 export type ResetPasswordMailPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ResetPasswordMailPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -62839,6 +65703,7 @@ export type ResetPasswordMailPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -63056,6 +65921,14 @@ export type ResetPasswordMailPageFacetSavedArgs = {
 };
 
 
+export type ResetPasswordMailPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ResetPasswordMailPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -63176,6 +66049,7 @@ export type ResetPasswordMailPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -63242,6 +66116,7 @@ export type ResetPasswordMailPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -63302,6 +66177,7 @@ export type ResetPasswordPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -63338,6 +66214,7 @@ export type ResetPasswordPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -63385,6 +66262,12 @@ export type ResetPasswordPageAutocompleteRelativePathArgs = {
 
 
 export type ResetPasswordPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ResetPasswordPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -63463,6 +66346,7 @@ export type ResetPasswordPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -63679,6 +66563,14 @@ export type ResetPasswordPageFacetSavedArgs = {
 };
 
 
+export type ResetPasswordPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ResetPasswordPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -63791,6 +66683,7 @@ export type ResetPasswordPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -63856,6 +66749,7 @@ export type ResetPasswordPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -63907,6 +66801,7 @@ export type RssReaderBlock = IContent & {
   /** URL for RSS feed */
   RssUrl?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -63932,6 +66827,7 @@ export type RssReaderBlockAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   RssUrl?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -63962,6 +66858,12 @@ export type RssReaderBlockAutocompleteRouteSegmentArgs = {
 
 
 export type RssReaderBlockAutocompleteRssUrlArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type RssReaderBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -64005,6 +66907,7 @@ export type RssReaderBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   RssUrl?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -64144,6 +67047,14 @@ export type RssReaderBlockFacetSavedArgs = {
 };
 
 
+export type RssReaderBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type RssReaderBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -64197,6 +67108,7 @@ export type RssReaderBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   RssUrl?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -64244,6 +67156,7 @@ export type RssReaderBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   RssUrl?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -64302,6 +67215,7 @@ export type SalesPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -64340,6 +67254,7 @@ export type SalesPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -64387,6 +67302,12 @@ export type SalesPageAutocompleteRelativePathArgs = {
 
 
 export type SalesPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SalesPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -64471,6 +67392,7 @@ export type SalesPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -64713,6 +67635,14 @@ export type SalesPageFacetSavedArgs = {
 };
 
 
+export type SalesPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SalesPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -64831,6 +67761,7 @@ export type SalesPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -64902,6 +67833,7 @@ export type SalesPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -64963,6 +67895,7 @@ export type SearchResultPage = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   /** This will determine whether or not to show recommendations */
   ShowRecommendations?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -65000,6 +67933,7 @@ export type SearchResultPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -65047,6 +67981,12 @@ export type SearchResultPageAutocompleteRelativePathArgs = {
 
 
 export type SearchResultPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SearchResultPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -65126,6 +68066,7 @@ export type SearchResultPageFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowRecommendations?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -65351,6 +68292,14 @@ export type SearchResultPageFacetShowRecommendationsArgs = {
 };
 
 
+export type SearchResultPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SearchResultPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -65464,6 +68413,7 @@ export type SearchResultPageOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowRecommendations?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -65531,6 +68481,7 @@ export type SearchResultPageWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowRecommendations?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -65598,6 +68549,7 @@ export type SelectionElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -65622,6 +68574,7 @@ export type SelectionElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -65646,6 +68599,12 @@ export type SelectionElementBlockAutocompleteRelativePathArgs = {
 
 
 export type SelectionElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SelectionElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -65687,6 +68646,7 @@ export type SelectionElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -65819,6 +68779,14 @@ export type SelectionElementBlockFacetSavedArgs = {
 };
 
 
+export type SelectionElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SelectionElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -65878,6 +68846,7 @@ export type SelectionElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -65924,6 +68893,7 @@ export type SelectionElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -65955,6 +68925,7 @@ export type SeoInformation = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -65979,6 +68950,7 @@ export type SeoInformationAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -66003,6 +68975,12 @@ export type SeoInformationAutocompleteRelativePathArgs = {
 
 
 export type SeoInformationAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SeoInformationAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -66038,6 +69016,7 @@ export type SeoInformationFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -66128,6 +69107,14 @@ export type SeoInformationFacetSavedArgs = {
 };
 
 
+export type SeoInformationFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SeoInformationFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -66181,6 +69168,7 @@ export type SeoInformationOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -66221,6 +69209,7 @@ export type SeoInformationWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -66274,6 +69263,7 @@ export type SharedCartPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -66310,6 +69300,7 @@ export type SharedCartPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -66357,6 +69348,12 @@ export type SharedCartPageAutocompleteRelativePathArgs = {
 
 
 export type SharedCartPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SharedCartPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -66435,6 +69432,7 @@ export type SharedCartPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -66651,6 +69649,14 @@ export type SharedCartPageFacetSavedArgs = {
 };
 
 
+export type SharedCartPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SharedCartPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -66763,6 +69769,7 @@ export type SharedCartPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -66828,6 +69835,7 @@ export type SharedCartPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -66865,6 +69873,7 @@ export type ShippingDimensions = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -66889,6 +69898,7 @@ export type ShippingDimensionsAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -66913,6 +69923,12 @@ export type ShippingDimensionsAutocompleteRelativePathArgs = {
 
 
 export type ShippingDimensionsAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ShippingDimensionsAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -66948,6 +69964,7 @@ export type ShippingDimensionsFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -67032,6 +70049,14 @@ export type ShippingDimensionsFacetSavedArgs = {
 };
 
 
+export type ShippingDimensionsFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ShippingDimensionsFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -67082,6 +70107,7 @@ export type ShippingDimensionsOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -67122,6 +70148,7 @@ export type ShippingDimensionsWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -67161,6 +70188,7 @@ export type SingleImage = IContent & {
   Right?: Maybe<Scalars['Float']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -67186,6 +70214,7 @@ export type SingleImageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -67210,6 +70239,12 @@ export type SingleImageAutocompleteRelativePathArgs = {
 
 
 export type SingleImageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SingleImageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -67253,6 +70288,7 @@ export type SingleImageFacet = {
   Right?: Maybe<Array<Maybe<NumberFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -67390,6 +70426,14 @@ export type SingleImageFacetSavedArgs = {
 };
 
 
+export type SingleImageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SingleImageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -67453,6 +70497,7 @@ export type SingleImageOrderByInput = {
   Right?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -67502,6 +70547,7 @@ export type SingleImageWhereInput = {
   Right?: InputMaybe<FloatFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -67793,6 +70839,7 @@ export type StandardFile = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -67818,6 +70865,7 @@ export type StandardFileAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -67854,6 +70902,12 @@ export type StandardFileAutocompleteRouteSegmentArgs = {
 };
 
 
+export type StandardFileAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type StandardFileAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -67885,6 +70939,7 @@ export type StandardFileFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -67983,6 +71038,14 @@ export type StandardFileFacetSavedArgs = {
 };
 
 
+export type StandardFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type StandardFileFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -68029,6 +71092,7 @@ export type StandardFileOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -68070,6 +71134,7 @@ export type StandardFileWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -68127,6 +71192,7 @@ export type StandardPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -68169,6 +71235,7 @@ export type StandardPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -68224,6 +71291,12 @@ export type StandardPageAutocompleteRelativePathArgs = {
 
 
 export type StandardPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type StandardPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -68318,6 +71391,7 @@ export type StandardPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -68549,6 +71623,14 @@ export type StandardPageFacetSavedArgs = {
 };
 
 
+export type StandardPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type StandardPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -68681,6 +71763,7 @@ export type StandardPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -68752,6 +71835,7 @@ export type StandardPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -68813,6 +71897,7 @@ export type StorePage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -68849,6 +71934,7 @@ export type StorePageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -68896,6 +71982,12 @@ export type StorePageAutocompleteRelativePathArgs = {
 
 
 export type StorePageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type StorePageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -68974,6 +72066,7 @@ export type StorePageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -69190,6 +72283,14 @@ export type StorePageFacetSavedArgs = {
 };
 
 
+export type StorePageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type StorePageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -69302,6 +72403,7 @@ export type StorePageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -69367,6 +72469,7 @@ export type StorePageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -69413,6 +72516,7 @@ export type StringFilterBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -69436,6 +72540,7 @@ export type StringFilterBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -69460,6 +72565,12 @@ export type StringFilterBlockAutocompleteRelativePathArgs = {
 
 
 export type StringFilterBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type StringFilterBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -69495,6 +72606,7 @@ export type StringFilterBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -69584,6 +72696,14 @@ export type StringFilterBlockFacetSavedArgs = {
 };
 
 
+export type StringFilterBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type StringFilterBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -69629,6 +72749,7 @@ export type StringFilterBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -69668,6 +72789,7 @@ export type StringFilterBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -69743,6 +72865,7 @@ export type SubOrganizationPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -69779,6 +72902,7 @@ export type SubOrganizationPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -69826,6 +72950,12 @@ export type SubOrganizationPageAutocompleteRelativePathArgs = {
 
 
 export type SubOrganizationPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SubOrganizationPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -69904,6 +73034,7 @@ export type SubOrganizationPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -70120,6 +73251,14 @@ export type SubOrganizationPageFacetSavedArgs = {
 };
 
 
+export type SubOrganizationPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SubOrganizationPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -70232,6 +73371,7 @@ export type SubOrganizationPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -70297,6 +73437,7 @@ export type SubOrganizationPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -70339,6 +73480,7 @@ export type SubmitButtonElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -70364,6 +73506,7 @@ export type SubmitButtonElementBlockAutocomplete = {
   RedirectToPage?: Maybe<Array<Maybe<Scalars['String']>>>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -70405,6 +73548,12 @@ export type SubmitButtonElementBlockAutocompleteRouteSegmentArgs = {
 };
 
 
+export type SubmitButtonElementBlockAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
 export type SubmitButtonElementBlockAutocompleteStatusArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
@@ -70440,6 +73589,7 @@ export type SubmitButtonElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -70566,6 +73716,14 @@ export type SubmitButtonElementBlockFacetSavedArgs = {
 };
 
 
+export type SubmitButtonElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SubmitButtonElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -70616,6 +73774,7 @@ export type SubmitButtonElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -70660,6 +73819,7 @@ export type SubmitButtonElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -70697,6 +73857,7 @@ export type SubscriptionBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
   ShowHeading?: Maybe<Scalars['Bool']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -70721,6 +73882,7 @@ export type SubscriptionBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -70745,6 +73907,12 @@ export type SubscriptionBlockAutocompleteRelativePathArgs = {
 
 
 export type SubscriptionBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SubscriptionBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -70785,6 +73953,7 @@ export type SubscriptionBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   ShowHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -70903,6 +74072,14 @@ export type SubscriptionBlockFacetShowHeadingArgs = {
 };
 
 
+export type SubscriptionBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SubscriptionBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -70953,6 +74130,7 @@ export type SubscriptionBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
   ShowHeading?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -70997,6 +74175,7 @@ export type SubscriptionBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
   ShowHeading?: InputMaybe<BoolFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -71049,6 +74228,7 @@ export type SubscriptionDetailPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -71085,6 +74265,7 @@ export type SubscriptionDetailPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -71132,6 +74313,12 @@ export type SubscriptionDetailPageAutocompleteRelativePathArgs = {
 
 
 export type SubscriptionDetailPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SubscriptionDetailPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -71210,6 +74397,7 @@ export type SubscriptionDetailPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -71426,6 +74614,14 @@ export type SubscriptionDetailPageFacetSavedArgs = {
 };
 
 
+export type SubscriptionDetailPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SubscriptionDetailPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -71538,6 +74734,7 @@ export type SubscriptionDetailPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -71603,6 +74800,7 @@ export type SubscriptionDetailPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -71662,6 +74860,7 @@ export type SubscriptionHistoryPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -71698,6 +74897,7 @@ export type SubscriptionHistoryPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -71745,6 +74945,12 @@ export type SubscriptionHistoryPageAutocompleteRelativePathArgs = {
 
 
 export type SubscriptionHistoryPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type SubscriptionHistoryPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -71823,6 +75029,7 @@ export type SubscriptionHistoryPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -72039,6 +75246,14 @@ export type SubscriptionHistoryPageFacetSavedArgs = {
 };
 
 
+export type SubscriptionHistoryPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type SubscriptionHistoryPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -72151,6 +75366,7 @@ export type SubscriptionHistoryPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -72216,6 +75432,7 @@ export type SubscriptionHistoryPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -72285,6 +75502,7 @@ export type TagPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -72322,6 +75540,7 @@ export type TagPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -72369,6 +75588,12 @@ export type TagPageAutocompleteRelativePathArgs = {
 
 
 export type TagPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TagPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -72450,6 +75675,7 @@ export type TagPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -72675,6 +75901,14 @@ export type TagPageFacetSavedArgs = {
 };
 
 
+export type TagPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TagPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -72790,6 +76024,7 @@ export type TagPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -72859,6 +76094,7 @@ export type TagPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -72917,6 +76153,7 @@ export type TeaserBlock = IContent & {
   Saved?: Maybe<Scalars['Date']>;
   SecondImage?: Maybe<ContentModelReference>;
   SecondImageSize?: Maybe<Scalars['Int']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -72948,6 +76185,7 @@ export type TeaserBlockAutocomplete = {
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SecondImage?: Maybe<ContentModelReferenceAutocomplete>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -72973,6 +76211,12 @@ export type TeaserBlockAutocompleteRelativePathArgs = {
 
 
 export type TeaserBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TeaserBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -73032,6 +76276,7 @@ export type TeaserBlockFacet = {
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
   SecondImage?: Maybe<ContentModelReferenceFacet>;
   SecondImageSize?: Maybe<Array<Maybe<NumberFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -73219,6 +76464,14 @@ export type TeaserBlockFacetSecondImageSizeArgs = {
 };
 
 
+export type TeaserBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TeaserBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -73314,6 +76567,7 @@ export type TeaserBlockOrderByInput = {
   Saved?: InputMaybe<OrderBy>;
   SecondImage?: InputMaybe<ContentModelReferenceOrderByInput>;
   SecondImageSize?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -73375,6 +76629,7 @@ export type TeaserBlockWhereInput = {
   Saved?: InputMaybe<DateFilterInput>;
   SecondImage?: InputMaybe<ContentModelReferenceWhereInput>;
   SecondImageSize?: InputMaybe<IntFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -73415,6 +76670,7 @@ export type TextBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -73439,6 +76695,7 @@ export type TextBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -73463,6 +76720,12 @@ export type TextBlockAutocompleteRelativePathArgs = {
 
 
 export type TextBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TextBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -73502,6 +76765,7 @@ export type TextBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -73612,6 +76876,14 @@ export type TextBlockFacetSavedArgs = {
 };
 
 
+export type TextBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TextBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -73661,6 +76933,7 @@ export type TextBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -73704,6 +76977,7 @@ export type TextBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -73738,6 +77012,7 @@ export type TextareaElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -73762,6 +77037,7 @@ export type TextareaElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -73786,6 +77062,12 @@ export type TextareaElementBlockAutocompleteRelativePathArgs = {
 
 
 export type TextareaElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TextareaElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -73825,6 +77107,7 @@ export type TextareaElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -73941,6 +77224,14 @@ export type TextareaElementBlockFacetSavedArgs = {
 };
 
 
+export type TextareaElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TextareaElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -73998,6 +77289,7 @@ export type TextareaElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -74042,6 +77334,7 @@ export type TextareaElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -74078,6 +77371,7 @@ export type TextboxElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -74102,6 +77396,7 @@ export type TextboxElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -74126,6 +77421,12 @@ export type TextboxElementBlockAutocompleteRelativePathArgs = {
 
 
 export type TextboxElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TextboxElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -74166,6 +77467,7 @@ export type TextboxElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -74290,6 +77592,14 @@ export type TextboxElementBlockFacetSavedArgs = {
 };
 
 
+export type TextboxElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TextboxElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -74348,6 +77658,7 @@ export type TextboxElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -74393,6 +77704,7 @@ export type TextboxElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -74451,6 +77763,7 @@ export type ThreeColumnLandingPage = IContent & {
   RightContentArea?: Maybe<Array<Maybe<ContentAreaItemModelSearch>>>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -74488,6 +77801,7 @@ export type ThreeColumnLandingPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -74535,6 +77849,12 @@ export type ThreeColumnLandingPageAutocompleteRelativePathArgs = {
 
 
 export type ThreeColumnLandingPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type ThreeColumnLandingPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -74618,6 +77938,7 @@ export type ThreeColumnLandingPageFacet = {
   RightContentArea?: Maybe<ContentAreaItemModelSearchFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -74850,6 +78171,14 @@ export type ThreeColumnLandingPageFacetSavedArgs = {
 };
 
 
+export type ThreeColumnLandingPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type ThreeColumnLandingPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -74967,6 +78296,7 @@ export type ThreeColumnLandingPageOrderByInput = {
   RightContentArea?: InputMaybe<ContentAreaItemModelSearchOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -75038,6 +78368,7 @@ export type ThreeColumnLandingPageWhereInput = {
   RightContentArea?: InputMaybe<ContentAreaItemModelSearchWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -75075,6 +78406,7 @@ export type TinyMceAdaptiveImage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -75298,6 +78630,7 @@ export type TinyMceAdaptiveImageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -75322,6 +78655,12 @@ export type TinyMceAdaptiveImageAutocompleteRelativePathArgs = {
 
 
 export type TinyMceAdaptiveImageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TinyMceAdaptiveImageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -75356,6 +78695,7 @@ export type TinyMceAdaptiveImageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -75429,6 +78769,14 @@ export type TinyMceAdaptiveImageFacetSavedArgs = {
 };
 
 
+export type TinyMceAdaptiveImageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TinyMceAdaptiveImageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -75473,6 +78821,7 @@ export type TinyMceAdaptiveImageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -75511,6 +78860,7 @@ export type TinyMceAdaptiveImageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -75548,6 +78898,7 @@ export type TwitterBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -75572,6 +78923,7 @@ export type TwitterBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -75596,6 +78948,12 @@ export type TwitterBlockAutocompleteRelativePathArgs = {
 
 
 export type TwitterBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TwitterBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -75636,6 +78994,7 @@ export type TwitterBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -75751,6 +79110,14 @@ export type TwitterBlockFacetSavedArgs = {
 };
 
 
+export type TwitterBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TwitterBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -75801,6 +79168,7 @@ export type TwitterBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -75845,6 +79213,7 @@ export type TwitterBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -75900,6 +79269,7 @@ export type TwoColumnLandingPage = IContent & {
   RightContentArea?: Maybe<Array<Maybe<ContentAreaItemModelSearch>>>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -75937,6 +79307,7 @@ export type TwoColumnLandingPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -75984,6 +79355,12 @@ export type TwoColumnLandingPageAutocompleteRelativePathArgs = {
 
 
 export type TwoColumnLandingPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type TwoColumnLandingPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -76065,6 +79442,7 @@ export type TwoColumnLandingPageFacet = {
   RightContentArea?: Maybe<ContentAreaItemModelSearchFacet>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -76292,6 +79670,14 @@ export type TwoColumnLandingPageFacetSavedArgs = {
 };
 
 
+export type TwoColumnLandingPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type TwoColumnLandingPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -76407,6 +79793,7 @@ export type TwoColumnLandingPageOrderByInput = {
   RightContentArea?: InputMaybe<ContentAreaItemModelSearchOrderByInput>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -76476,6 +79863,7 @@ export type TwoColumnLandingPageWhereInput = {
   RightContentArea?: InputMaybe<ContentAreaItemModelSearchWhereInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -76518,6 +79906,7 @@ export type UrlElementBlock = IContent & {
   RouteSegment?: Maybe<Scalars['String']>;
   SatisfiedAction?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -76542,6 +79931,7 @@ export type UrlElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -76566,6 +79956,12 @@ export type UrlElementBlockAutocompleteRelativePathArgs = {
 
 
 export type UrlElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type UrlElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -76605,6 +80001,7 @@ export type UrlElementBlockFacet = {
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   SatisfiedAction?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -76724,6 +80121,14 @@ export type UrlElementBlockFacetSavedArgs = {
 };
 
 
+export type UrlElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type UrlElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -76781,6 +80186,7 @@ export type UrlElementBlockOrderByInput = {
   RouteSegment?: InputMaybe<OrderBy>;
   SatisfiedAction?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -76825,6 +80231,7 @@ export type UrlElementBlockWhereInput = {
   RouteSegment?: InputMaybe<StringFilterInput>;
   SatisfiedAction?: InputMaybe<SearchableStringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -76878,6 +80285,7 @@ export type UsersPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -76914,6 +80322,7 @@ export type UsersPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -76961,6 +80370,12 @@ export type UsersPageAutocompleteRelativePathArgs = {
 
 
 export type UsersPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type UsersPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -77039,6 +80454,7 @@ export type UsersPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -77255,6 +80671,14 @@ export type UsersPageFacetSavedArgs = {
 };
 
 
+export type UsersPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type UsersPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -77367,6 +80791,7 @@ export type UsersPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -77432,6 +80857,7 @@ export type UsersPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -77453,6 +80879,7 @@ export type UsersPageWhereInput = {
 export type VariationContent = IContent & {
   __typename?: 'VariationContent';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<Array<Maybe<CommerceMedia>>>;
   Associations?: Maybe<VariationContentAssociations>;
   CatalogId?: Maybe<Scalars['Int']>;
   Categories?: Maybe<VariationContentCategories>;
@@ -77467,7 +80894,9 @@ export type VariationContent = IContent & {
   IsCommonDraft?: Maybe<Scalars['Bool']>;
   Language?: Maybe<ContentLanguageModel>;
   MasterLanguage?: Maybe<ContentLanguageModel>;
+  MaxQuantity?: Maybe<Scalars['Float']>;
   MetaClassId?: Maybe<Scalars['Int']>;
+  MinQuantity?: Maybe<Scalars['Float']>;
   Name?: Maybe<Scalars['String']>;
   ParentEntries?: Maybe<VariationContentRelations>;
   ParentLink?: Maybe<ContentModelReference>;
@@ -77479,6 +80908,7 @@ export type VariationContent = IContent & {
   SeoUri?: Maybe<Scalars['String']>;
   ShippingDimensions?: Maybe<VariationContentShippingDimensions>;
   ShippingPackageId?: Maybe<Scalars['Int']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -77519,6 +80949,7 @@ export type VariationContentAssociationsWhereInput = {
 export type VariationContentAutocomplete = {
   __typename?: 'VariationContentAutocomplete';
   Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Assets?: Maybe<CommerceMediaAutocomplete>;
   Associations?: Maybe<VariationContentAssociationsAutocomplete>;
   Categories?: Maybe<VariationContentCategoriesAutocomplete>;
   ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
@@ -77534,6 +80965,7 @@ export type VariationContentAutocomplete = {
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
   SeoInformation?: Maybe<VariationContentSeoInformationAutocomplete>;
   SeoUri?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -77564,6 +80996,12 @@ export type VariationContentAutocompleteRouteSegmentArgs = {
 
 
 export type VariationContentAutocompleteSeoUriArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VariationContentAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -77606,6 +81044,7 @@ export type VariationContentCategoriesWhereInput = {
 export type VariationContentFacet = {
   __typename?: 'VariationContentFacet';
   Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Assets?: Maybe<CommerceMediaFacet>;
   Associations?: Maybe<VariationContentAssociationsFacet>;
   CatalogId?: Maybe<Array<Maybe<NumberFacet>>>;
   Categories?: Maybe<VariationContentCategoriesFacet>;
@@ -77620,7 +81059,9 @@ export type VariationContentFacet = {
   IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
   Language?: Maybe<ContentLanguageModelFacet>;
   MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  MaxQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   MetaClassId?: Maybe<Array<Maybe<NumberFacet>>>;
+  MinQuantity?: Maybe<Array<Maybe<NumberFacet>>>;
   Name?: Maybe<Array<Maybe<StringFacet>>>;
   ParentEntries?: Maybe<VariationContentRelationsFacet>;
   ParentLink?: Maybe<ContentModelReferenceFacet>;
@@ -77632,6 +81073,7 @@ export type VariationContentFacet = {
   SeoUri?: Maybe<Array<Maybe<StringFacet>>>;
   ShippingDimensions?: Maybe<VariationContentShippingDimensionsFacet>;
   ShippingPackageId?: Maybe<Array<Maybe<NumberFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -77699,7 +81141,17 @@ export type VariationContentFacetIsCommonDraftArgs = {
 };
 
 
+export type VariationContentFacetMaxQuantityArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
 export type VariationContentFacetMetaClassIdArgs = {
+  ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type VariationContentFacetMinQuantityArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
 };
 
@@ -77744,6 +81196,14 @@ export type VariationContentFacetSeoUriArgs = {
 
 export type VariationContentFacetShippingPackageIdArgs = {
   ranges?: InputMaybe<Array<InputMaybe<RangeFacetsInput>>>;
+};
+
+
+export type VariationContentFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
 };
 
 
@@ -77794,6 +81254,7 @@ export type VariationContentFacetWeightArgs = {
 
 export type VariationContentOrderByInput = {
   Ancestors?: InputMaybe<OrderBy>;
+  Assets?: InputMaybe<CommerceMediaOrderByInput>;
   Associations?: InputMaybe<VariationContentAssociationsOrderByInput>;
   CatalogId?: InputMaybe<OrderBy>;
   Categories?: InputMaybe<VariationContentCategoriesOrderByInput>;
@@ -77808,7 +81269,9 @@ export type VariationContentOrderByInput = {
   IsCommonDraft?: InputMaybe<OrderBy>;
   Language?: InputMaybe<ContentLanguageModelOrderByInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MaxQuantity?: InputMaybe<OrderBy>;
   MetaClassId?: InputMaybe<OrderBy>;
+  MinQuantity?: InputMaybe<OrderBy>;
   Name?: InputMaybe<OrderBy>;
   ParentEntries?: InputMaybe<VariationContentRelationsOrderByInput>;
   ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
@@ -77820,6 +81283,7 @@ export type VariationContentOrderByInput = {
   SeoUri?: InputMaybe<OrderBy>;
   ShippingDimensions?: InputMaybe<VariationContentShippingDimensionsOrderByInput>;
   ShippingPackageId?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -77985,6 +81449,7 @@ export type VariationContentShippingDimensionsWhereInput = {
 
 export type VariationContentWhereInput = {
   Ancestors?: InputMaybe<StringFilterInput>;
+  Assets?: InputMaybe<CommerceMediaWhereInput>;
   Associations?: InputMaybe<VariationContentAssociationsWhereInput>;
   CatalogId?: InputMaybe<IntFilterInput>;
   Categories?: InputMaybe<VariationContentCategoriesWhereInput>;
@@ -77999,7 +81464,9 @@ export type VariationContentWhereInput = {
   IsCommonDraft?: InputMaybe<BoolFilterInput>;
   Language?: InputMaybe<ContentLanguageModelWhereInput>;
   MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  MaxQuantity?: InputMaybe<FloatFilterInput>;
   MetaClassId?: InputMaybe<IntFilterInput>;
+  MinQuantity?: InputMaybe<FloatFilterInput>;
   Name?: InputMaybe<SearchableStringFilterInput>;
   ParentEntries?: InputMaybe<VariationContentRelationsWhereInput>;
   ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
@@ -78011,6 +81478,7 @@ export type VariationContentWhereInput = {
   SeoUri?: InputMaybe<StringFilterInput>;
   ShippingDimensions?: InputMaybe<VariationContentShippingDimensionsWhereInput>;
   ShippingPackageId?: InputMaybe<IntFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -78071,6 +81539,7 @@ export type VectorImageMediaData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -78103,6 +81572,7 @@ export type VectorImageMediaDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
@@ -78153,6 +81623,12 @@ export type VectorImageMediaDataAutocompleteRelativePathArgs = {
 
 
 export type VectorImageMediaDataAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VectorImageMediaDataAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -78218,6 +81694,7 @@ export type VectorImageMediaDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -78474,6 +81951,14 @@ export type VectorImageMediaDataFacetSavedArgs = {
 };
 
 
+export type VectorImageMediaDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type VectorImageMediaDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -78559,6 +82044,7 @@ export type VectorImageMediaDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -78625,6 +82111,7 @@ export type VectorImageMediaDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -78663,6 +82150,7 @@ export type VideoBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -78688,6 +82176,7 @@ export type VideoBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   Video?: Maybe<ContentModelReferenceAutocomplete>;
@@ -78713,6 +82202,12 @@ export type VideoBlockAutocompleteRelativePathArgs = {
 
 
 export type VideoBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VideoBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -78751,6 +82246,7 @@ export type VideoBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -78854,6 +82350,14 @@ export type VideoBlockFacetSavedArgs = {
 };
 
 
+export type VideoBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type VideoBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -78902,6 +82406,7 @@ export type VideoBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -78945,6 +82450,7 @@ export type VideoBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -78981,6 +82487,7 @@ export type VideoFile = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -79007,6 +82514,7 @@ export type VideoFileAutocomplete = {
   PreviewImage?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -79038,6 +82546,12 @@ export type VideoFileAutocompleteRelativePathArgs = {
 
 
 export type VideoFileAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VideoFileAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -79077,6 +82591,7 @@ export type VideoFileFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -79191,6 +82706,14 @@ export type VideoFileFacetSavedArgs = {
 };
 
 
+export type VideoFileFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type VideoFileFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -79240,6 +82763,7 @@ export type VideoFileOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -79284,6 +82808,7 @@ export type VideoFileWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -79324,6 +82849,7 @@ export type VimeoBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -79351,6 +82877,7 @@ export type VimeoBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
   VimeoVideoLink?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -79376,6 +82903,12 @@ export type VimeoBlockAutocompleteRelativePathArgs = {
 
 
 export type VimeoBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VimeoBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -79423,6 +82956,7 @@ export type VimeoBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -79542,6 +83076,14 @@ export type VimeoBlockFacetSavedArgs = {
 };
 
 
+export type VimeoBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type VimeoBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -79601,6 +83143,7 @@ export type VimeoBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -79647,6 +83190,7 @@ export type VimeoBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -79676,6 +83220,7 @@ export type VisitorDataHiddenElementBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -79700,6 +83245,7 @@ export type VisitorDataHiddenElementBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -79724,6 +83270,12 @@ export type VisitorDataHiddenElementBlockAutocompleteRelativePathArgs = {
 
 
 export type VisitorDataHiddenElementBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type VisitorDataHiddenElementBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -79757,6 +83309,7 @@ export type VisitorDataHiddenElementBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -79831,6 +83384,14 @@ export type VisitorDataHiddenElementBlockFacetSavedArgs = {
 };
 
 
+export type VisitorDataHiddenElementBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type VisitorDataHiddenElementBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -79882,6 +83443,7 @@ export type VisitorDataHiddenElementBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -79920,6 +83482,7 @@ export type VisitorDataHiddenElementBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -79978,6 +83541,7 @@ export type WebImageMediaData = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -80010,6 +83574,7 @@ export type WebImageMediaDataAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   Thumbnail?: Maybe<BlobModelAutocomplete>;
@@ -80060,6 +83625,12 @@ export type WebImageMediaDataAutocompleteRelativePathArgs = {
 
 
 export type WebImageMediaDataAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type WebImageMediaDataAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -80125,6 +83696,7 @@ export type WebImageMediaDataFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -80381,6 +83953,14 @@ export type WebImageMediaDataFacetSavedArgs = {
 };
 
 
+export type WebImageMediaDataFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type WebImageMediaDataFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -80466,6 +84046,7 @@ export type WebImageMediaDataOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -80532,6 +84113,7 @@ export type WebImageMediaDataWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -80565,6 +84147,7 @@ export type WidgetBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -80590,6 +84173,7 @@ export type WidgetBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -80614,6 +84198,12 @@ export type WidgetBlockAutocompleteRelativePathArgs = {
 
 
 export type WidgetBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type WidgetBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -80648,6 +84238,7 @@ export type WidgetBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -80728,6 +84319,14 @@ export type WidgetBlockFacetSavedArgs = {
 };
 
 
+export type WidgetBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type WidgetBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -80788,6 +84387,7 @@ export type WidgetBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -80828,6 +84428,7 @@ export type WidgetBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -80882,6 +84483,7 @@ export type WishListPage = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -80918,6 +84520,7 @@ export type WishListPageAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserButtonStyle?: Maybe<Array<Maybe<Scalars['String']>>>;
   TeaserColorTheme?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -80965,6 +84568,12 @@ export type WishListPageAutocompleteRelativePathArgs = {
 
 
 export type WishListPageAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type WishListPageAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -81043,6 +84652,7 @@ export type WishListPageFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -81259,6 +84869,14 @@ export type WishListPageFacetSavedArgs = {
 };
 
 
+export type WishListPageFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type WishListPageFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -81371,6 +84989,7 @@ export type WishListPageOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -81436,6 +85055,7 @@ export type WishListPageWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;
@@ -81481,6 +85101,7 @@ export type YouTubeBlock = IContent & {
   RelativePath?: Maybe<Scalars['String']>;
   RouteSegment?: Maybe<Scalars['String']>;
   Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
   StartPublish?: Maybe<Scalars['Date']>;
   Status?: Maybe<Scalars['String']>;
   StopPublish?: Maybe<Scalars['Date']>;
@@ -81507,6 +85128,7 @@ export type YouTubeBlockAutocomplete = {
   ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
   RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
   RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
   Status?: Maybe<Array<Maybe<Scalars['String']>>>;
   Url?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
@@ -81531,6 +85153,12 @@ export type YouTubeBlockAutocompleteRelativePathArgs = {
 
 
 export type YouTubeBlockAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type YouTubeBlockAutocompleteSiteIdArgs = {
   limit?: Scalars['Int'];
   value: Scalars['String'];
 };
@@ -81571,6 +85199,7 @@ export type YouTubeBlockFacet = {
   RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
   RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
   Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
   StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
   Status?: Maybe<Array<Maybe<StringFacet>>>;
   StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
@@ -81690,6 +85319,14 @@ export type YouTubeBlockFacetSavedArgs = {
 };
 
 
+export type YouTubeBlockFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
 export type YouTubeBlockFacetStartPublishArgs = {
   unit?: InputMaybe<DateFacetUnit>;
   value?: InputMaybe<Scalars['Int']>;
@@ -81748,6 +85385,7 @@ export type YouTubeBlockOrderByInput = {
   RelativePath?: InputMaybe<OrderBy>;
   RouteSegment?: InputMaybe<OrderBy>;
   Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
   StartPublish?: InputMaybe<OrderBy>;
   Status?: InputMaybe<OrderBy>;
   StopPublish?: InputMaybe<OrderBy>;
@@ -81793,6 +85431,7 @@ export type YouTubeBlockWhereInput = {
   RelativePath?: InputMaybe<StringFilterInput>;
   RouteSegment?: InputMaybe<StringFilterInput>;
   Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
   StartPublish?: InputMaybe<DateFilterInput>;
   Status?: InputMaybe<StringFilterInput>;
   StopPublish?: InputMaybe<DateFilterInput>;

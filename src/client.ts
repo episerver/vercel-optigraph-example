@@ -1,10 +1,6 @@
 import {GraphQLClient, RequestMiddleware} from 'graphql-request';
 import {getSdk} from "@/src/generated/sdk";
-import Base64 from "crypto-js/enc-base64";
-import md5 from "crypto-js/md5";
-import hmacSHA256 from "crypto-js/hmac-sha256";
 import {getAuthenticationHeader} from "@/src/lib/contentgraph";
-
 
 const endpoint = `https://cg.optimizely.com/content/v2`
 const endpointWithSingleKey = `${endpoint}?auth=${process.env.CG_SINGLE_KEY}`
@@ -12,7 +8,7 @@ const endpointWithSingleKey = `${endpoint}?auth=${process.env.CG_SINGLE_KEY}`
 // Standard Requests
 
 const graphQlClient = new GraphQLClient(endpointWithSingleKey, {
-    next: {revalidate: 3600}
+    next: {revalidate: 90000}
 });
 
 
@@ -34,10 +30,17 @@ const previewGraphQlClient = new GraphQLClient(endpoint, {
     requestMiddleware: requestMiddleware
 });
 
-const client = getSdk(graphQlClient);
-const previewClient = getSdk(previewGraphQlClient);
 
-export function getClient(){
+
+export function getClient(tags: string[] = []){
+    if(tags?.length > 0){
+        tags.map((tag) => {
+            graphQlClient.requestConfig.next?.tags?.push(tag);
+            previewGraphQlClient.requestConfig.next?.tags?.push(tag);
+        })
+    }
+    const client = getSdk(graphQlClient);
+    const previewClient = getSdk(previewGraphQlClient);
     return !isPreviewBranch() ? client : previewClient;
     //return previewClient;
     //return client;

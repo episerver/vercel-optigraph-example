@@ -50,7 +50,7 @@ export default async function Page({ params }: any)  {
     );
 }
 export async function getData(){
-    const data = await getClient().BlogList();
+    const data = await getClient(["cities"]).BlogList();
     if(process.env.VERCEL_ENV !== "preview") return data.LocationItemPage?.items;
     let filteredItems: LocationItemPage[] = [];
     if(data?.LocationItemPage?.items != null){
