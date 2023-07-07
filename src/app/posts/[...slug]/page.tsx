@@ -12,7 +12,7 @@ const inter = Inter({subsets: ["latin"]});
 export default async function Post({params: { slug } }) {
     const id = parseInt(slug[0] || "0");
     const workId = parseInt(slug[1] || "0");
-    const data = await getClient(["cities"]).BlogPost({id: id, workId: workId});
+    const data = await getClient(["city"]).BlogPost({id: id, workId: workId});
     const item = data?.LocationItemPage?.items[0];
     let image  = item?.PageImage?.Url == null ? item?.Image?.Url : item?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${item?.Name.replace(' ','')}` : image;
