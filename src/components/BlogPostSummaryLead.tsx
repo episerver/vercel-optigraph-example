@@ -15,7 +15,7 @@ export default function BlogPostSummaryLead({blogItem} : Content){
     }
     return(
             <div className="flex h-full bg-white rounded overflow-hidden shadow-lg">
-                <Link href={`/posts/${blogItem?.ContentLink?.Id}/${blogItem?.ContentLink?.WorkId}`} className="flex flex-wrap no-underline hover:no-underline">
+                <Link href={`/posts/${blogItem?.ContentLink?.GuidValue}`} className="flex flex-wrap no-underline hover:no-underline">
                     <div className="w-full md:w-2/3 rounded-t">
                         <Image src={image} loading={"lazy"} width={640} height={480} alt={blogItem?.Name || "city"}
                              className="h-full w-full shadow" />

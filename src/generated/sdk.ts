@@ -85461,8 +85461,7 @@ export type BlogListQuery = { __typename?: 'Query', LocationItemPage?: { __typen
 
 export type BlogPostQueryVariables = Exact<{
   locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
-  id?: InputMaybe<Scalars['Int']>;
-  workId?: InputMaybe<Scalars['Int']>;
+  guid?: InputMaybe<Scalars['String']>;
 }>;
 
 
@@ -85526,10 +85525,10 @@ export const BlogListDocument = gql`
 }
     `;
 export const BlogPostDocument = gql`
-    query BlogPost($locale: [Locales] = en, $id: Int, $workId: Int) {
+    query BlogPost($locale: [Locales] = en, $guid: String) {
   LocationItemPage(
     locale: $locale
-    where: {ContentLink: {Id: {eq: $id}, WorkId: {eq: $workId}}}
+    where: {ContentLink: {GuidValue: {eq: $guid}}}
   ) {
     items {
       Name

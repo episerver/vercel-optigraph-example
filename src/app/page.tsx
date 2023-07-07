@@ -1,4 +1,4 @@
-import {getClient} from "@/src/client";
+import {getClient, isPreviewBranch} from "@/src/client";
 import Head from "next/head";
 import Header from "@/src/components/Header";
 import BlogPostSummaryLead from "@/src/components/BlogPostSummaryLead";
@@ -51,13 +51,13 @@ export default async function Page({ params }: any)  {
 }
 export async function getData(){
     const data = await getClient(["cities"]).BlogList();
-    if(process.env.VERCEL_ENV !== "preview") return data.LocationItemPage?.items;
+    if(!isPreviewBranch()) return data.LocationItemPage?.items;
     let filteredItems: LocationItemPage[] = [];
     if(data?.LocationItemPage?.items != null){
         data.LocationItemPage.items.map((content) => {
             if(content == null) return;
             let existingItem = filteredItems
-                .filter((item, index) => item?.ContentLink?.Id == content?.ContentLink?.Id);
+                .filter((item, index) => item?.ContentLink?.GuidValue == content?.ContentLink?.GuidValue);
             if (existingItem.length == 0)
                 filteredItems.push(content);
             else if (existingItem[0].Saved < content.Saved)
