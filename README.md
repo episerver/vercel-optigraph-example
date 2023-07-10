@@ -6,17 +6,15 @@ Click the deploy button below to directly deploy this repository with Vercel
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Deployment Variables
-When deploying to Vercel add the environment variable *CG_SINGLE_KEY* to the project with a valid content graph Single Key
-When testing the application locally ensure that you update .env file with a valid Single Key from Content Graph
+When deploying to Vercel add the environment variables listed below, if you use the "Deploy with vercel" button the names of the variables are pre-populated for you.
 
-## Setting Up Preview for Content Graph
-| Variable          | Description                                                                         | Value                         |
-|-------------------|-------------------------------------------------------------------------------------|-------------------------------|
-| CG_SINGLE_KEY     | Single Key from Content Graph                                                       |                               |
-| CG_APP_KEY        | App Key from ContentGraph                                                           |                               |
-| CG_SECRET         | App Secret from ContentGraph                                                        |                               |
-| CG_WEBHOOK_SECRET | The secret used when registering the webhook with Content Graph                     | true/false , default is false |
-| CMS_URL           | The url of your CMS that will be used when using visual-editing on a preview branch | true/false , default is false |
+| Variable          | Description                                                                         | Value |
+|-------------------|-------------------------------------------------------------------------------------|-------|
+| CG_SINGLE_KEY     | Single Key from Content Graph                                                       |       |
+| CG_APP_KEY        | App Key from ContentGraph                                                           |       |
+| CG_SECRET         | App Secret from ContentGraph                                                        |       |
+| CG_WEBHOOK_SECRET | The secret used when registering the webhook with Content Graph                     |       |
+| CMS_URL           | The url of your CMS that will be used when using visual-editing on a preview branch |       |
 
 
 

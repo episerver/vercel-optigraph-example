@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {LocationItemPage} from "@/src/generated/sdk";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
+import {isPreviewBranch} from "@/src/lib/client";
 interface Content {
     blogItem: LocationItemPage,
 }
