@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {LocationItemPage} from "@/src/generated/sdk";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
+import {isPreviewBranch} from "@/src/lib/client";
 interface Content {
     blogItem: LocationItemPage
     width?: String
@@ -10,7 +11,7 @@ export default function BlogPostSummary({blogItem, width = "1/3"} : Content){
     let image  = blogItem?.PageImage?.Url == null ? blogItem?.Image?.Url : blogItem?.PageImage?.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${blogItem?.Name}` : image;
     const cmsUrl = process.env.CMS_URL || "";
-    if(cmsUrl !== ""){
+    if(cmsUrl !== "" && isPreviewBranch()){
         const finalUrl=  `${cmsUrl}/EPiServer/CMS/?language=en#context=epi.cms.contentdata:///${blogItem?.ContentLink?.Id}&viewsetting=viewlanguage:///en`
         blogItem.Name = encodeEditInfo(blogItem?.Name || '', "optimizely.com" ,finalUrl);
     }
