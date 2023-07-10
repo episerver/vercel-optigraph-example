@@ -4,7 +4,7 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import {getData} from "@/src/app/page";
 import {encodeEditInfo} from "@/src/lib/visualEditing";
-import {getClient, isPreviewBranch} from "@/src/client";
+import {getClient, isPreviewBranch} from "@/src/lib/client";
 import {LocationItemPage} from "@/src/generated/sdk";
 
 const inter = Inter({subsets: ["latin"]});
