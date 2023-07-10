@@ -10,7 +10,7 @@ export default function BlogPostSummaryLead({blogItem} : Content){
     let image  = blogItem?.PageImage?.Url == null ? blogItem.Image?.Url : blogItem.PageImage.Url;
     image = image == null ? `https://source.unsplash.com/random?city,landscape,${blogItem?.Name?.replace(' ','') || ""}` : image;
     const cmsUrl = process.env.CMS_URL || "";
-    if(cmsUrl !== "" && isPreviewBranch()){
+    if(cmsUrl !== ""){
         const finalUrl=  `${cmsUrl}/EPiServer/CMS/?language=en#context=epi.cms.contentdata:///${blogItem?.ContentLink?.Id}&viewsetting=viewlanguage:///en`
         blogItem.Name = encodeEditInfo(blogItem?.Name || '', "optimizely.com" ,finalUrl);
     }
