@@ -1,4 +1,4 @@
-import {getClient, isPreviewBranch} from "@/src/client";
+import {getClient, isPreviewBranch} from "@/src/lib/client";
 import Head from "next/head";
 import Header from "@/src/components/Header";
 import BlogPostSummaryLead from "@/src/components/BlogPostSummaryLead";

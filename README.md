@@ -1,24 +1,23 @@
 ## Deploy with Vercel
 Click the deploy button below to directly deploy this repository with Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fepiserver%2Fvercel-contentgraph-template&env=CG_SINGLE_KEY,CG_APP_KEY,CG_SECRET,REDEPLOY_HOOK,CMS_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fepiserver%2Fvercel-contentgraph-template&env=CG_SINGLE_KEY,CG_APP_KEY,CG_SECRET,CG_WEBHOOK_SECRET,CMS_URL)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Deployment Variables
-When deploying to Vercel add the environment variable *NEXT_PUBLIC_CG_SINGLE_KEY* to the project with a valid content graph Single Key
-When testing the application locally ensure that you update .env file with a valide Single Key from Content Graph
-
-[![name](public/vercel.gif)](public/vercel.gif)
-
+When deploying to Vercel add the environment variable *CG_SINGLE_KEY* to the project with a valid content graph Single Key
+When testing the application locally ensure that you update .env file with a valid Single Key from Content Graph
 
 ## Setting Up Preview for Content Graph
-| Variable                    | Description                    | Value                         |
-|-----------------------------|--------------------------------|-------------------------------|
-| NEXT_PUBLIC_CG_SINGLE_KEY   | Single Key from Content Graph  |                               |
-| NEXT_PUBLIC_CG_APP_KEY      | App Key from ContentGraph      |                               |
-| NEXT_PUBLIC_CG_SECRET       | App Secret from ContentGraph   |                               |
-| NEXT_PUBLIC_CG_PREVIEW_MODE | Toggles fetching Draft Content | true/false , default is false |
+| Variable          | Description                                                                         | Value                         |
+|-------------------|-------------------------------------------------------------------------------------|-------------------------------|
+| CG_SINGLE_KEY     | Single Key from Content Graph                                                       |                               |
+| CG_APP_KEY        | App Key from ContentGraph                                                           |                               |
+| CG_SECRET         | App Secret from ContentGraph                                                        |                               |
+| CG_WEBHOOK_SECRET | The secret used when registering the webhook with Content Graph                     | true/false , default is false |
+| CMS_URL           | The url of your CMS that will be used when using visual-editing on a preview branch | true/false , default is false |
+
 
 
 ## Getting Started
@@ -35,11 +34,11 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The `app/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
