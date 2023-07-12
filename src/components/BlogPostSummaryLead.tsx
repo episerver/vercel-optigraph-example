@@ -24,6 +24,10 @@ export default function BlogPostSummaryLead({ blogItem }: Content) {
       "optimizely.com",
       finalUrl
     );
+  } else {
+    console.log(
+      "CMS_URL has not been configured, please configure it under environment variables or your .env file"
+    );
   }
   return (
     <div className="flex h-full bg-white rounded overflow-hidden shadow-lg">

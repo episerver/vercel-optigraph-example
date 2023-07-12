@@ -2,7 +2,8 @@ import { GraphQLClient, RequestMiddleware } from "graphql-request";
 import { getSdk } from "@/src/generated/sdk";
 import { getAuthenticationHeader } from "@/src/lib/contentGraph";
 
-const endpoint = `https://cg.optimizely.com/content/v2`;
+const endpoint =
+  process.env.CG_ENDPOINT ?? "https://cg.optimizely.com/content/v2";
 const endpointWithSingleKey = `${endpoint}?auth=${process.env.CG_SINGLE_KEY}`;
 
 // Standard Requests

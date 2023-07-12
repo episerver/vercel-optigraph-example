@@ -25,6 +25,10 @@ export default function BlogPostSummary({ blogItem, width = "1/3" }: Content) {
       "optimizely.com",
       finalUrl
     );
+  } else {
+    console.log(
+      "CMS_URL has not been configured, please configure it under environment variables or your .env file"
+    );
   }
   return (
     <>
