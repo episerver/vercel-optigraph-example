@@ -1,29 +1,29 @@
 query BlogPost($locale: [Locales] = en, $guid: String){
-  LocationItemPage(locale: $locale, where:{
-    ContentLink: {
-      GuidValue: {eq: $guid}
+    LocationItemPage(locale: $locale, where:{
+        ContentLink: {
+            GuidValue: {eq: $guid}
+        }
+    })
+    {
+        items{
+            Name,
+            Url,
+            StartPublish,
+            MainIntro,
+            MainBody,
+            Image {
+                Url
+            },
+            PageImage {
+                Url
+            },
+            ContentLink {
+                Id
+                WorkId
+                GuidValue
+                ProviderName
+                Url
+            }
+        }
     }
-  })
-  {
-    items{
-      Name,
-      Url,
-      StartPublish,
-      MainIntro,
-      MainBody,
-      Image {
-        Url
-      },
-      PageImage {
-        Url
-      },
-      ContentLink {
-        Id
-        WorkId
-        GuidValue
-        ProviderName
-        Url
-      }
-    }
-  }
 }
