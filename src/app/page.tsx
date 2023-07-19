@@ -52,7 +52,6 @@ export default async function Page({ params }: any) {
                   .map((content) => {
                     // @ts-ignore
                     return (
-                      // <BlogPostSummary key={content?.RelativePath} blogItem={content} width={`${chance().pickone(['1/3','2/3','2/3','1/3'])}`} />
                       <BlogPostSummary
                         key={content?.RelativePath}
                         blogItem={content || {}}
