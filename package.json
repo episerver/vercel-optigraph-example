@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "generate": "graphql-codegen -r dotenv/config",
+    "generate": "graphql-codegen -r dotenv/config --config ./codegen.yaml",
+    "generate-local": "graphql-codegen -r dotenv/config --config ./codegen.yaml dotenv_config_path=./.env.local",
     "dev": "next dev",
+    "prebuild": "graphql-codegen -r dotenv/config --config ./codegen.yaml",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

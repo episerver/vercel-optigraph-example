@@ -26,14 +26,14 @@ names of the variables are pre-populated for you.
 ### Generating Typescript files from Content Graph
 
 ```bash  
-npm run generate  
+npm run generate-local  
 # or  
-yarn generate  
+yarn generate-local  
 # or  
-pnpm generate  
+pnpm generate-local  
 ```
 
-You can run also run `yarn generate -w` to watch your **./src/graphql** folder for changes to .graphql files and
+You can run also run `yarn generate-local -w` to watch your **./src/graphql** folder for changes to .graphql files and
 auto-update the generate typescript files automatically.
 
 #### codegen.yaml
