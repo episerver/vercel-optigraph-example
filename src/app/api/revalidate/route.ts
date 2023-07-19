@@ -10,13 +10,18 @@ export async function POST(request: Request) {
     });
   }
   const requestJson = await request.json();
-  const guid = (requestJson?.data?.journalId || "").split("_")[0];
-  if (guid !== "") {
-    console.log(`flushing cache for: ${guid}`);
-    revalidatePath(`/posts/${guid}`);
+  const docId = requestJson?.data?.docId || "";
+  if (docId !== "") {
+    const [guid, locale, status] = docId.split("_");
+    if (status === "Published") {
+      console.log(requestJson);
+      // someone published new changes, flush the cache
+      console.log(`flushing cache for: ${guid}`);
+      revalidatePath(`/posts/${guid}`);
+      // note since the homepage displays a gist of post detail pages, we need to invalidate it always
+      revalidatePath("/");
+    }
   }
-  // note since the homepage displays a gist of post detail pages, we need to invalidate it always
-  revalidatePath("/");
   return new Response(`OK`, {
     status: 200,
   });
