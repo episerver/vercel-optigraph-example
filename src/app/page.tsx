@@ -1,11 +1,11 @@
 import { getClient, isPreviewBranch } from "@/src/lib/client";
 import Head from "next/head";
 import Header from "@/src/components/Header";
-import BlogPostSummaryLead from "@/src/components/BlogPostSummaryLead";
-import BlogPostSummary from "@/src/components/BlogPostSummary";
 import { Suspense } from "react";
-import { LocationItemPage } from "@/src/generated/sdk";
 import { Skeleton } from "@/src/components/Skeleton";
+import { City } from "@/src/generated/sdk";
+import CityLeadCard from "@/src/components/CityLeadCard";
+import CityCard from "@/src/components/CityCard";
 
 export default async function Page({ params }: any) {
   const items = await getData();
@@ -29,8 +29,8 @@ export default async function Page({ params }: any) {
                 .filter((item, index) => index === 0)
                 .map((content) => {
                   return (
-                    <BlogPostSummaryLead
-                      key={content?.RelativePath}
+                    <CityLeadCard
+                      key={content?.ContentLink?.GuidValue}
                       blogItem={content || {}}
                     />
                   );
@@ -52,8 +52,8 @@ export default async function Page({ params }: any) {
                   .map((content) => {
                     // @ts-ignore
                     return (
-                      <BlogPostSummary
-                        key={content?.RelativePath}
+                      <CityCard
+                        key={content?.ContentLink?.GuidValue}
                         blogItem={content || {}}
                       />
                     );
@@ -67,11 +67,11 @@ export default async function Page({ params }: any) {
 }
 
 export async function getData() {
-  const data = await getClient(["cities"]).BlogList();
-  if (!isPreviewBranch()) return data.LocationItemPage?.items;
-  let filteredItems: LocationItemPage[] = [];
-  if (data?.LocationItemPage?.items != null) {
-    data.LocationItemPage.items.map((content) => {
+  const data = await getClient(["cities"]).CityList();
+  if (!isPreviewBranch()) return data.City?.items;
+  let filteredItems: City[] = [];
+  if (data?.City?.items != null) {
+    data.City.items.map((content) => {
       if (content == null) return;
       let existingItem = filteredItems.filter(
         (item, index) =>

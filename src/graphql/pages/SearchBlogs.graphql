@@ -1,5 +1,5 @@
-query SearchBlogs($locale: [Locales] = en, $query:String){
-    LocationItemPage(
+query SearchCities($locale: [Locales] = en, $query:String){
+    City(
         locale: $locale,
         orderBy:{
             Name : ASC
@@ -13,14 +13,9 @@ query SearchBlogs($locale: [Locales] = en, $query:String){
         items{
             RelativePath,
             Name,
-            MainIntro,
+            IntroText,
             StartPublish,
-            Image {
-                Url
-            },
-            PageImage {
-                Url
-            }
+            ImageUrl
         }
     }
 }

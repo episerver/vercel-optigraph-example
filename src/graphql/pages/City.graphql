@@ -1,0 +1,24 @@
+query City($locale: [Locales] = en, $guid: String){
+    City(locale: $locale, where:{
+        ContentLink: {
+            GuidValue: {eq: $guid}
+        }
+    })
+    {
+        items{
+            Name,
+            Url,
+            StartPublish,
+            IntroText,
+            MainBody,
+            ImageUrl,
+            ContentLink {
+                Id
+                WorkId
+                GuidValue
+                ProviderName
+                Url
+            }
+        }
+    }
+}

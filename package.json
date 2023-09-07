@@ -8,6 +8,7 @@
     "dev": "next dev",
     "prebuild": "graphql-codegen -r dotenv/config --config ./codegen.yaml",
     "build": "next build",
+    "build-local": "yarn generate-local && next build",
     "start": "next start",
     "lint": "next lint"
   },

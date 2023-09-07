@@ -1,10 +1,7 @@
-import { LocationItemPage } from "@/src/generated/sdk";
+import { City } from "@/src/generated/sdk";
 
-export function getImageFromLocationItemPage(blogItem: LocationItemPage) {
-  let image =
-    blogItem?.PageImage?.Url == null
-      ? blogItem.Image?.Url
-      : blogItem.PageImage.Url;
+export function getImageFromLocationItemPage(blogItem: City) {
+  let image = blogItem?.ImageUrl;
   return image == null
     ? `https://source.unsplash.com/random?city,landscape,${
         blogItem?.Name?.replace(" ", "") || ""

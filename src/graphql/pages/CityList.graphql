@@ -1,0 +1,21 @@
+query CityList($locale: [Locales] = en){
+    City(locale: $locale, limit: 100, orderBy:{
+        Name : ASC, Saved: DESC
+    }, where: { IsCommonDraft: {eq: true}})
+    {
+        items{
+            Name,
+            StartPublish,
+            IntroText,
+            ImageUrl,
+            Saved,
+            ContentLink {
+                Id
+                WorkId
+                GuidValue
+                ProviderName
+                Url
+            }
+        }
+    }
+}
