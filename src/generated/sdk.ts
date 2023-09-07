@@ -13617,6 +13617,329 @@ export type ChoiceElementBlockWhereInput = {
   _or?: InputMaybe<Array<InputMaybe<ChoiceElementBlockWhereInput>>>;
 };
 
+export type City = IContent & {
+  __typename?: 'City';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Category?: Maybe<Array<Maybe<CategoryModel>>>;
+  Changed?: Maybe<Scalars['Date']>;
+  ContentLink?: Maybe<ContentModelReference>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Created?: Maybe<Scalars['Date']>;
+  ExistingLanguages?: Maybe<Array<Maybe<ContentLanguageModel>>>;
+  ImageUrl?: Maybe<Scalars['String']>;
+  IntroText?: Maybe<Scalars['String']>;
+  IsCommonDraft?: Maybe<Scalars['Bool']>;
+  Language?: Maybe<ContentLanguageModel>;
+  MainBody?: Maybe<Scalars['String']>;
+  MasterLanguage?: Maybe<ContentLanguageModel>;
+  Name?: Maybe<Scalars['String']>;
+  ParentLink?: Maybe<ContentModelReference>;
+  RelativePath?: Maybe<Scalars['String']>;
+  RouteSegment?: Maybe<Scalars['String']>;
+  Saved?: Maybe<Scalars['Date']>;
+  SiteId?: Maybe<Scalars['String']>;
+  StartPublish?: Maybe<Scalars['Date']>;
+  Status?: Maybe<Scalars['String']>;
+  StopPublish?: Maybe<Scalars['Date']>;
+  Url?: Maybe<Scalars['String']>;
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']>>>;
+  _modified?: Maybe<Scalars['Date']>;
+  _score?: Maybe<Scalars['Float']>;
+};
+
+export type CityAutocomplete = {
+  __typename?: 'CityAutocomplete';
+  Ancestors?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Category?: Maybe<CategoryModelAutocomplete>;
+  ContentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  ContentType?: Maybe<Array<Maybe<Scalars['String']>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelAutocomplete>;
+  ImageUrl?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Language?: Maybe<ContentLanguageModelAutocomplete>;
+  MasterLanguage?: Maybe<ContentLanguageModelAutocomplete>;
+  ParentLink?: Maybe<ContentModelReferenceAutocomplete>;
+  RelativePath?: Maybe<Array<Maybe<Scalars['String']>>>;
+  RouteSegment?: Maybe<Array<Maybe<Scalars['String']>>>;
+  SiteId?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Status?: Maybe<Array<Maybe<Scalars['String']>>>;
+  Url?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+
+export type CityAutocompleteAncestorsArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteContentTypeArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteImageUrlArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteRelativePathArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteRouteSegmentArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteSiteIdArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteStatusArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+
+export type CityAutocompleteUrlArgs = {
+  limit?: Scalars['Int'];
+  value: Scalars['String'];
+};
+
+export type CityFacet = {
+  __typename?: 'CityFacet';
+  Ancestors?: Maybe<Array<Maybe<StringFacet>>>;
+  Category?: Maybe<CategoryModelFacet>;
+  Changed?: Maybe<Array<Maybe<DateFacet>>>;
+  ContentLink?: Maybe<ContentModelReferenceFacet>;
+  ContentType?: Maybe<Array<Maybe<StringFacet>>>;
+  Created?: Maybe<Array<Maybe<DateFacet>>>;
+  ExistingLanguages?: Maybe<ContentLanguageModelFacet>;
+  ImageUrl?: Maybe<Array<Maybe<StringFacet>>>;
+  IntroText?: Maybe<Array<Maybe<StringFacet>>>;
+  IsCommonDraft?: Maybe<Array<Maybe<StringFacet>>>;
+  Language?: Maybe<ContentLanguageModelFacet>;
+  MainBody?: Maybe<Array<Maybe<StringFacet>>>;
+  MasterLanguage?: Maybe<ContentLanguageModelFacet>;
+  Name?: Maybe<Array<Maybe<StringFacet>>>;
+  ParentLink?: Maybe<ContentModelReferenceFacet>;
+  RelativePath?: Maybe<Array<Maybe<StringFacet>>>;
+  RouteSegment?: Maybe<Array<Maybe<StringFacet>>>;
+  Saved?: Maybe<Array<Maybe<DateFacet>>>;
+  SiteId?: Maybe<Array<Maybe<StringFacet>>>;
+  StartPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Status?: Maybe<Array<Maybe<StringFacet>>>;
+  StopPublish?: Maybe<Array<Maybe<DateFacet>>>;
+  Url?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type CityFacetAncestorsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetChangedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CityFacetContentTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetCreatedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CityFacetImageUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetIntroTextArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetIsCommonDraftArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetMainBodyArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetNameArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetRelativePathArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetRouteSegmentArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetSavedArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CityFacetSiteIdArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetStartPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CityFacetStatusArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type CityFacetStopPublishArgs = {
+  unit?: InputMaybe<DateFacetUnit>;
+  value?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CityFacetUrlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']>>;
+  limit?: Scalars['Int'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type CityOrderByInput = {
+  Ancestors?: InputMaybe<OrderBy>;
+  Category?: InputMaybe<CategoryModelOrderByInput>;
+  Changed?: InputMaybe<OrderBy>;
+  ContentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  ContentType?: InputMaybe<OrderBy>;
+  Created?: InputMaybe<OrderBy>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelOrderByInput>;
+  ImageUrl?: InputMaybe<OrderBy>;
+  IntroText?: InputMaybe<OrderBy>;
+  IsCommonDraft?: InputMaybe<OrderBy>;
+  Language?: InputMaybe<ContentLanguageModelOrderByInput>;
+  MainBody?: InputMaybe<OrderBy>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelOrderByInput>;
+  Name?: InputMaybe<OrderBy>;
+  ParentLink?: InputMaybe<ContentModelReferenceOrderByInput>;
+  RelativePath?: InputMaybe<OrderBy>;
+  RouteSegment?: InputMaybe<OrderBy>;
+  Saved?: InputMaybe<OrderBy>;
+  SiteId?: InputMaybe<OrderBy>;
+  StartPublish?: InputMaybe<OrderBy>;
+  Status?: InputMaybe<OrderBy>;
+  StopPublish?: InputMaybe<OrderBy>;
+  Url?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+};
+
+export type CityOutput = {
+  __typename?: 'CityOutput';
+  autocomplete?: Maybe<CityAutocomplete>;
+  cursor?: Maybe<Scalars['String']>;
+  facets?: Maybe<CityFacet>;
+  items?: Maybe<Array<Maybe<City>>>;
+  total?: Maybe<Scalars['Int']>;
+};
+
+
+export type CityOutputTotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type CityWhereInput = {
+  Ancestors?: InputMaybe<StringFilterInput>;
+  Category?: InputMaybe<CategoryModelWhereInput>;
+  Changed?: InputMaybe<DateFilterInput>;
+  ContentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  ContentType?: InputMaybe<StringFilterInput>;
+  Created?: InputMaybe<DateFilterInput>;
+  ExistingLanguages?: InputMaybe<ContentLanguageModelWhereInput>;
+  ImageUrl?: InputMaybe<StringFilterInput>;
+  IntroText?: InputMaybe<SearchableStringFilterInput>;
+  IsCommonDraft?: InputMaybe<BoolFilterInput>;
+  Language?: InputMaybe<ContentLanguageModelWhereInput>;
+  MainBody?: InputMaybe<SearchableStringFilterInput>;
+  MasterLanguage?: InputMaybe<ContentLanguageModelWhereInput>;
+  Name?: InputMaybe<SearchableStringFilterInput>;
+  ParentLink?: InputMaybe<ContentModelReferenceWhereInput>;
+  RelativePath?: InputMaybe<StringFilterInput>;
+  RouteSegment?: InputMaybe<StringFilterInput>;
+  Saved?: InputMaybe<DateFilterInput>;
+  SiteId?: InputMaybe<StringFilterInput>;
+  StartPublish?: InputMaybe<DateFilterInput>;
+  Status?: InputMaybe<StringFilterInput>;
+  StopPublish?: InputMaybe<DateFilterInput>;
+  Url?: InputMaybe<StringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<CityWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<CityWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<CityWhereInput>>>;
+};
+
 /** Used for coding file types such as Css, Javascript. */
 export type CodingFile = IContent & {
   __typename?: 'CodingFile';
@@ -58119,6 +58442,7 @@ export type Query = {
   CategoryBlock?: Maybe<CategoryBlockOutput>;
   CheckoutPage?: Maybe<CheckoutPageOutput>;
   ChoiceElementBlock?: Maybe<ChoiceElementBlockOutput>;
+  City?: Maybe<CityOutput>;
   CodingFile?: Maybe<CodingFileOutput>;
   CollectionPage?: Maybe<CollectionPageOutput>;
   CommentsBlock?: Maybe<CommentsBlockOutput>;
@@ -58561,6 +58885,17 @@ export type QueryChoiceElementBlockArgs = {
   orderBy?: InputMaybe<ChoiceElementBlockOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   where?: InputMaybe<ChoiceElementBlockWhereInput>;
+};
+
+
+export type QueryCityArgs = {
+  cursor?: InputMaybe<Scalars['String']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CityOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<CityWhereInput>;
 };
 
 
@@ -60187,6 +60522,7 @@ export type QueryRef = {
   CategoryBlock?: Maybe<CategoryBlockOutput>;
   CheckoutPage?: Maybe<CheckoutPageOutput>;
   ChoiceElementBlock?: Maybe<ChoiceElementBlockOutput>;
+  City?: Maybe<CityOutput>;
   CodingFile?: Maybe<CodingFileOutput>;
   CollectionPage?: Maybe<CollectionPageOutput>;
   CommentsBlock?: Maybe<CommentsBlockOutput>;
@@ -60629,6 +60965,17 @@ export type QueryRefChoiceElementBlockArgs = {
   orderBy?: InputMaybe<ChoiceElementBlockOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   where?: InputMaybe<ChoiceElementBlockWhereInput>;
+};
+
+
+export type QueryRefCityArgs = {
+  cursor?: InputMaybe<Scalars['String']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CityOrderByInput>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<CityWhereInput>;
 };
 
 
@@ -68510,10 +68857,14 @@ export type SearchableStringFilterInput = {
   eq?: InputMaybe<Scalars['String']>;
   /** `exist` matches results that have this field. */
   exist?: InputMaybe<Scalars['Boolean']>;
+  /** enables supporting fuzzy matching on the query terms (keywords), which returns items that contain terms in the content similar to the keywords, as measured by a _Levenshtein edit distance_. An edit distance is the number of one-character changes needed to turn one term into another. The edit distance is based on the length of the term.  */
+  fuzzy?: InputMaybe<Scalars['Boolean']>;
   /** `in` matches with 1 or more exact values in a list. Example: `in: ["word1", "word2", "this is a phrase"]` */
   in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** `like` matches on substrings with wildcard support: `%` to match on 0 or more characters, `_` to match on any character.  */
   like?: InputMaybe<Scalars['String']>;
+  /** `match` performs full-text search on a word or phrase where less relevant items are also returned. The `match` operator is only supported for `searchable` fields. It will improve fulltext search by making it easier to match on words. More exact matches will be ranked higher, less exact matches will be ranked lower. The `match` operator is supported with synonyms and fuzzy search. */
+  match?: InputMaybe<Scalars['String']>;
   /** `not_eq` retrieves results not matching with an exact (but case-insensitive) value. */
   notEq?: InputMaybe<Scalars['String']>;
   /** `not_in` returns results that do not match with 1 or more exact values in a list. Example: `not_in: ["word1", "word2", "this is a phrase"]` */
@@ -72810,6 +73161,8 @@ export type StringFilterInput = {
   eq?: InputMaybe<Scalars['String']>;
   /** `exist` matches results that have this field. */
   exist?: InputMaybe<Scalars['Boolean']>;
+  /** enables supporting fuzzy matching on the query terms (keywords), which returns items that contain terms in the content similar to the keywords, as measured by a _Levenshtein edit distance_. An edit distance is the number of one-character changes needed to turn one term into another. The edit distance is based on the length of the term.  */
+  fuzzy?: InputMaybe<Scalars['Boolean']>;
   /** `in` matches with 1 or more exact values in a list. Example: `in: ["word1", "word2", "this is a phrase"]` */
   in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** `like` matches on substrings with wildcard support: `%` to match on 0 or more characters, `_` to match on any character.  */
@@ -85452,27 +85805,27 @@ export type ModifiedContentForWebhookCallQueryVariables = Exact<{
 
 export type ModifiedContentForWebhookCallQuery = { __typename?: 'Query', Content?: { __typename?: 'ContentOutput', total?: number | null } | null };
 
-export type BlogListQueryVariables = Exact<{
-  locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
-}>;
-
-
-export type BlogListQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, RelativePath?: string | null, StartPublish?: any | null, MainIntro?: string | null, Saved?: any | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null, ContentLink?: { __typename?: 'ContentModelReference', Id?: number | null, WorkId?: number | null, GuidValue?: string | null, ProviderName?: string | null, Url?: string | null } | null } | null> | null } | null };
-
-export type BlogPostQueryVariables = Exact<{
+export type CityQueryVariables = Exact<{
   locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
   guid?: InputMaybe<Scalars['String']>;
 }>;
 
 
-export type BlogPostQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', Name?: string | null, Url?: string | null, StartPublish?: any | null, MainIntro?: string | null, MainBody?: string | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null, ContentLink?: { __typename?: 'ContentModelReference', Id?: number | null, WorkId?: number | null, GuidValue?: string | null, ProviderName?: string | null, Url?: string | null } | null } | null> | null } | null };
+export type CityQuery = { __typename?: 'Query', City?: { __typename?: 'CityOutput', items?: Array<{ __typename?: 'City', Name?: string | null, Url?: string | null, StartPublish?: any | null, IntroText?: string | null, MainBody?: string | null, ImageUrl?: string | null, ContentLink?: { __typename?: 'ContentModelReference', Id?: number | null, WorkId?: number | null, GuidValue?: string | null, ProviderName?: string | null, Url?: string | null } | null } | null> | null } | null };
+
+export type CityListQueryVariables = Exact<{
+  locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
+}>;
+
+
+export type CityListQuery = { __typename?: 'Query', City?: { __typename?: 'CityOutput', items?: Array<{ __typename?: 'City', Name?: string | null, StartPublish?: any | null, IntroText?: string | null, ImageUrl?: string | null, Saved?: any | null, ContentLink?: { __typename?: 'ContentModelReference', Id?: number | null, WorkId?: number | null, GuidValue?: string | null, ProviderName?: string | null, Url?: string | null } | null } | null> | null } | null };
 
 export type GetContentQueryVariables = Exact<{
   url?: InputMaybe<Scalars['String']>;
 }>;
 
 
-export type GetContentQuery = { __typename?: 'Query', Content?: { __typename?: 'ContentOutput', items?: Array<{ __typename?: 'AdaptiveHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressBookPage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressesElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AssetsDownloadLinksBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Associations', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogCommentBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BookmarksPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BootstrapCardBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BreadcrumbBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BudgetingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BundleContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarEventPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CallToActionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselControls', _fulltext?: Array<string | null> | null } | { __typename?: 'CartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CatalogContent', _fulltext?: Array<string | null> | null } | { __typename?: 'Categories', _fulltext?: Array<string | null> | null } | { __typename?: 'CategoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CheckoutPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CodingFile', _fulltext?: Array<string | null> | null } | { __typename?: 'CollectionPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CommentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CommunityPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Content', _fulltext?: Array<string | null> | null } | { __typename?: 'CouponData', _fulltext?: Array<string | null> | null } | { __typename?: 'CreditCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CustomViewConfigurationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMImageAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMVideoAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeRangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DiscountItems', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'ElevatedRoleBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ExistsFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FacebookBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FeedBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FileUploadElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterActivitiesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterContinentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterDistancesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterTemperaturesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FixedPricePurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'FolderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'FormContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FormStepBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FoundationPdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericBundle', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericNode', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericPackage', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'GiftCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'GoogleMapsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupAdmissionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupCreationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HcaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HealthChatbotBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'HomePage', _fulltext?: Array<string | null> | null } | { __typename?: 'HtmlBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'IframeBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'JourneyContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LikeButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipAffiliationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipDisplayBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MenuItemBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ModalBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MonetaryReward', _fulltext?: Array<string | null> | null } | { __typename?: 'NavigationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NewProductsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'NodeContent', _fulltext?: Array<string | null> | null } | { __typename?: 'NumberElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NumericFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEmailEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEventTrackingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListConsentFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPSearchEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPUpdateProfileBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderDetailsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderPadsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrdersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PackageContent', _fulltext?: Array<string | null> | null } | { __typename?: 'PageListBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ParagraphTextElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'PdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonList', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PredefinedHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockImage', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProfilePage', _fulltext?: Array<string | null> | null } | { __typename?: 'PromotionSchedule', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseAmount', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RatingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RecaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RedemptionLimitsData', _fulltext?: Array<string | null> | null } | { __typename?: 'Relations', _fulltext?: Array<string | null> | null } | { __typename?: 'ReportingMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RssReaderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SalesPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SearchResultPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SelectionElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SeoInformation', _fulltext?: Array<string | null> | null } | { __typename?: 'SharedCartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ShippingDimensions', _fulltext?: Array<string | null> | null } | { __typename?: 'SingleImage', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardFile', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'StorePage', _fulltext?: Array<string | null> | null } | { __typename?: 'StringFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubOrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubmitButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionDetailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TagPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TeaserBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextareaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextboxElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ThreeColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TinyMceAdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'TwitterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TwoColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'UrlElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'UsersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'VariationContent', _fulltext?: Array<string | null> | null } | { __typename?: 'VectorImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoFile', _fulltext?: Array<string | null> | null } | { __typename?: 'VimeoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VisitorDataHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WebImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'WidgetBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WishListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'YouTubeBlock', _fulltext?: Array<string | null> | null } | null> | null } | null };
+export type GetContentQuery = { __typename?: 'Query', Content?: { __typename?: 'ContentOutput', items?: Array<{ __typename?: 'AdaptiveHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressBookPage', _fulltext?: Array<string | null> | null } | { __typename?: 'AddressesElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'AssetsDownloadLinksBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Associations', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogCommentBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BlogListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BookmarksPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BootstrapCardBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BreadcrumbBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'BudgetingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'BundleContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CalendarEventPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CallToActionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CarouselControls', _fulltext?: Array<string | null> | null } | { __typename?: 'CartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CatalogContent', _fulltext?: Array<string | null> | null } | { __typename?: 'Categories', _fulltext?: Array<string | null> | null } | { __typename?: 'CategoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CheckoutPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'City', _fulltext?: Array<string | null> | null } | { __typename?: 'CodingFile', _fulltext?: Array<string | null> | null } | { __typename?: 'CollectionPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CommentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'CommunityPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'Content', _fulltext?: Array<string | null> | null } | { __typename?: 'CouponData', _fulltext?: Array<string | null> | null } | { __typename?: 'CreditCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'CustomViewConfigurationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMImageAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DAMVideoAsset', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DateTimeRangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'DiscountItems', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'DynamicVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'ElevatedRoleBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ExistsFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FacebookBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FeedBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FileUploadElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterActivitiesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterContinentsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterDistancesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FilterTemperaturesBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FixedPricePurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'FolderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'FormContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FormStepBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'FoundationPdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericBundle', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericNode', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericPackage', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericProduct', _fulltext?: Array<string | null> | null } | { __typename?: 'GenericVariant', _fulltext?: Array<string | null> | null } | { __typename?: 'GiftCardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'GoogleMapsBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupAdmissionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'GroupCreationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HcaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HealthChatbotBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'HeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'HomePage', _fulltext?: Array<string | null> | null } | { __typename?: 'HtmlBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'IframeBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageChoiceElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'JourneyContainerBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LikeButtonBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationItemPage', _fulltext?: Array<string | null> | null } | { __typename?: 'LocationListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipAffiliationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MembershipDisplayBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MenuItemBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ModalBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'MonetaryReward', _fulltext?: Array<string | null> | null } | { __typename?: 'NavigationBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NewProductsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'NodeContent', _fulltext?: Array<string | null> | null } | { __typename?: 'NumberElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'NumericFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEmailEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPEventTrackingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListConsentFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPListFormBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPSearchEventBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ODPUpdateProfileBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderConfirmationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderDetailsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderPadsPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrderSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'OrdersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'OrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PackageContent', _fulltext?: Array<string | null> | null } | { __typename?: 'PageListBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ParagraphTextElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'PdfFile', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonList', _fulltext?: Array<string | null> | null } | { __typename?: 'PersonPage', _fulltext?: Array<string | null> | null } | { __typename?: 'PredefinedHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductContent', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockCallout', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductHeroBlockImage', _fulltext?: Array<string | null> | null } | { __typename?: 'ProductSearchBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ProfilePage', _fulltext?: Array<string | null> | null } | { __typename?: 'PromotionSchedule', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseAmount', _fulltext?: Array<string | null> | null } | { __typename?: 'PurchaseQuantity', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'QuickOrderPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RangeElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RatingBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RecaptchaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'RedemptionLimitsData', _fulltext?: Array<string | null> | null } | { __typename?: 'Relations', _fulltext?: Array<string | null> | null } | { __typename?: 'ReportingMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordMailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ResetPasswordPage', _fulltext?: Array<string | null> | null } | { __typename?: 'RssReaderBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SalesPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SearchResultPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SelectionElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SeoInformation', _fulltext?: Array<string | null> | null } | { __typename?: 'SharedCartPage', _fulltext?: Array<string | null> | null } | { __typename?: 'ShippingDimensions', _fulltext?: Array<string | null> | null } | { __typename?: 'SingleImage', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardFile', _fulltext?: Array<string | null> | null } | { __typename?: 'StandardPage', _fulltext?: Array<string | null> | null } | { __typename?: 'StorePage', _fulltext?: Array<string | null> | null } | { __typename?: 'StringFilterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubOrganizationPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubmitButtonElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionDetailPage', _fulltext?: Array<string | null> | null } | { __typename?: 'SubscriptionHistoryPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TagPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TeaserBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextareaElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TextboxElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'ThreeColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'TinyMceAdaptiveImage', _fulltext?: Array<string | null> | null } | { __typename?: 'TwitterBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'TwoColumnLandingPage', _fulltext?: Array<string | null> | null } | { __typename?: 'UrlElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'UsersPage', _fulltext?: Array<string | null> | null } | { __typename?: 'VariationContent', _fulltext?: Array<string | null> | null } | { __typename?: 'VectorImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VideoFile', _fulltext?: Array<string | null> | null } | { __typename?: 'VimeoBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'VisitorDataHiddenElementBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WebImageMediaData', _fulltext?: Array<string | null> | null } | { __typename?: 'WidgetBlock', _fulltext?: Array<string | null> | null } | { __typename?: 'WishListPage', _fulltext?: Array<string | null> | null } | { __typename?: 'YouTubeBlock', _fulltext?: Array<string | null> | null } | null> | null } | null };
 
 export type SearchBlogsQueryVariables = Exact<{
   locale?: InputMaybe<Array<InputMaybe<Locales>> | InputMaybe<Locales>>;
@@ -85480,7 +85833,7 @@ export type SearchBlogsQueryVariables = Exact<{
 }>;
 
 
-export type SearchBlogsQuery = { __typename?: 'Query', LocationItemPage?: { __typename?: 'LocationItemPageOutput', items?: Array<{ __typename?: 'LocationItemPage', RelativePath?: string | null, Name?: string | null, MainIntro?: string | null, StartPublish?: any | null, Image?: { __typename?: 'ContentModelReference', Url?: string | null } | null, PageImage?: { __typename?: 'ContentModelReference', Url?: string | null } | null } | null> | null } | null };
+export type SearchBlogsQuery = { __typename?: 'Query', City?: { __typename?: 'CityOutput', items?: Array<{ __typename?: 'City', RelativePath?: string | null, Name?: string | null, IntroText?: string | null, StartPublish?: any | null, ImageUrl?: string | null } | null> | null } | null };
 
 
 export const ModifiedContentForWebhookCallDocument = gql`
@@ -85493,26 +85846,16 @@ export const ModifiedContentForWebhookCallDocument = gql`
   }
 }
     `;
-export const BlogListDocument = gql`
-    query BlogList($locale: [Locales] = en) {
-  LocationItemPage(
-    locale: $locale
-    limit: 100
-    orderBy: {Name: ASC, Saved: DESC}
-    where: {IsCommonDraft: {eq: true}}
-  ) {
+export const CityDocument = gql`
+    query City($locale: [Locales] = en, $guid: String) {
+  City(locale: $locale, where: {ContentLink: {GuidValue: {eq: $guid}}}) {
     items {
       Name
-      RelativePath
+      Url
       StartPublish
-      MainIntro
-      Image {
-        Url
-      }
-      PageImage {
-        Url
-      }
-      Saved
+      IntroText
+      MainBody
+      ImageUrl
       ContentLink {
         Id
         WorkId
@@ -85524,24 +85867,20 @@ export const BlogListDocument = gql`
   }
 }
     `;
-export const BlogPostDocument = gql`
-    query BlogPost($locale: [Locales] = en, $guid: String) {
-  LocationItemPage(
+export const CityListDocument = gql`
+    query CityList($locale: [Locales] = en) {
+  City(
     locale: $locale
-    where: {ContentLink: {GuidValue: {eq: $guid}}}
+    limit: 100
+    orderBy: {Name: ASC, Saved: DESC}
+    where: {IsCommonDraft: {eq: true}}
   ) {
     items {
       Name
-      Url
       StartPublish
-      MainIntro
-      MainBody
-      Image {
-        Url
-      }
-      PageImage {
-        Url
-      }
+      IntroText
+      ImageUrl
+      Saved
       ContentLink {
         Id
         WorkId
@@ -85564,7 +85903,7 @@ export const GetContentDocument = gql`
     `;
 export const SearchBlogsDocument = gql`
     query SearchBlogs($locale: [Locales] = en, $query: String) {
-  LocationItemPage(
+  City(
     locale: $locale
     orderBy: {Name: ASC}
     where: {_fulltext: {contains: $query}}
@@ -85572,14 +85911,9 @@ export const SearchBlogsDocument = gql`
     items {
       RelativePath
       Name
-      MainIntro
+      IntroText
       StartPublish
-      Image {
-        Url
-      }
-      PageImage {
-        Url
-      }
+      ImageUrl
     }
   }
 }
@@ -85595,11 +85929,11 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
     ModifiedContentForWebhookCall(variables?: ModifiedContentForWebhookCallQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<ModifiedContentForWebhookCallQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<ModifiedContentForWebhookCallQuery>(ModifiedContentForWebhookCallDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'ModifiedContentForWebhookCall', 'query');
     },
-    BlogList(variables?: BlogListQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<BlogListQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<BlogListQuery>(BlogListDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'BlogList', 'query');
+    City(variables?: CityQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<CityQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<CityQuery>(CityDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'City', 'query');
     },
-    BlogPost(variables?: BlogPostQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<BlogPostQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<BlogPostQuery>(BlogPostDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'BlogPost', 'query');
+    CityList(variables?: CityListQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<CityListQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<CityListQuery>(CityListDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'CityList', 'query');
     },
     GetContent(variables?: GetContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<GetContentQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<GetContentQuery>(GetContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'GetContent', 'query');

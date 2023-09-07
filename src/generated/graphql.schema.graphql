@@ -7585,6 +7585,191 @@ input ChoiceElementBlockWhereInput {
   _or: [ChoiceElementBlockWhereInput]
 }
 
+type City implements IContent {
+  """"""
+  Ancestors: [String]
+
+  """"""
+  Category: [CategoryModel]
+
+  """"""
+  Changed: Date
+
+  """"""
+  ContentLink: ContentModelReference
+
+  """"""
+  ContentType: [String]
+
+  """"""
+  Created: Date
+
+  """"""
+  ExistingLanguages: [ContentLanguageModel]
+
+  """"""
+  ImageUrl: String
+
+  """"""
+  IntroText: String
+
+  """"""
+  IsCommonDraft: Bool
+
+  """"""
+  Language: ContentLanguageModel
+
+  """"""
+  MainBody: String
+
+  """"""
+  MasterLanguage: ContentLanguageModel
+
+  """"""
+  Name: String
+
+  """"""
+  ParentLink: ContentModelReference
+
+  """"""
+  RelativePath: String
+
+  """"""
+  RouteSegment: String
+
+  """"""
+  Saved: Date
+
+  """"""
+  SiteId: String
+
+  """"""
+  StartPublish: Date
+
+  """"""
+  Status: String
+
+  """"""
+  StopPublish: Date
+
+  """"""
+  Url: String
+  _children: QueryRef
+  _deleted: Bool
+  _fulltext: [String]
+  _modified: Date
+  _score: Float
+}
+
+type CityAutocomplete {
+  Ancestors(limit: Int! = 10, value: String!): [String]
+  Category: CategoryModelAutocomplete
+  ContentLink: ContentModelReferenceAutocomplete
+  ContentType(limit: Int! = 10, value: String!): [String]
+  ExistingLanguages: ContentLanguageModelAutocomplete
+  ImageUrl(limit: Int! = 10, value: String!): [String]
+  Language: ContentLanguageModelAutocomplete
+  MasterLanguage: ContentLanguageModelAutocomplete
+  ParentLink: ContentModelReferenceAutocomplete
+  RelativePath(limit: Int! = 10, value: String!): [String]
+  RouteSegment(limit: Int! = 10, value: String!): [String]
+  SiteId(limit: Int! = 10, value: String!): [String]
+  Status(limit: Int! = 10, value: String!): [String]
+  Url(limit: Int! = 10, value: String!): [String]
+}
+
+type CityFacet {
+  Ancestors(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Category: CategoryModelFacet
+  Changed(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ContentLink: ContentModelReferenceFacet
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Created(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ExistingLanguages: ContentLanguageModelFacet
+  ImageUrl(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  IntroText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  IsCommonDraft(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Language: ContentLanguageModelFacet
+  MainBody(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  MasterLanguage: ContentLanguageModelFacet
+  Name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ParentLink: ContentModelReferenceFacet
+  RelativePath(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StopPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+}
+
+input CityOrderByInput {
+  Ancestors: OrderBy
+  Category: CategoryModelOrderByInput
+  Changed: OrderBy
+  ContentLink: ContentModelReferenceOrderByInput
+  ContentType: OrderBy
+  Created: OrderBy
+  ExistingLanguages: ContentLanguageModelOrderByInput
+  ImageUrl: OrderBy
+  IntroText: OrderBy
+  IsCommonDraft: OrderBy
+  Language: ContentLanguageModelOrderByInput
+  MainBody: OrderBy
+  MasterLanguage: ContentLanguageModelOrderByInput
+  Name: OrderBy
+  ParentLink: ContentModelReferenceOrderByInput
+  RelativePath: OrderBy
+  RouteSegment: OrderBy
+  Saved: OrderBy
+  SiteId: OrderBy
+  StartPublish: OrderBy
+  Status: OrderBy
+  StopPublish: OrderBy
+  Url: OrderBy
+  _ranking: Ranking
+}
+
+type CityOutput {
+  autocomplete: CityAutocomplete
+  cursor: String
+  facets: CityFacet
+  items: [City]
+  total(all: Boolean): Int
+}
+
+input CityWhereInput {
+  Ancestors: StringFilterInput
+  Category: CategoryModelWhereInput
+  Changed: DateFilterInput
+  ContentLink: ContentModelReferenceWhereInput
+  ContentType: StringFilterInput
+  Created: DateFilterInput
+  ExistingLanguages: ContentLanguageModelWhereInput
+  ImageUrl: StringFilterInput
+  IntroText: SearchableStringFilterInput
+  IsCommonDraft: BoolFilterInput
+  Language: ContentLanguageModelWhereInput
+  MainBody: SearchableStringFilterInput
+  MasterLanguage: ContentLanguageModelWhereInput
+  Name: SearchableStringFilterInput
+  ParentLink: ContentModelReferenceWhereInput
+  RelativePath: StringFilterInput
+  RouteSegment: StringFilterInput
+  Saved: DateFilterInput
+  SiteId: StringFilterInput
+  StartPublish: DateFilterInput
+  Status: StringFilterInput
+  StopPublish: DateFilterInput
+  Url: StringFilterInput
+  _and: [CityWhereInput]
+  _fulltext: SearchableStringFilterInput
+  _modified: DateFilterInput
+  _not: [CityWhereInput]
+  _or: [CityWhereInput]
+}
+
 """Used for coding file types such as Css, Javascript."""
 type CodingFile implements IContent {
   """"""
@@ -33444,6 +33629,7 @@ type Query {
   CategoryBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CategoryBlockOrderByInput, skip: Int = 0, where: CategoryBlockWhereInput): CategoryBlockOutput
   CheckoutPage(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CheckoutPageOrderByInput, skip: Int = 0, where: CheckoutPageWhereInput): CheckoutPageOutput
   ChoiceElementBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: ChoiceElementBlockOrderByInput, skip: Int = 0, where: ChoiceElementBlockWhereInput): ChoiceElementBlockOutput
+  City(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CityOrderByInput, skip: Int = 0, where: CityWhereInput): CityOutput
   CodingFile(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CodingFileOrderByInput, skip: Int = 0, where: CodingFileWhereInput): CodingFileOutput
   CollectionPage(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CollectionPageOrderByInput, skip: Int = 0, where: CollectionPageWhereInput): CollectionPageOutput
   CommentsBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CommentsBlockOrderByInput, skip: Int = 0, where: CommentsBlockWhereInput): CommentsBlockOutput
@@ -33620,6 +33806,7 @@ type QueryRef {
   CategoryBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CategoryBlockOrderByInput, skip: Int = 0, where: CategoryBlockWhereInput): CategoryBlockOutput
   CheckoutPage(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CheckoutPageOrderByInput, skip: Int = 0, where: CheckoutPageWhereInput): CheckoutPageOutput
   ChoiceElementBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: ChoiceElementBlockOrderByInput, skip: Int = 0, where: ChoiceElementBlockWhereInput): ChoiceElementBlockOutput
+  City(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CityOrderByInput, skip: Int = 0, where: CityWhereInput): CityOutput
   CodingFile(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CodingFileOrderByInput, skip: Int = 0, where: CodingFileWhereInput): CodingFileOutput
   CollectionPage(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CollectionPageOrderByInput, skip: Int = 0, where: CollectionPageWhereInput): CollectionPageOutput
   CommentsBlock(cursor: String, ids: [String], limit: Int = 20, locale: [Locales], orderBy: CommentsBlockOrderByInput, skip: Int = 0, where: CommentsBlockWhereInput): CommentsBlockOutput
@@ -37360,6 +37547,11 @@ input SearchableStringFilterInput {
   exist: Boolean
 
   """
+  enables supporting fuzzy matching on the query terms (keywords), which returns items that contain terms in the content similar to the keywords, as measured by a _Levenshtein edit distance_. An edit distance is the number of one-character changes needed to turn one term into another. The edit distance is based on the length of the term. 
+  """
+  fuzzy: Boolean
+
+  """
   `in` matches with 1 or more exact values in a list. Example: `in: ["word1", "word2", "this is a phrase"]`
   """
   in: [String]
@@ -37368,6 +37560,11 @@ input SearchableStringFilterInput {
   `like` matches on substrings with wildcard support: `%` to match on 0 or more characters, `_` to match on any character. 
   """
   like: String
+
+  """
+  `match` performs full-text search on a word or phrase where less relevant items are also returned. The `match` operator is only supported for `searchable` fields. It will improve fulltext search by making it easier to match on words. More exact matches will be ranked higher, less exact matches will be ranked lower. The `match` operator is supported with synonyms and fuzzy search.
+  """
+  match: String
 
   """
   `not_eq` retrieves results not matching with an exact (but case-insensitive) value.
@@ -39820,6 +40017,11 @@ input StringFilterInput {
 
   """`exist` matches results that have this field."""
   exist: Boolean
+
+  """
+  enables supporting fuzzy matching on the query terms (keywords), which returns items that contain terms in the content similar to the keywords, as measured by a _Levenshtein edit distance_. An edit distance is the number of one-character changes needed to turn one term into another. The edit distance is based on the length of the term. 
+  """
+  fuzzy: Boolean
 
   """
   `in` matches with 1 or more exact values in a list. Example: `in: ["word1", "word2", "this is a phrase"]`
