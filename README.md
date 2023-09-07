@@ -23,6 +23,7 @@ names of the variables are pre-populated for you.
 
 ## Getting Started
 
+
 ### CMS
 
 The BlocksTypes and Blocks required to run this frontend application can be found in *cms/TheCityGuide.episerverdata*. You can import them into your instance of Optimizely CMS with the Import/Export Data functionality. More information can be found here - https://support.optimizely.com/hc/en-us/articles/4413192300301-Export-and-import-data
