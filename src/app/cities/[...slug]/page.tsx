@@ -7,8 +7,9 @@ import { getClient, isPreviewBranch } from "@/src/lib/client";
 import { LocationItemPage } from "@/src/generated/sdk";
 import {
   getCmsUrlForContentId,
-  getImageFromLocationItemPage,
+  getImageFromCityBlock,
 } from "@/src/lib/helpers";
+import { Suspense } from "react";
 
 export default async function Post({ params: { slug } }) {
   const guid = slug[0] || "0";
@@ -18,7 +19,7 @@ export default async function Post({ params: { slug } }) {
   if (id === 0) {
     console.log(`something went wrong when fetching item with guid: ${guid}`);
   }
-  const image = getImageFromLocationItemPage(item);
+  const image = getImageFromCityBlock(item);
   const cmsUrl = process.env.CMS_URL || "";
   if (cmsUrl !== "") {
     const finalUrl = getCmsUrlForContentId(cmsUrl, id);
@@ -41,7 +42,9 @@ export default async function Post({ params: { slug } }) {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <Header height={15} />
+          <Suspense>
+            <Header height={15} />
+          </Suspense>
           <div className="text-center pt-16 md:pt-32">
             {item.Name && (
               <h1 className="font-bold break-normal text-3xl md:text-5xl">
