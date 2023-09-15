@@ -20,7 +20,9 @@ export default async function Page({ params }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header height={60} />
+      <Suspense>
+        <Header height={60} />
+      </Suspense>
       <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
         <div className="mx-0 sm:mx-6">
           <Suspense fallback={<Skeleton />}>

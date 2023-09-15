@@ -4,7 +4,7 @@ import { City } from "@/src/generated/sdk";
 import { encodeEditInfo } from "@/src/lib/visualEditing";
 import {
   getCmsUrlForContentId,
-  getImageFromLocationItemPage,
+  getImageFromCityBlock,
 } from "@/src/lib/helpers";
 
 interface Content {
@@ -13,7 +13,7 @@ interface Content {
 }
 
 export default function CityCard({ blogItem, width = "1/3" }: Content) {
-  const image = getImageFromLocationItemPage(blogItem);
+  const image = getImageFromCityBlock(blogItem, 336);
   const cmsUrl = process.env.CMS_URL || "";
   if (cmsUrl !== "") {
     const finalUrl = getCmsUrlForContentId(
