@@ -12,21 +12,22 @@ with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/
 When deploying to Vercel add the environment variables listed below, if you use the "Deploy with vercel" button the  
 names of the variables are pre-populated for you.
 
-| Variable          | Description                                                                         | Default Value                        |  
-|-------------------|-------------------------------------------------------------------------------------|--------------------------------------|  
-| CG_ENDPOINT       | Content Graph Endpoint to use                                                       | https://cg.optimizely.com/content/v2 |  
-| CG_SINGLE_KEY     | Single Key from Content Graph                                                       |                                      |  
-| CG_APP_KEY        | App Key from ContentGraph                                                           |                                      |  
-| CG_SECRET         | App Secret from ContentGraph                                                        |                                      |  
-| CG_WEBHOOK_SECRET | The secret used when registering the webhook with Content Graph                     |                                      |  
-| CMS_URL           | The url of your CMS that will be used when using visual-editing on a preview branch |                                      |  
+| Variable          | Description                                                                                                               | Default Value                        | Example |  
+|-------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------|---------|  
+| CG_ENDPOINT       | Content Graph Endpoint to use                                                                                             | https://cg.optimizely.com/content/v2 |
+| CG_SINGLE_KEY     | Single Key from Content Graph                                                                                             |                                      |
+| CG_APP_KEY        | App Key from ContentGraph                                                                                                 |                                      |
+| CG_SECRET         | App Secret from ContentGraph                                                                                              |                                      |
+| CG_WEBHOOK_SECRET | A randomly generated secret that you would like to be used as part of the Optimizely Graph Webhook for request validation |                                      |
+| CMS_URL           | The url of your CMS that will be used when using visual-editing on a preview branch                                       |                                      |
 
 ## Getting Started
 
-
 ### CMS
 
-The BlocksTypes and Blocks required to run this frontend application can be found in *cms/TheCityGuide.episerverdata*. You can import them into your instance of Optimizely CMS with the Import/Export Data functionality. More information can be found here - https://support.optimizely.com/hc/en-us/articles/4413192300301-Export-and-import-data
+The BlocksTypes and Blocks required to run this frontend application can be found in *cms/TheCityGuide.episerverdata*.
+You can import them into your instance of Optimizely CMS with the Import/Export Data functionality. More information can
+be found here - https://support.optimizely.com/hc/en-us/articles/4413192300301-Export-and-import-data
 
 ### Generating Typescript files from Content Graph
 
